@@ -9,10 +9,12 @@ services:
         volumes:
             - ./mysql.cnf:/etc/mysql/conf.d/mysql.cnf
             - ./data/www:/var/www/html
+            - ./public:/var/www/html/wp-content/themes/custom
 
     mysql:
         image: mysql
         environment:
+            MYSQL_DATABASE: wordpress
             MYSQL_ROOT_PASSWORD: password
         volumes:
             - ./data/mysql:/var/lib/mysql
