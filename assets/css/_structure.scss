@@ -1,0 +1,81 @@
+.section {
+    position: relative;
+    padding: 80px 0px;
+    background-color: black;
+
+    &.parallax {
+        position: relative;
+        padding: 0;
+
+        & > .placeholder {
+            height: 95vh;
+            background-color: transparent;
+            pointer-events: none;
+        }
+
+        & > .float {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 100px;
+            height: 95%;
+            background-image: url(http://graphicdesignjunction.com/wp-content/uploads/2011/03/background-pattern-design-31.jpg);
+        }
+    }
+
+    &.small {
+        padding: 60px 0px;
+    }
+
+    &.tiny {
+        padding: 40px 0px;
+    }
+
+    &.long {
+        height: 1000px;
+    }
+
+    &.micro {
+        padding: 20px 0px;
+    }
+
+    .large-container {
+        width: 1200px;
+    }
+
+    .container {
+    }
+
+    .small-container {
+        width: 700px;
+    }
+
+    .large-container, .container, .small-container {
+        & > * {
+            vertical-align: top;
+            display: inline-block;
+            margin-right: 4%;
+
+            &:last-child {
+                margin-right: 0px;
+            }
+
+            & > *:last-child {
+                margin-bottom: 0px;
+            }
+        }
+
+        & > .full {
+            width: 100%;
+        }
+
+        & > .half {
+            width: 48%;
+        }
+
+        & > .third{
+            width: 32.666660%;
+        }
+    }
+}
