@@ -17,6 +17,10 @@
     &.orange {
         color: #ffffff;
         background-color: #ffa800;
+
+        h1, h2 {
+            color: #ffffff;
+        }
     }
 
     &.parallax {
@@ -101,7 +105,7 @@
         }
 
         & > .third {
-            width: 30%;
+            width: 30.6%;
         }
 
         & > .fifth {

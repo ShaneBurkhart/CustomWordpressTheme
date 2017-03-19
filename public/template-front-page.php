@@ -53,14 +53,7 @@
                         <h2 class="text-center">The Meat Of The Matter</h2>
                     </div>
                 </div>
-                <div class="fluid-container">
-                    <div class="third">
-                    </div>
-                    <div class="third">
-                    </div>
-                    <div class="third">
-                    </div>
-                </div>
+                <?php include(locate_template('three-page-previews.php', false, false)); ?>
             </div>
             <div class="section orange">
                 <div class="fluid-container">
