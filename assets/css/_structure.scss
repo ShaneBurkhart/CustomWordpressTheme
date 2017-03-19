@@ -1,15 +1,32 @@
 .section {
     position: relative;
     padding: 80px 0px;
-    background-color: black;
+
+    &.white {
+        background-color: #ffffff;
+    }
+
+    &.dark-gray {
+        background-color: #5e574f;
+    }
+
+    &.light-gray {
+        background-color: #f6f6f6;
+    }
+
+    &.orange {
+        color: #ffffff;
+        background-color: #ffa800;
+    }
 
     &.parallax {
         position: relative;
         padding: 0;
 
-        & > .placeholder {
-            height: 95vh;
+        & > .content {
             background-color: transparent;
+            height: 95vh;
+            padding-top: 100px;
             pointer-events: none;
         }
 
@@ -18,9 +35,9 @@
             top: 0;
             left: 0;
             right: 0;
-            padding: 100px;
             height: 95%;
             background-image: url(http://graphicdesignjunction.com/wp-content/uploads/2011/03/background-pattern-design-31.jpg);
+            z-index: -1;
         }
     }
 
@@ -32,12 +49,17 @@
         padding: 40px 0px;
     }
 
-    &.long {
-        height: 1000px;
-    }
-
     &.micro {
         padding: 20px 0px;
+    }
+
+    &.no-padding {
+        padding: 0px 0px;
+    }
+
+    .fluid-container {
+        width: 100%;
+        padding: 0px 3%;
     }
 
     .large-container {
@@ -45,24 +67,24 @@
     }
 
     .container {
+        width: 850px;
     }
 
     .small-container {
         width: 700px;
     }
 
-    .large-container, .container, .small-container {
+    .fluid-container, .large-container, .container, .small-container {
+        overflow: hidden;
+
         & > * {
             vertical-align: top;
             display: inline-block;
+            float: left;
             margin-right: 4%;
 
             &:last-child {
                 margin-right: 0px;
-            }
-
-            & > *:last-child {
-                margin-bottom: 0px;
             }
         }
 
@@ -74,8 +96,26 @@
             width: 48%;
         }
 
-        & > .third{
-            width: 32.666660%;
+        & > .two-thirds {
+            width: 60%;
         }
+
+        & > .third {
+            width: 30%;
+        }
+
+        & > .fifth {
+            width: 16.5%;
+        }
+    }
+}
+
+.group-wrapper {
+    position: relative;
+
+    & .on-top {
+        position: absolute;
+        top: 0;
+        left: 0;
     }
 }
