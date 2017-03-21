@@ -22,12 +22,8 @@
                     </div>
                 </div>
             </div>
-            <div class="section no-padding white bg-image">
-                <div class="full-container">
-                    <div class="full">
-                        <img class="bg" src="<?php echo get_template_directory_uri() ?>/assets/images/banners/free-sample-subtle-background.png">
-                    </div>
-                </div>
+            <div class="section no-padding white image-with-popup">
+                <img class="bg" src="<?php echo get_template_directory_uri() ?>/assets/images/banners/free-sample-subtle-background.png">
             </div>
         </main>
 

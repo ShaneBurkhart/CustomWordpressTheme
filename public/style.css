@@ -1624,10 +1624,11 @@ ul {
     background-color: #ffa800; }
     .section.orange h1, .section.orange h2 {
       color: #ffffff; }
-  .section.image, .section.image-with-text {
+  .section.image, .section.image-with-text, .section.image-with-popup {
     position: relative; }
-    .section.image > img, .section.image-with-text > img {
-      width: 100%; }
+    .section.image > img, .section.image-with-text > img, .section.image-with-popup > img {
+      width: 100%;
+      display: block; }
   .section.image-with-text > img {
     padding-bottom: 30px; }
   .section.image-with-text > h2 {

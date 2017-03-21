@@ -23,11 +23,12 @@
         }
     }
 
-    &.image, &.image-with-text {
+    &.image, &.image-with-text, &.image-with-popup {
         position: relative;
 
         & > img {
             width: 100%;
+            display: block;
         }
     }
 
@@ -44,6 +45,9 @@
             margin: 0px;
             text-align: center;
         }
+    }
+
+    &.image-with-popup{
     }
 
     &.parallax {
