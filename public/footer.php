@@ -1,7 +1,7 @@
 <footer class="section small dark-gray">
     <div class="fluid-container">
         <div class="full">
-            <a id="site-logo">TwistedQ</a>
+            <a id="site-logo"></a>
         </div>
     </div>
     <div class="fluid-container">

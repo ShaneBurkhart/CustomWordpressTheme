@@ -23,9 +23,44 @@
         }
     }
 
+    &.bg-image {
+        position: relative;
+
+        & .bg {
+            width: 100%;
+        }
+
+        & .content {
+            position: absolute;
+            bottom: -30px;
+            left: 0;
+            right: 0;
+        }
+    }
+
     &.parallax {
         position: relative;
         padding: 0;
+        margin-top: -100px;
+
+        &.torn-paper {
+            & > .content:after {
+                display: block;
+                content: ' ';
+                position: absolute;
+                height: 100px;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-image: url(assets/images/torn-paper.png);
+                background-repeat: repeat-x;
+                background-position: bottom left;
+                -webkit-background-size: contain;
+                -moz-background-size: contain;
+                -o-background-size: contain;
+                background-size: contain;
+            }
+        }
 
         & > .content {
             background-color: transparent;
@@ -40,7 +75,12 @@
             left: 0;
             right: 0;
             height: 95%;
-            background-image: url(http://graphicdesignjunction.com/wp-content/uploads/2011/03/background-pattern-design-31.jpg);
+            background-position: top center;
+            background-attachment: fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
             z-index: -1;
         }
     }
@@ -66,6 +106,10 @@
         padding: 0px 3%;
     }
 
+    .full-container {
+        width: 100%;
+    }
+
     .large-container {
         width: 1200px;
     }
@@ -78,7 +122,7 @@
         width: 700px;
     }
 
-    .fluid-container, .large-container, .container, .small-container {
+    .fluid-container, .full-container, .large-container, .container, .small-container {
         overflow: hidden;
 
         & > * {
@@ -101,7 +145,7 @@
         }
 
         & > .two-thirds {
-            width: 60%;
+            width: 65.2%;
         }
 
         & > .third {

@@ -11,8 +11,11 @@
         <?php get_header(); ?>
 
         <main>
-            <div class="section parallax">
-                <div class="float"></div>
+            <div class="section parallax torn-paper">
+                <div
+                    class="float"
+                        style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/banners/homepage-hero.jpg)"
+                ></div>
                 <div class="content">
                     <div class="fluid-container">
                         <div class="full">
@@ -36,23 +39,32 @@
                     </div>
                 </div>
                 <div class="fluid-container">
-                    <div class="third">
-                        <h3 class="text-center">Seasonings</h3>
-                    </div>
-                    <div class="third">
-                        <h3 class="text-center">Rubs</h3>
-                    </div>
-                    <div class="third">
-                        <h3 class="text-center">Sauces</h3>
+                    <?php
+                        $pages = get_pages(array(
+                            'meta_key' => '_wp_page_template',
+                            'meta_value' => 'template-product-group.php'
+                        ));
+
+                        foreach($pages as $page) {
+                    ?>
+                        <div class="third">
+                            <img src="<?php the_field('homepage_product_group_image', $page->ID); ?>">
+                            <h3 class="text-center"><?php echo $page->post_title; ?></h3>
+                        </div>
+                    <?php } ?>
+                </div>
+            </div>
+            <div class="section micro white bg-image">
+                <div class="full-container">
+                    <div class="full">
+                        <img class="bg" src="<?php the_field('blog_preview_banner_image') ?>">
+                        <div class="content">
+                            <h2 class="text-center"><?php the_field('blog_preview_heading'); ?></h2>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="section white">
-                <div class="fluid-container">
-                    <div class="full">
-                        <h2 class="text-center">The Meat Of The Matter</h2>
-                    </div>
-                </div>
                 <?php include(locate_template('three-page-previews.php', false, false)); ?>
             </div>
             <div class="section orange">

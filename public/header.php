@@ -1,7 +1,7 @@
 <header class="section no-padding">
     <div class="fluid-container">
         <div class="full">
-            <a id="site-logo">TwistedQ</a>
+            <a id="site-logo"></a>
             <ul>
                 <li><a href="">Products</a></li>
                 <li><a href="">Q' Club</a></li>
