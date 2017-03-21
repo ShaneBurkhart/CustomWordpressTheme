@@ -1528,7 +1528,8 @@ ul {
     font-weight: bold; }
 
 .promo {
-  width: 250px; }
+  width: 250px;
+  margin-top: 75px; }
   .promo h3 {
     color: #ffffff;
     font-size: 36px;
@@ -1623,15 +1624,19 @@ ul {
     background-color: #ffa800; }
     .section.orange h1, .section.orange h2 {
       color: #ffffff; }
-  .section.bg-image {
+  .section.image, .section.image-with-text {
     position: relative; }
-    .section.bg-image .bg {
+    .section.image > img, .section.image-with-text > img {
       width: 100%; }
-    .section.bg-image .content {
-      position: absolute;
-      bottom: -30px;
-      left: 0;
-      right: 0; }
+  .section.image-with-text > img {
+    padding-bottom: 30px; }
+  .section.image-with-text > h2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0px;
+    text-align: center; }
   .section.parallax {
     position: relative;
     padding: 0;
@@ -1669,6 +1674,8 @@ ul {
       -o-background-size: cover;
       background-size: cover;
       z-index: -1; }
+  .section.large {
+    padding: 160px 0px; }
   .section.small {
     padding: 60px 0px; }
   .section.tiny {
@@ -1677,6 +1684,8 @@ ul {
     padding: 20px 0px; }
   .section.no-padding {
     padding: 0px 0px; }
+  .section.micro-padding-top {
+    padding-top: 20px; }
   .section .fluid-container {
     width: 100%;
     padding: 0px 3%; }

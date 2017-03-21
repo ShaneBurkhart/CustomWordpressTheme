@@ -23,18 +23,26 @@
         }
     }
 
-    &.bg-image {
+    &.image, &.image-with-text {
         position: relative;
 
-        & .bg {
+        & > img {
             width: 100%;
         }
+    }
 
-        & .content {
+    &.image-with-text {
+        & > img {
+            padding-bottom: 30px;
+        }
+
+        & > h2 {
             position: absolute;
-            bottom: -30px;
+            bottom: 0;
             left: 0;
             right: 0;
+            margin: 0px;
+            text-align: center;
         }
     }
 
@@ -85,6 +93,10 @@
         }
     }
 
+    &.large {
+        padding: 160px 0px;
+    }
+
     &.small {
         padding: 60px 0px;
     }
@@ -101,6 +113,9 @@
         padding: 0px 0px;
     }
 
+    &.micro-padding-top {
+        padding-top: 20px;
+    }
     .fluid-container {
         width: 100%;
         padding: 0px 3%;

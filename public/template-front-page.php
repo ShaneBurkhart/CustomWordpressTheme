@@ -54,17 +54,11 @@
                     <?php } ?>
                 </div>
             </div>
-            <div class="section micro white bg-image">
-                <div class="full-container">
-                    <div class="full">
-                        <img class="bg" src="<?php the_field('blog_preview_banner_image') ?>">
-                        <div class="content">
-                            <h2 class="text-center"><?php the_field('blog_preview_heading'); ?></h2>
-                        </div>
-                    </div>
-                </div>
+            <div class="section no-padding white image-with-text">
+                <img src="<?php the_field('blog_preview_banner_image') ?>">
+                <h2 class="text-center"><?php the_field('blog_preview_heading'); ?></h2>
             </div>
-            <div class="section white">
+            <div class="section large white micro-padding-top">
                 <?php include(locate_template('three-page-previews.php', false, false)); ?>
             </div>
             <div class="section orange">
