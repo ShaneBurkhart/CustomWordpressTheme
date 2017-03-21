@@ -1,6 +1,6 @@
 <?php
     /**
-    * Template Name: Free Samples Page
+    * Template Name: Free Sample Page
     */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
