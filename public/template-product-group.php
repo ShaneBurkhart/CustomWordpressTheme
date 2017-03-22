@@ -21,7 +21,7 @@
                     </div>
                 </div>
             </div>
-            <div class="section micro">
+            <div class="section micro torn-paper">
                 <div class="full-container">
                     <div class="full">
                         <div class="products-previews-wrapper">

@@ -14,7 +14,7 @@
             <div class="section parallax torn-paper">
                 <div
                     class="float"
-                        style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/banners/homepage-hero.jpg)"
+                    style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/banners/homepage-hero.jpg)"
                 ></div>
                 <div class="content">
                     <div class="fluid-container">

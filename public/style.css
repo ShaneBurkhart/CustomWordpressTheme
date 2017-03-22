@@ -1364,7 +1364,7 @@ h3 {
   font-size: 22px; }
 
 h4 {
-  font-size: 20px; }
+  font-size: 16px; }
 
 p {
   margin-top: 0;
@@ -1624,9 +1624,9 @@ ul {
     background-color: #ffa800; }
     .section.orange h1, .section.orange h2 {
       color: #ffffff; }
-  .section.image, .section.image-with-text, .section.image-with-popup {
+  .section.image, .section.image-with-text, .section.image-with-glow, .section.image-with-popup {
     position: relative; }
-    .section.image > img, .section.image-with-text > img, .section.image-with-popup > img {
+    .section.image > img, .section.image-with-text > img, .section.image-with-glow > img, .section.image-with-popup > img {
       width: 100%;
       display: block; }
   .section.image-with-text > img {
@@ -1638,25 +1638,41 @@ ul {
     right: 0;
     margin: 0px;
     text-align: center; }
+  .section.image-with-glow:before {
+    background-color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 5px;
+    border-radius: 50%;
+    margin-top: -3px;
+    box-shadow: 0px 0px 35px 75px white;
+    content: ''; }
+  .section.image-with-glow > .content {
+    position: absolute;
+    text-align: center;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1005; }
+    .section.image-with-glow > .content h1, .section.image-with-glow > .content h2, .section.image-with-glow > .content h3, .section.image-with-glow > .content h4, .section.image-with-glow > .content p {
+      margin-bottom: 5px; }
+  .section.image-with-popup > .popup {
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 650px;
+    background-color: rgba(116, 111, 105, 0.9);
+    padding: 40px;
+    text-align: center;
+    transform: translate(-50%, -50%); }
   .section.parallax {
     position: relative;
     padding: 0;
     margin-top: -100px; }
-    .section.parallax.torn-paper > .content:after {
-      display: block;
-      content: ' ';
-      position: absolute;
-      height: 100px;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background-image: url(assets/images/torn-paper.png);
-      background-repeat: repeat-x;
-      background-position: bottom left;
-      -webkit-background-size: contain;
-      -moz-background-size: contain;
-      -o-background-size: contain;
-      background-size: contain; }
     .section.parallax > .content {
       background-color: transparent;
       height: 95vh;
@@ -1675,6 +1691,22 @@ ul {
       -o-background-size: cover;
       background-size: cover;
       z-index: -1; }
+  .section.torn-paper:after {
+    display: block;
+    content: ' ';
+    position: absolute;
+    height: 100px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-image: url(assets/images/torn-paper.png);
+    background-repeat: repeat-x;
+    background-position: bottom left;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain; }
   .section.large {
     padding: 160px 0px; }
   .section.small {
@@ -1731,7 +1763,8 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100; }
+  z-index: 100001;
+  height: 100px; }
   header a {
     color: #000000; }
   header .button {

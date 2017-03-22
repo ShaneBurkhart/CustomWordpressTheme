@@ -23,7 +23,7 @@
         }
     }
 
-    &.image, &.image-with-text, &.image-with-popup {
+    &.image, &.image-with-text, &.image-with-glow, &.image-with-popup {
         position: relative;
 
         & > img {
@@ -47,32 +47,53 @@
         }
     }
 
+    &.image-with-glow {
+        &:before {
+            background-color: #ffffff;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 5px;
+            border-radius: 50%;
+            margin-top: -3px;
+            box-shadow: 0px 0px 35px 75px rgba(255, 255, 255, 1);
+            content: '';
+        }
+
+        & > .content {
+            position: absolute;
+            text-align: center;
+            width: 80%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1005;
+
+            h1, h2, h3, h4, p {
+                margin-bottom: 5px;
+            }
+        }
+    }
+
     &.image-with-popup{
+        & > .popup {
+            color: #ffffff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 650px;
+            background-color: rgba(116, 111, 105, .9);
+            padding: 40px;
+            text-align: center;
+            transform: translate(-50%, -50%);
+        }
     }
 
     &.parallax {
         position: relative;
         padding: 0;
         margin-top: -100px;
-
-        &.torn-paper {
-            & > .content:after {
-                display: block;
-                content: ' ';
-                position: absolute;
-                height: 100px;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                background-image: url(assets/images/torn-paper.png);
-                background-repeat: repeat-x;
-                background-position: bottom left;
-                -webkit-background-size: contain;
-                -moz-background-size: contain;
-                -o-background-size: contain;
-                background-size: contain;
-            }
-        }
 
         & > .content {
             background-color: transparent;
@@ -96,6 +117,25 @@
             z-index: -1;
         }
     }
+
+    &.torn-paper:after {
+        display: block;
+        content: ' ';
+        position: absolute;
+        height: 100px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background-image: url(assets/images/torn-paper.png);
+        background-repeat: repeat-x;
+        background-position: bottom left;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain;
+    }
+
 
     &.large {
         padding: 160px 0px;
