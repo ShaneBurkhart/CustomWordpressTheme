@@ -14,7 +14,7 @@
             <div class="section no-padding white image-with-glow">
                 <img src="<?php echo get_template_directory_uri() ?>/assets/images/banners/free-sample-ty-splatter.png">
                 <div class="content">
-                    <h1>Delicious is on it's way!</h1>
+                    <h1>Thank You. Enjoy.</h1>
                     <p>Some promo text confirming their free samples are on their way and what to do if they don't get them.</p>
                 </div>
             </div>
