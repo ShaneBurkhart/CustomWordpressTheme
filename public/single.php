@@ -1,43 +1,36 @@
 <?php
-/**
- * The template for displaying all single posts
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
- * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since 1.0
- * @version 1.0
- */
+?><!DOCTYPE html>
+<html <?php language_attributes(); ?>>
+    <?php get_template_part('head'); ?>
 
-get_header(); ?>
+    <body <?php body_class(); ?>>
 
-<div class="wrap">
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+        <?php get_header(); ?>
 
-			<?php
-				/* Start the Loop */
-				while ( have_posts() ) : the_post();
+        <main>
+            <div class="section no-padding white image">
+                <img src="<?php the_field('image') ?>">
+                <h2 class="text-center"><?php the_field('blog_preview_heading'); ?></h2>
+            </div>
+            <div class="section large white micro-padding-top">
+                <?php include(locate_template('three-page-previews.php', false, false)); ?>
+            </div>
+            <div class="section orange">
+                <div class="fluid-container">
+                    <div class="full text-center">
+                        <h2 class="capitalize">The Smokin' Hottest Club Around.</h2>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="full text-center">
+                        <p>Sign up for the Q club to get pro-style tips, tricks and the tastiest recipes on this side of the Mason Dixon. Get ready to walk, talk, grill and smoke like a pitmaster.</p>
+                        <a href="" class="button capitalize">Sign Up Now</a>
+                    </div>
+                </div>
+            </div>
+        </main>
 
-					get_template_part( 'template-parts/post/content', get_post_format() );
+        <?php get_footer(); ?>
 
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
-
-					the_post_navigation( array(
-						'prev_text' => '<span class="screen-reader-text">' . __( 'Previous Post', 'twentyseventeen' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Previous', 'twentyseventeen' ) . '</span> <span class="nav-title"><span class="nav-title-icon-wrapper">' . twentyseventeen_get_svg( array( 'icon' => 'arrow-left' ) ) . '</span>%title</span>',
-						'next_text' => '<span class="screen-reader-text">' . __( 'Next Post', 'twentyseventeen' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Next', 'twentyseventeen' ) . '</span> <span class="nav-title">%title<span class="nav-title-icon-wrapper">' . twentyseventeen_get_svg( array( 'icon' => 'arrow-right' ) ) . '</span></span>',
-					) );
-
-				endwhile; // End of the loop.
-			?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-	<?php get_sidebar(); ?>
-</div><!-- .wrap -->
-
-<?php get_footer();
+    </body>
+</html>

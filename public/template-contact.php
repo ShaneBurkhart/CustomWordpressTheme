@@ -17,7 +17,10 @@
             </div>
             <div class="section large white micro-padding-top">
                 <div class="container">
-                    <p class="text-center"><?php the_field('form_snippet') ?></p>
+                    <div class="full">
+                        <p class="text-center"><?php the_field('form_snippet') ?></p>
+                        <?php gravity_form(1, false, false, false, '', false); ?>
+                    </div>
                 </div>
             </div>
         </main>

@@ -1,7 +1,9 @@
 version: '2.1'
 services:
     wordpress:
-        image: wordpress
+        build:
+            dockerfile: Dockerfile.wordpress
+            context: .
         ports:
             - 5000:80
         links:

@@ -30,6 +30,7 @@ main {
 }
 
 footer {
+    position: relative;
     color: #9e9993;
 
     a {
@@ -44,6 +45,42 @@ footer {
             font-size: 14px;
             font-weight: 700;
             text-transform: uppercase;
+        }
+    }
+
+    ul.social-buttons-group {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+        width: 100px;
+        height: 100%;
+
+        li {
+            height: 33.3330%;
+            margin: 0px;
+            border-bottom: 1px solid #333333;
+            border-left: 1px solid #333333;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            a {
+                display: table;
+                height: 100%;
+                width: 100%;
+                text-align: center;
+
+                i {
+                    display: table-cell;
+                    vertical-align: middle;
+                    font-size: 45px;
+                }
+            }
         }
     }
 }
@@ -460,6 +497,10 @@ ul {
             }
         }
     }
+}
+
+.gform_wrapper .gform_footer {
+    text-align: center;
 }
 
 @media only screen and (max-width : 750px) {
