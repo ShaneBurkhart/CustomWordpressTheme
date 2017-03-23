@@ -26,42 +26,29 @@
                 <div class="full-container">
                     <div class="full">
                         <div class="products-previews-wrapper">
-                            <div class="product">
-                                <img class="thumbnail">
-                                <div class="full-container promo-overlay">
-                                    <div class="graphic">
-                                        <img>
-                                    </div>
-                                    <div class="info">
-                                        <h3>American Royal Beef Rub</h3>
-                                        <p>Something about the best american royal beef rub around.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product">
-                                <img class="thumbnail">
-                                <div class="full-container promo-overlay">
-                                    <div class="graphic">
-                                        <img>
-                                    </div>
-                                    <div class="info">
-                                        <h3>Russian Royal Beef Rub</h3>
-                                        <p>Something about the best american royal beef rub around.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product">
-                                <img class="thumbnail">
-                                <div class="full-container promo-overlay">
-                                    <div class="graphic">
-                                        <img>
-                                    </div>
-                                    <div class="info">
-                                        <h3>African Royal Beef Rub</h3>
-                                        <p>Something about the best american royal beef rub around.</p>
+                            <?php
+                                $pages = get_children(array(
+                                    'post_parent' => get_the_ID(),
+                                    'post_type' => 'page'
+                                ));
+
+                                foreach($pages as $page) {
+                            ?>
+                                <div class="product">
+                                    <a href="<?php echo get_permalink($page->ID); ?>">
+                                        <img class="thumbnail" src="<?php the_field('product_image', $page->ID); ?>">
+                                    </a>
+                                    <div class="full-container promo-overlay">
+                                        <div class="graphic">
+                                            <img src="<?php the_field('promo_image', $page->ID); ?>">
+                                        </div>
+                                        <div class="info">
+                                            <h3><?php echo $page->post_title;  ?></h3>
+                                            <p>Something about the best american royal beef rub around.</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>
@@ -72,20 +59,14 @@
                         <h2 class="text-center">Recipes Worth Rubbin'</h2>
                     </div>
                 </div>
-                <?php include(locate_template('three-page-previews.php', false, false)); ?>
-            </div>
-            <div class="section orange">
-                <div class="fluid-container">
-                    <div class="full text-center">
-                        <h2 class="capitalize">The Smokin' Hottest Club Around.</h2>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="full text-center">
-                        <p>Sign up for the Q club to get pro-style tips, tricks and the tastiest recipes on this side of the Mason Dixon. Get ready to walk, talk, grill and smoke like a pitmaster.</p>
-                        <a href="" class="button capitalize">Sign Up Now</a>
-                    </div>
-                </div>
+
+                <?php
+                    $pages = get_posts(array(
+                        'category_name' => 'recipe',
+                        'posts_per_page' => 3
+                    ));
+                    include(locate_template('three-page-previews.php', false, false));
+                ?>
             </div>
         </main>
 

@@ -2538,8 +2538,7 @@ ul {
       z-index: 1000; }
     .products-previews-wrapper .product .thumbnail {
       width: 100%;
-      height: 100%;
-      background-color: #000000; }
+      height: 100%; }
     .products-previews-wrapper .product .promo-overlay {
       position: absolute;
       left: 0;
@@ -2559,7 +2558,11 @@ ul {
           width: 100%; }
       .products-previews-wrapper .product .promo-overlay .info {
         width: 36%;
-        display: inline-block; }
+        display: inline-block;
+        padding-top: 35px;
+        padding-right: 4%; }
+        .products-previews-wrapper .product .promo-overlay .info h3 {
+          margin-bottom: 10px; }
 
 .gform_wrapper .gform_footer {
   text-align: center; }

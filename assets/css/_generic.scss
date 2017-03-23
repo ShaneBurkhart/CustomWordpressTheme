@@ -466,7 +466,6 @@ ul {
         .thumbnail {
             width: 100%;
             height: 100%;
-            background-color: #000000;
         }
 
         .promo-overlay {
@@ -494,6 +493,12 @@ ul {
             .info {
                 width: 36%;
                 display: inline-block;
+                padding-top: 35px;
+                padding-right: 4%;
+
+                h3 {
+                    margin-bottom: 10px;
+                }
             }
         }
     }

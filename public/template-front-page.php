@@ -63,7 +63,13 @@
                 <h2 class="text-center"><?php the_field('blog_preview_heading'); ?></h2>
             </div>
             <div class="section large white micro-padding-top">
-                <?php include(locate_template('three-page-previews.php', false, false)); ?>
+                <?php
+                    $pages = get_posts(array(
+                        'category_name' => 'uncategorized',
+                        'posts_per_page' => 3
+                    ));
+                    include(locate_template('three-page-previews.php', false, false));
+                ?>
             </div>
             <div class="section orange">
                 <div class="fluid-container">

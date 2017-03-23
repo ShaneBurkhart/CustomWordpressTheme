@@ -1,8 +1,13 @@
 <article class="thumbnail-page-preview">
-    <div class="image-wrapper" style="background-image: url('https://www.kingsford.com/wp-content/uploads/2014/12/kfd-howtoporkribs-Ribs5_0285-1024x621.jpg');">
+    <div class="image-wrapper" style="background-image: url('<?php the_field('preview_image', $page->ID); ?>">
     </div>
-    <h3>World Series of BBQ 2017</h3>
-    <p>See what the pros are cooking up at the biggest BBQ event in the country. Warning: this video will make you salivate.</p>
-    <div class="text-center"><a href="" class="button">Watch Video</a></div>
+    <h3><?php echo $page->post_title ?></h3>
+    <p><?php the_field('snippet', $page->ID); ?></p>
+
+    <?php if (in_category('recipe', $page->ID)) { ?>
+        <div class="text-center"><a href="" class="button">View Recipe</a></div>
+    <?php } else { ?>
+        <div class="text-center"><a href="" class="button">View Post</a></div>
+    <?php } ?>
 </article>
 
