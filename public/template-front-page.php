@@ -40,16 +40,20 @@
                 </div>
                 <div class="fluid-container">
                     <?php
-                        $pages = get_pages(array(
+                        $products_page = get_pages(array(
                             'meta_key' => '_wp_page_template',
-                            'meta_value' => 'template-product-group.php'
-                        ));
+                            'meta_value' => 'template-products.php',
+                        ))[0];
+
+                        $pages = get_children(array('post_parent' => $products_page->ID));
 
                         foreach($pages as $page) {
                     ?>
                         <div class="third">
-                            <img src="<?php the_field('homepage_product_group_image', $page->ID); ?>">
-                            <h3 class="text-center"><?php echo $page->post_title; ?></h3>
+                            <a href="<?php echo get_permalink($page->ID); ?>">
+                                <img src="<?php the_field('homepage_product_group_image', $page->ID); ?>">
+                                <h3 class="text-center"><?php echo $page->post_title; ?></h3>
+                            </a>
                         </div>
                     <?php } ?>
                 </div>
@@ -70,7 +74,7 @@
                 <div class="container">
                     <div class="full text-center">
                         <p>Sign up for the Q club to get pro-style tips, tricks and the tastiest recipes on this side of the Mason Dixon. Get ready to walk, talk, grill and smoke like a pitmaster.</p>
-                        <a href="" class="button capitalize">Sign Up Now</a>
+                        <a href="/q-club" class="button capitalize">Sign Up Now</a>
                     </div>
                 </div>
             </div>
