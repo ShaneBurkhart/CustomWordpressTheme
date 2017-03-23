@@ -1,6 +1,6 @@
 <?php
     /**
-    * Template Name: Coupon Download Thank You Page
+    * Template Name: Thank You Page
     */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -14,8 +14,8 @@
             <div class="section no-padding white image-with-glow">
                 <img src="<?php echo get_template_directory_uri() ?>/assets/images/banners/free-sample-ty-splatter.png">
                 <div class="content">
-                    <h1>Thank You. Enjoy.</h1>
-                    <p>Some promo text confirming their free samples are on their way and what to do if they don't get them.</p>
+                    <h1><?php the_field('headline'); ?></h1>
+                    <p><?php the_field('subheading'); ?></p>
                 </div>
             </div>
             <div class="section tiny white micro-padding-top">
