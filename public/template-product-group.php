@@ -13,11 +13,12 @@
         <main>
             <div class="section tiny">
                 <div class="fluid-container">
-                    <div class="third">
-                        <h2 class="">The Lineup</h2>
+                    <div class="graphic">
+                        <img src="<?php the_field('intro_image'); ?>">
                     </div>
-                    <div class="">
-                        <h2 class="text-center">The Lineup</h2>
+                    <div class="description">
+                        <h2><?php the_field('page_heading'); ?></h2>
+                        <p><?php the_field('page_description'); ?></h2>
                     </div>
                 </div>
             </div>

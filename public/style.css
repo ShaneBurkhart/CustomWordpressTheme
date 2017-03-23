@@ -2707,6 +2707,10 @@ ul {
       width: 30.6%; }
     .section .fluid-container > .fifth, .section .full-container > .fifth, .section .large-container > .fifth, .section .container > .fifth, .section .small-container > .fifth {
       width: 16.5%; }
+    .section .fluid-container > .description, .section .full-container > .description, .section .large-container > .description, .section .container > .description, .section .small-container > .description {
+      width: 55%; }
+    .section .fluid-container > .graphic, .section .full-container > .graphic, .section .large-container > .graphic, .section .container > .graphic, .section .small-container > .graphic {
+      width: 41%; }
 
 .group-wrapper {
   position: relative; }
