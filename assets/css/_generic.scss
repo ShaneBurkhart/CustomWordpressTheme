@@ -439,6 +439,14 @@ ul {
     }
 }
 
+.product-group-thumbnail {
+    display: block;
+
+    h3 {
+        color: #4f4f4f;
+    }
+}
+
 .products-previews-wrapper {
     overflow: hidden;
     text-align: center;
@@ -506,6 +514,11 @@ ul {
 
 .gform_wrapper .gform_footer {
     text-align: center;
+}
+
+.gform_wrapper ul {
+    margin: 0;
+    padding: 0;
 }
 
 @media only screen and (max-width : 750px) {

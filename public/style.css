@@ -2520,6 +2520,11 @@ ul {
   .thumbnail-page-preview p {
     height: 125px; }
 
+.product-group-thumbnail {
+  display: block; }
+  .product-group-thumbnail h3 {
+    color: #4f4f4f; }
+
 .products-previews-wrapper {
   overflow: hidden;
   text-align: center;
@@ -2566,6 +2571,10 @@ ul {
 
 .gform_wrapper .gform_footer {
   text-align: center; }
+
+.gform_wrapper ul {
+  margin: 0;
+  padding: 0; }
 
 @media only screen and (max-width: 750px) {
   .small-container, .container {
