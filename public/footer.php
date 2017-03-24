@@ -23,7 +23,7 @@
         <div class="fifth">
             <p class="capitalize"><a href="/store-locator">Store Locator</a></p>
             <p class="capitalize"><a href="/q-club">Q' Club</a></p>
-            <p class="capitalize"><a href="/recipes">Receipes</a></p>
+            <p class="capitalize"><a href="/recipes">Recipes</a></p>
         </div>
         <div class="fifth">
             <p class="capitalize"><a href="/blog">Blog</a></p>

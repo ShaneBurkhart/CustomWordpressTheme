@@ -50,13 +50,15 @@
                     <div class="full text-center">
                         <?php
                             if (sizeof($all_pages) > $offset + 9) {
-
-                            }
-
-                            if ($offset > 0) {
-
-                            }
                         ?>
+                                <a class="button" href="/recipes/page/<?php echo $page_num + 1; ?>">More Recipes</a>
+                        <?php } ?>
+
+                        <?php
+                            if ($offset > 0) {
+                        ?>
+                                <a class="button" href="/recipes/page/<?php echo $page_num - 1; ?>">Back</a>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
