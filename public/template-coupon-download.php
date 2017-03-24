@@ -25,9 +25,7 @@
                     </div>
                 </div>
             </div>
-            <div class="section no-padding white image-with-popup">
-                <img class="bg" src="<?php echo get_template_directory_uri() ?>/assets/images/banners/free-sample-subtle-background.png">
-            </div>
+            <?php include(locate_template('newsletter-signup-section.php', false, false)); ?>
         </main>
 
         <?php get_footer(); ?>

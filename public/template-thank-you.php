@@ -22,12 +22,7 @@
                 <h3 class="text-center capitalize">Something Else You Might Enjoy</h3>
                 <?php include(locate_template('three-page-previews.php', false, false)); ?>
             </div>
-            <div class="section no-padding white image-with-popup">
-                <img class="bg" src="<?php echo get_template_directory_uri() ?>/assets/images/banners/free-sample-subtle-background.png">
-                <div class="popup">
-                    <h4>Get pro-style tips, tricks and recipes straight to your inbox.</h4>
-                </div>
-            </div>
+            <?php include(locate_template('newsletter-signup-section.php', false, false)); ?>
         </main>
 
         <?php get_footer(); ?>
