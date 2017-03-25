@@ -1,4 +1,5 @@
 <?php
+    the_post();
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
     <?php get_template_part('head'); ?>
@@ -8,26 +9,37 @@
         <?php get_header(); ?>
 
         <main>
-            <div class="section no-padding white image">
-                <img src="<?php the_field('image') ?>">
-                <h2 class="text-center"><?php the_field('blog_preview_heading'); ?></h2>
-            </div>
-            <div class="section large white micro-padding-top">
-                <?php include(locate_template('three-page-previews.php', false, false)); ?>
-            </div>
-            <div class="section orange">
+            <div class="section no-padding white page-nav">
                 <div class="fluid-container">
-                    <div class="full text-center">
-                        <h2 class="capitalize">The Smokin' Hottest Club Around.</h2>
-                    </div>
+                    <p><a href="/blog"><i class="fa fa-arrow-left"></i> Blog</a></p>
                 </div>
+            </div>
+            <div class="section no-padding white post-image-section" style="background-image: url(<?php the_field('banner_image') ?>);">
+            </div>
+            <div class="section tiny white">
                 <div class="container">
-                    <div class="full text-center">
-                        <p>Sign up for the Q club to get pro-style tips, tricks and the tastiest recipes on this side of the Mason Dixon. Get ready to walk, talk, grill and smoke like a pitmaster.</p>
-                        <a href="" class="button capitalize">Sign Up Now</a>
+                    <div class="third">
+                        <h3>Subscribe To Q'Club</h3>
+                        <p></p>
+                    </div>
+                    <div class="two-thirds blog-post">
+                        <h1><?php echo get_the_title(); ?></h1>
+                        <?php the_content(); ?>
                     </div>
                 </div>
             </div>
+            <div class="section white">
+                <?php
+                    $pages = get_posts(array(
+                        'category_name' => 'uncategorized',
+                        'posts_per_page' => 3,
+                        'exclude' => get_the_ID()
+                    ));
+                    include(locate_template('three-page-previews.php', false, false));
+                ?>
+            </div>
+
+            <?php include(locate_template('newsletter-signup-section.php', false, false)); ?>
         </main>
 
         <?php get_footer(); ?>

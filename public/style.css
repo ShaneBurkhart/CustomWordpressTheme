@@ -2645,6 +2645,13 @@ ul {
         margin: 0;
         border: none; }
 
+.blog-post h1 {
+  color: #4f4f4f;
+  font-size: 28px; }
+
+.page-nav a {
+  color: #4f4f4f; }
+
 @media only screen and (max-width: 750px) {
   .small-container, .container {
     width: 95%; } }
@@ -2730,6 +2737,15 @@ ul {
       left: 3%; }
     .section.image-with-two-popups > .popup-right {
       right: 3%; }
+  .section.post-image-section {
+    height: 450px;
+    overflow: hidden;
+    background-repeat: none;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
   .section.product-section {
     height: 350px;
     overflow: hidden;

@@ -611,6 +611,19 @@ ul {
     }
 }
 
+.blog-post {
+    h1 {
+        color: #4f4f4f;
+        font-size: 28px;
+    }
+}
+
+.page-nav {
+    a {
+        color: #4f4f4f;
+    }
+}
+
 @media only screen and (max-width : 750px) {
 
   .small-container, .container{

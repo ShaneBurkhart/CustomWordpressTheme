@@ -126,6 +126,17 @@
         }
     }
 
+    &.post-image-section {
+        height: 450px;
+        overflow: hidden;
+        background-repeat: none;
+        background-position: center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
     &.product-section {
         height: 350px;
         overflow: hidden;
