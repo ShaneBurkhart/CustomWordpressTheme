@@ -25,7 +25,9 @@ body {
   box-sizing: inherit;
 }
 
-textarea, input, button { outline: none; }
+textarea, input, button {
+    outline: none;
+}
 
 main {
     padding-top: 100px;
@@ -294,30 +296,14 @@ ul {
     text-align: center;
 }
 
-.input-group {
-    margin-bottom: 10px;
-
-    * {
-        display: block;
-        width: 100%;
-    }
-
-    label {
-        color: #606060;
-        padding-bottom: 3px;
-        font-size: 14px;
-    }
-
-    input, select {
-        background-color: #ffffff;
-        padding: 7px;
-        font-size: 16px;
-        border: 1px solid #cccccc;
-        border-radius: 3px;
+.gform_wrapper form {
+    input[type=text], select, textarea {
+        padding: 13px 24px !important;
+        border-radius: 0px;
     }
 
     select {
-        -webkit-appearance:none;
+        -webkit-appearance: none;
     }
 }
 

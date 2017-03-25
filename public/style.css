@@ -2423,23 +2423,12 @@ ul {
 #paypal-form {
   text-align: center; }
 
-.input-group {
-  margin-bottom: 10px; }
-  .input-group * {
-    display: block;
-    width: 100%; }
-  .input-group label {
-    color: #606060;
-    padding-bottom: 3px;
-    font-size: 14px; }
-  .input-group input, .input-group select {
-    background-color: #ffffff;
-    padding: 7px;
-    font-size: 16px;
-    border: 1px solid #cccccc;
-    border-radius: 3px; }
-  .input-group select {
-    -webkit-appearance: none; }
+.gform_wrapper form input[type=text], .gform_wrapper form select, .gform_wrapper form textarea {
+  padding: 13px 24px !important;
+  border-radius: 0px; }
+
+.gform_wrapper form select {
+  -webkit-appearance: none; }
 
 .button, button {
   color: #000000;
@@ -2663,6 +2652,8 @@ ul {
 .section {
   position: relative;
   padding: 80px 0px; }
+  .section h1, .section h2, .section h3, .section h4 {
+    margin-bottom: 10px; }
   .section.white {
     background-color: #ffffff; }
   .section.dark-gray {
@@ -2674,9 +2665,9 @@ ul {
     background-color: #ffa800; }
     .section.orange h1, .section.orange h2 {
       color: #ffffff; }
-  .section.image, .section.image-with-text, .section.image-with-glow, .section.image-with-popup {
+  .section.image, .section.image-with-text, .section.image-with-glow, .section.image-with-popup, .section.image-with-two-popups {
     position: relative; }
-    .section.image > img, .section.image-with-text > img, .section.image-with-glow > img, .section.image-with-popup > img {
+    .section.image > img, .section.image-with-text > img, .section.image-with-glow > img, .section.image-with-popup > img, .section.image-with-two-popups > img {
       width: 100%;
       display: block; }
   .section.image-with-text > img {
@@ -2719,6 +2710,26 @@ ul {
     padding: 40px;
     text-align: center;
     transform: translate(-50%, -50%); }
+  .section.image-with-two-popups {
+    position: relative; }
+    .section.image-with-two-popups > .popup-left, .section.image-with-two-popups > .popup-right {
+      color: #ffffff;
+      width: 500px;
+      position: absolute;
+      top: 50%;
+      background-color: rgba(41, 41, 41, 0.9);
+      padding: 40px;
+      text-align: center;
+      transform: translate(0%, -50%);
+      text-align: left; }
+      .section.image-with-two-popups > .popup-left .gform_wrapper, .section.image-with-two-popups > .popup-left .gform_wrapper #gform_3.inline-form, .section.image-with-two-popups > .popup-right .gform_wrapper, .section.image-with-two-popups > .popup-right .gform_wrapper #gform_3.inline-form {
+        text-align: left; }
+        .section.image-with-two-popups > .popup-left .gform_wrapper .validation_error, .section.image-with-two-popups > .popup-left .gform_wrapper #gform_3.inline-form .validation_error, .section.image-with-two-popups > .popup-right .gform_wrapper .validation_error, .section.image-with-two-popups > .popup-right .gform_wrapper #gform_3.inline-form .validation_error {
+          text-align: left; }
+    .section.image-with-two-popups > .popup-left {
+      left: 3%; }
+    .section.image-with-two-popups > .popup-right {
+      right: 3%; }
   .section.parallax {
     position: relative;
     padding: 0;

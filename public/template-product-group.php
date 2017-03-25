@@ -68,6 +68,8 @@
                     include(locate_template('three-page-previews.php', false, false));
                 ?>
             </div>
+
+            <?php include(locate_template('store-locator-and-newsletter-signup-section.php', false, false)); ?>
         </main>
 
         <?php get_footer(); ?>
