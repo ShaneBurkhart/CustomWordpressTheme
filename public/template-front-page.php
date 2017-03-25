@@ -14,19 +14,19 @@
             <div class="section parallax torn-paper">
                 <div
                     class="float"
-                    style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/banners/homepage-hero.jpg)"
+                    style="background-image: url(<?php the_field('parallax_bg_image'); ?>)"
                 ></div>
                 <div class="content">
                     <div class="fluid-container">
                         <div class="full">
                             <div class="promo pull-right">
-                                <h3>Save $2 <br><span class="large">In Store<span></h3>
-                                <p>Stock up for BBQ season and save on Twiest'd Q seasonings and rubs.</p>
-                                <a href="" class="button">Get Coupon</a>
+                                <h3><?php the_field('hero_promo_headline'); ?></h3>
+                                <p><?php the_field('hero_promo_subheading'); ?></p>
+                                <a href="<?php the_field('hero_promo_button_destination'); ?>" class="button"><?php the_field('hero_promo_button_text'); ?></a>
                             </div>
                             <div class="jumbotron">
-                                <h1>Award-Winning Flavors. And We're Not Just Blowing Smoke.</h1>
-                                <p>Championship seasonings, rubs and sauces for good times and great BBQ.</p>
+                                <h1><?php the_field('main_headline'); ?></h1>
+                                <p><?php the_field('main_subheading'); ?></p>
                             </div>
                         </div>
                     </div>
@@ -35,7 +35,7 @@
             <div class="section white">
                 <div class="fluid-container">
                     <div class="full">
-                        <h2 class="text-center">The Lineup</h2>
+                        <h2 class="text-center"><?php the_field('products_section_headline'); ?></h2>
                     </div>
                 </div>
                 <div class="fluid-container">
@@ -74,13 +74,13 @@
             <div class="section orange">
                 <div class="fluid-container">
                     <div class="full text-center">
-                        <h2 class="capitalize">The Smokin' Hottest Club Around.</h2>
+                        <h2 class="capitalize"><?php the_field('qclub_section_headline'); ?></h2>
                     </div>
                 </div>
                 <div class="container">
                     <div class="full text-center">
-                        <p>Sign up for the Q club to get pro-style tips, tricks and the tastiest recipes on this side of the Mason Dixon. Get ready to walk, talk, grill and smoke like a pitmaster.</p>
-                        <a href="/q-club" class="button capitalize">Sign Up Now</a>
+                        <p><?php the_field('qclub_section_description'); ?></p>
+                        <a href="/q-club" class="button capitalize"><?php the_field('qclub_section_button_text'); ?></a>
                     </div>
                 </div>
             </div>

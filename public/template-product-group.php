@@ -44,7 +44,7 @@
                                         </div>
                                         <div class="info">
                                             <h3><?php echo $page->post_title; ?></h3>
-                                            <p>Something about the best american royal beef rub around.</p>
+                                            <p><?php the_field('products_group_page_description', $page->ID); ?></p>
                                         </div>
                                     </div>
                                 </div>
@@ -56,7 +56,7 @@
             <div class="section white">
                 <div class="fluid-container">
                     <div class="full">
-                        <h2 class="text-center">Recipes Worth Rubbin'</h2>
+                        <h2 class="text-center"><?php the_field('product_group_recipes_headline'); ?></h2>
                     </div>
                 </div>
 
