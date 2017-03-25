@@ -2645,6 +2645,11 @@ ul {
         margin: 0;
         border: none; }
 
+.product-section h1 {
+  color: #4f4f4f;
+  font-size: 28px;
+  text-transform: uppercase; }
+
 .blog-post h1 {
   color: #4f4f4f;
   font-size: 28px;
@@ -2779,6 +2784,13 @@ ul {
       line-height: 50px;
       border-radius: 50%;
       text-align: center; }
+  .section.product-details-section {
+    background-color: #e0e0e0; }
+    .section.product-details-section h1 {
+      color: #4f4f4f;
+      font-size: 28px;
+      text-transform: uppercase;
+      margin-top: 20px; }
   .section.parallax {
     position: relative;
     padding: 0;

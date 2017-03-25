@@ -10,83 +10,44 @@
 
         <?php get_header(); ?>
 
+        <?php
+            $parent_post_id = wp_get_post_parent_ID(get_the_ID());
+        ?>
+
         <main>
-            <div class="section tiny">
+            <div class="section no-padding white page-nav">
                 <div class="fluid-container">
+                    <p><a href="<?php echo get_permalink($parent_post_id); ?>"><i class="fa fa-arrow-left"></i> <?php echo get_the_title($parent_post_id); ?></a></p>
+                </div>
+            </div>
+            <div class="section micro-padding-top torn-paper product-details-section">
+                <div class="container">
                     <div class="graphic">
-                        <img src="<?php the_field('intro_image'); ?>">
+                        <img src="<?php the_field('product_image', $page->ID); ?>">
                     </div>
                     <div class="description">
-                        <h2><?php the_field('page_heading'); ?></h2>
-                        <p><?php the_field('page_description'); ?></h2>
+                        <h1><?php the_title(); ?></h1>
+                        <p><?php the_field('product_description'); ?></p>
                     </div>
                 </div>
             </div>
-            <div class="section micro torn-paper">
-                <div class="full-container">
-                    <div class="full">
-                        <div class="products-previews-wrapper">
-                            <div class="product">
-                                <img class="thumbnail">
-                                <div class="full-container promo-overlay">
-                                    <div class="graphic">
-                                        <img>
-                                    </div>
-                                    <div class="info">
-                                        <h3>American Royal Beef Rub</h3>
-                                        <p>Something about the best american royal beef rub around.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product">
-                                <img class="thumbnail">
-                                <div class="full-container promo-overlay">
-                                    <div class="graphic">
-                                        <img>
-                                    </div>
-                                    <div class="info">
-                                        <h3>Russian Royal Beef Rub</h3>
-                                        <p>Something about the best american royal beef rub around.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product">
-                                <img class="thumbnail">
-                                <div class="full-container promo-overlay">
-                                    <div class="graphic">
-                                        <img>
-                                    </div>
-                                    <div class="info">
-                                        <h3>African Royal Beef Rub</h3>
-                                        <p>Something about the best american royal beef rub around.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="section white">
+            <div class="section tiny white">
                 <div class="fluid-container">
                     <div class="full">
-                        <h2 class="text-center">Recipes Worth Rubbin'</h2>
+                        <h2 class="text-center">Famous Recipes</h2>
                     </div>
                 </div>
-                <?php include(locate_template('three-page-previews.php', false, false)); ?>
+
+                <?php
+                    $pages = get_posts(array(
+                        'category_name' => 'recipe',
+                        'posts_per_page' => 3
+                    ));
+                    include(locate_template('three-page-previews.php', false, false));
+                ?>
             </div>
-            <div class="section orange">
-                <div class="fluid-container">
-                    <div class="full text-center">
-                        <h2 class="capitalize">The Smokin' Hottest Club Around.</h2>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="full text-center">
-                        <p>Sign up for the Q club to get pro-style tips, tricks and the tastiest recipes on this side of the Mason Dixon. Get ready to walk, talk, grill and smoke like a pitmaster.</p>
-                        <a href="" class="button capitalize">Sign Up Now</a>
-                    </div>
-                </div>
-            </div>
+
+            <?php include(locate_template('store-locator-and-newsletter-signup-section.php', false, false)); ?>
         </main>
 
         <?php get_footer(); ?>

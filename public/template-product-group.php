@@ -43,7 +43,7 @@
                                             <img src="<?php the_field('promo_image', $page->ID); ?>">
                                         </div>
                                         <div class="info">
-                                            <h3><?php echo $page->post_title;  ?></h3>
+                                            <h3><?php echo $page->post_title; ?></h3>
                                             <p>Something about the best american royal beef rub around.</p>
                                         </div>
                                     </div>
