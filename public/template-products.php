@@ -12,26 +12,52 @@
 
         <main>
             <div class="section tiny">
-                <div class="fluid-container">
-                    <?php
-                        $products_page = get_pages(array(
-                            'meta_key' => '_wp_page_template',
-                            'meta_value' => 'template-products.php',
-                        ))[0];
-
-                        $pages = get_children(array('post_parent' => $products_page->ID));
-
-                        foreach($pages as $page) {
-                    ?>
-                        <div class="third">
-                            <a class="product-group-thumbnail" href="<?php echo get_permalink($page->ID); ?>">
-                                <img src="<?php the_field('homepage_product_group_image', $page->ID); ?>">
-                                <h3 class="text-center"><?php echo $page->post_title; ?></h3>
-                            </a>
-                        </div>
-                    <?php } ?>
+                <div class="container">
+                    <div class="full">
+                        <h1><?php the_field('headline'); ?></h1>
+                        <p><?php the_field('description'); ?></p>
+                    </div>
                 </div>
             </div>
+            <?php
+                $products_page = get_pages(array(
+                    'meta_key' => '_wp_page_template',
+                    'meta_value' => 'template-products.php',
+                ))[0];
+
+                $pages = get_children(array('post_parent' => $products_page->ID));
+                $i = 0;
+
+                foreach($pages as $page) {
+            ?>
+                <div class="section tiny product-section" style="background-image: url(<?php the_field('products_page_background_image', $page->ID); ?>);">
+                    <div class="container">
+                        <?php if ($i % 2 == 0) { ?>
+                            <div class="graphic">
+                                <a class="product-group-thumbnail" href="<?php echo get_permalink($page->ID); ?>">
+                                    <img src="<?php the_field('homepage_product_group_image', $page->ID); ?>">
+                                </a>
+                            </div>
+                        <?php }?>
+                        <div class="description">
+                            <h3><?php echo $page->post_title; ?></h3>
+                            <p><?php the_field('products_page_description', $page->ID); ?></>
+                            <p><a href="<?php echo get_permalink($page->ID); ?>" class="fa fa-arrow-right"></a></p>
+                        </div>
+                        <?php if ($i % 2 == 1) { ?>
+                            <div class="graphic">
+                                <a class="product-group-thumbnail" href="<?php echo get_permalink($page->ID); ?>">
+                                    <img src="<?php the_field('homepage_product_group_image', $page->ID); ?>">
+                                </a>
+                            </div>
+                        <?php }?>
+                    </div>
+                </div>
+
+                <?php $i = $i + 1; ?>
+            <?php } ?>
+
+            <?php include(locate_template('store-locator-and-newsletter-signup-section.php', false, false)); ?>
         </main>
 
         <?php get_footer(); ?>
