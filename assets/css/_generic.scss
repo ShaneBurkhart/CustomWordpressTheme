@@ -398,6 +398,14 @@ ul {
     text-align: center;
 }
 
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
 .anchor{
   display: block;
   height: 25px;
@@ -559,10 +567,11 @@ ul {
                             font-size: 14px;
                             color: #cccccc;
                             width: 250px;
-                            padding: 12px 25px;
+                            padding: 12px 25px !important;
                             margin: 0;
                             background-color: #000000;
                             border: none;
+                            line-height: normal;
                         }
                     }
 
@@ -645,9 +654,77 @@ ul {
     }
 }
 
-@media only screen and (max-width : 750px) {
+@media only screen and (max-width : 500px) {
 
-  .small-container, .container{
-    width: 95%;
-  }
+    footer.section {
+        .fluid-container {
+            text-align: center;
+
+            #site-logo {
+                float: none;
+                margin: 0px auto;
+            }
+
+            & > .fifth {
+                display: block;
+                width: 100%;
+                float: none;
+                margin-bottom: 20px;
+            }
+        }
+
+        & > ul.social-buttons-group {
+            top: auto;
+            width: auto;
+            height: 100px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            & > li {
+                float: left;
+                width: 33.3330%;
+                height: 100%;
+                border-top: 1px solid #333333;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 370px) {
+    .gform_wrapper {
+        #gform_3.inline-form {
+            .gform_body {
+                width: 75%;
+                ul.gform_fields {
+                    li.gfield {
+                        div.ginput_container {
+                            input {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 230px) {
+    .gform_wrapper {
+        #gform_3.inline-form {
+            .gform_body {
+                width: 60%;
+                ul.gform_fields {
+                    li.gfield {
+                        div.ginput_container {
+                            input {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
