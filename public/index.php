@@ -8,7 +8,7 @@
 
         <main>
             <div class="section no-padding white image-with-text">
-                <img src="<?php the_field('banner_image') ?>">
+                <img src="<?php the_field('banner_image', get_option('page_for_posts')) ?>">
                 <h2 class="text-center">Blog Posts</h2>
             </div>
                 <?php
