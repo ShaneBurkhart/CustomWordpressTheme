@@ -4,10 +4,12 @@
     <h3><?php echo $page->post_title ?></h3>
     <p><?php the_field('snippet', $page->ID); ?></p>
 
-    <?php if (in_category('recipe', $page->ID)) { ?>
-        <div class="text-center"><a href="" class="button">View Recipe</a></div>
-    <?php } else { ?>
-        <div class="text-center"><a href="" class="button">View Post</a></div>
-    <?php } ?>
+    <div class="text-center"><a href="<?php echo get_permalink($page->ID); ?>" class="button">
+        <?php if (in_category('recipe', $page->ID)) { ?>
+            View Recipe
+        <?php } else { ?>
+            View Post
+        <?php } ?>
+    </a></div>
 </article>
 
