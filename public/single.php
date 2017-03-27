@@ -24,7 +24,7 @@
             <div class="section tiny white">
                 <div class="container">
                     <?php if ($is_recipe) { ?>
-                        <div class="third">
+                        <div class="third blog-side-bar">
                             <h3>Subscribe To Q'Club</h3>
                             <p></p>
                         </div>
@@ -50,7 +50,7 @@
                             <?php the_content(); ?>
                         </div>
                     <?php } else { ?>
-                        <div class="third">
+                        <div class="third blog-side-bar">
                             <h3>Subscribe To Q'Club</h3>
                             <p></p>
                         </div>

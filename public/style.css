@@ -2535,8 +2535,10 @@ ul {
   .products-previews-wrapper .product {
     display: inline-block;
     text-align: center;
-    width: 20%;
-    height: 300px; }
+    width: 200px;
+    height: 250px; }
+    .products-previews-wrapper .product a {
+      display: block; }
     .products-previews-wrapper .product:hover .promo-overlay {
       z-index: 1000; }
     .products-previews-wrapper .product .thumbnail {
@@ -2675,20 +2677,32 @@ ul {
   color: #4f4f4f; }
 
 @media only screen and (max-width: 750px) {
-  .section.parallax > .content {
-    position: relative;
-    padding-top: 75px;
-    height: auto; }
-    .section.parallax > .content .promo {
-      position: absolute;
+  .products-previews-wrapper {
+    border-top: 1px solid #999999; }
+    .products-previews-wrapper:after {
+      display: none; }
+    .products-previews-wrapper .product {
       display: block;
-      width: 100%;
-      margin-top: 15px;
-      float: none; }
-    .section.parallax > .content .jumbotron {
-      display: block;
-      width: 100%;
-      margin-top: 15px; }
+      height: auto;
+      width: auto;
+      padding: 40px 3%;
+      border-bottom: 1px solid #999999; }
+      .products-previews-wrapper .product a {
+        width: 41%;
+        display: inline-block; }
+      .products-previews-wrapper .product .promo-overlay {
+        position: static;
+        display: inline-block;
+        width: 55%;
+        height: auto;
+        background-color: transparent;
+        padding: 20px; }
+        .products-previews-wrapper .product .promo-overlay .info {
+          display: block;
+          width: 100%;
+          padding: 0; }
+        .products-previews-wrapper .product .promo-overlay .graphic {
+          display: none; }
   .product-group-thumbnail {
     margin-bottom: 45px; }
     .product-group-thumbnail img {
@@ -2697,6 +2711,11 @@ ul {
       margin: 0px auto; } }
 
 @media only screen and (max-width: 500px) {
+  .section .container > .blog-side-bar {
+    display: none; }
+  .section .container > .two-thirds.blog-post {
+    width: 100%;
+    display: block; }
   footer.section .fluid-container {
     text-align: center; }
     footer.section .fluid-container #site-logo {
@@ -2954,6 +2973,11 @@ ul {
     left: 0; }
 
 @media only screen and (max-width: 1150px) {
+  .section .half .jumbotron {
+    display: block;
+    width: 100%; }
+    .section .half .jumbotron p {
+      width: 100 !important; }
   .section.image-with-two-popups .half {
     display: block;
     width: 100%;
@@ -2974,6 +2998,9 @@ ul {
     width: 95%; } }
 
 @media only screen and (max-width: 750px) {
+  .section.torn-paper-break:after {
+    display: none;
+    content: ''; }
   .section > .small-container {
     width: 95%; }
   .section .fluid-container > .third {
@@ -3005,11 +3032,19 @@ ul {
       width: 100%;
       margin-top: 15px; } }
 
-@media only screen and (max-width: 400px) {
-  .section.product-section .container .graphic, .section.product-section .container .description {
+@media only screen and (max-width: 500px) {
+  .section .fluid-container .half, .section .full-container .half, .section.product-section .fluid-container .half, .section.product-section .full-container .half {
     display: block;
     width: 100%; }
-  .section.product-section .container .graphic {
+    .section .fluid-container .half .jumbotron, .section .full-container .half .jumbotron, .section.product-section .fluid-container .half .jumbotron, .section.product-section .full-container .half .jumbotron {
+      margin-top: 30px;
+      padding: 0px 3%; }
+    .section .fluid-container .half .bg, .section .full-container .half .bg, .section.product-section .fluid-container .half .bg, .section.product-section .full-container .half .bg {
+      padding: 0px 40px; }
+  .section .container .graphic, .section .container .description, .section .fluid-container .graphic, .section .fluid-container .description, .section.product-section .container .graphic, .section.product-section .container .description, .section.product-section .fluid-container .graphic, .section.product-section .fluid-container .description {
+    display: block;
+    width: 100%; }
+  .section .container .graphic, .section .fluid-container .graphic, .section.product-section .container .graphic, .section.product-section .fluid-container .graphic {
     float: left; } }
 
 @media only screen and (max-width: 500px) {

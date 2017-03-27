@@ -458,8 +458,12 @@ ul {
     .product {
         display: inline-block;
         text-align: center;
-        width: 20%;
-        height: 300px;
+        width: 200px;
+        height: 250px;
+
+        a {
+            display: block;
+        }
 
         &:hover {
             .promo-overlay {
@@ -655,24 +659,42 @@ ul {
 }
 
 @media only screen and (max-width : 750px) {
-    .section.parallax {
-        & > .content {
-            position: relative;
-            padding-top: 75px;
-            height: auto;
+    .products-previews-wrapper {
+        border-top: 1px solid #999999;
 
-            .promo {
-                position: absolute;
-                display: block;
-                width: 100%;
-                margin-top: 15px;
-                float: none;
+        &:after {
+            display: none;
+        }
+
+        .product {
+            display: block;
+            height: auto;
+            width: auto;
+            padding: 40px 3%;
+            border-bottom: 1px solid #999999;
+
+            a {
+                width: 41%;
+                display: inline-block;
             }
 
-            .jumbotron {
-                display: block;
-                width: 100%;
-                margin-top: 15px;
+            .promo-overlay {
+                position: static;
+                display: inline-block;
+                width: 55%;
+                height: auto;
+                background-color: transparent;
+                padding: 20px;
+
+                .info {
+                    display: block;
+                    width: 100%;
+                    padding: 0;
+                }
+
+                .graphic {
+                    display: none;
+                }
             }
         }
     }
@@ -689,6 +711,14 @@ ul {
 }
 
 @media only screen and (max-width : 500px) {
+    .section .container > .blog-side-bar {
+        display: none;
+    }
+
+    .section .container > .two-thirds.blog-post {
+        width: 100%;
+        display: block;
+    }
 
     footer.section {
         .fluid-container {
