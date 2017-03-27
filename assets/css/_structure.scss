@@ -291,6 +291,25 @@
             }
         }
 
+        & > .two-thirds.light-gray {
+            background-color: #f6f6f6;
+            width: 69.2%;
+            margin-right: 0;
+            height: 100%;
+        }
+
+        & > .orange {
+            color: #ffffff;
+            background-color: #ffa800;
+            height: 100%;
+
+            h2 {
+                font-size: 30px;
+                color: #ffffff;
+                text-transform: uppercase;
+            }
+        }
+
         & > .full {
             width: 100%;
         }
@@ -328,6 +347,12 @@
         position: absolute;
         top: 0;
         left: 0;
+    }
+}
+
+.store-locator-header {
+    .full-container {
+        height: 300px;
     }
 }
 
@@ -382,6 +407,19 @@
 }
 
 @media only screen and (max-width : 750px) {
+    .section.store-locator-header {
+        height: auto;
+
+        .full-container {
+            height: auto;
+
+            & > .third, & > .two-thirds {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+
     .section {
         &.torn-paper-break:after {
             display: none;

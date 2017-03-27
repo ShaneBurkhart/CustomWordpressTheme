@@ -2676,6 +2676,30 @@ ul {
 .page-nav a {
   color: #4f4f4f; }
 
+#store-locator-map .bh-sl-map-container {
+  width: 100%;
+  height: 500px;
+  text-align: right; }
+  #store-locator-map .bh-sl-map-container .bh-sl-loc-list {
+    display: inline-block;
+    width: 35%;
+    height: 100%;
+    overflow: scroll; }
+    #store-locator-map .bh-sl-map-container .bh-sl-loc-list ul.list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-align: left; }
+      #store-locator-map .bh-sl-map-container .bh-sl-loc-list ul.list li {
+        width: 100%;
+        padding: 20px; }
+        #store-locator-map .bh-sl-map-container .bh-sl-loc-list ul.list li .list-label, #store-locator-map .bh-sl-map-container .bh-sl-loc-list ul.list li .loc-web, #store-locator-map .bh-sl-map-container .bh-sl-loc-list ul.list li .loc-phone, #store-locator-map .bh-sl-map-container .bh-sl-loc-list ul.list li .loc-dist, #store-locator-map .bh-sl-map-container .bh-sl-loc-list ul.list li .loc-directions {
+          display: none; }
+  #store-locator-map .bh-sl-map-container .bh-sl-map {
+    display: inline-block;
+    width: 64%;
+    height: 100%; }
+
 @media only screen and (max-width: 750px) {
   .products-previews-wrapper {
     border-top: 1px solid #999999; }
@@ -2950,6 +2974,19 @@ ul {
       margin-right: 4%; }
       .section .fluid-container > *:last-child, .section .full-container > *:last-child, .section .large-container > *:last-child, .section .container > *:last-child, .section .small-container > *:last-child {
         margin-right: 0px; }
+    .section .fluid-container > .two-thirds.light-gray, .section .full-container > .two-thirds.light-gray, .section .large-container > .two-thirds.light-gray, .section .container > .two-thirds.light-gray, .section .small-container > .two-thirds.light-gray {
+      background-color: #f6f6f6;
+      width: 69.2%;
+      margin-right: 0;
+      height: 100%; }
+    .section .fluid-container > .orange, .section .full-container > .orange, .section .large-container > .orange, .section .container > .orange, .section .small-container > .orange {
+      color: #ffffff;
+      background-color: #ffa800;
+      height: 100%; }
+      .section .fluid-container > .orange h2, .section .full-container > .orange h2, .section .large-container > .orange h2, .section .container > .orange h2, .section .small-container > .orange h2 {
+        font-size: 30px;
+        color: #ffffff;
+        text-transform: uppercase; }
     .section .fluid-container > .full, .section .full-container > .full, .section .large-container > .full, .section .container > .full, .section .small-container > .full {
       width: 100%; }
     .section .fluid-container > .half, .section .full-container > .half, .section .large-container > .half, .section .container > .half, .section .small-container > .half {
@@ -2971,6 +3008,9 @@ ul {
     position: absolute;
     top: 0;
     left: 0; }
+
+.store-locator-header .full-container {
+  height: 300px; }
 
 @media only screen and (max-width: 1150px) {
   .section .half .jumbotron {
@@ -2998,6 +3038,13 @@ ul {
     width: 95%; } }
 
 @media only screen and (max-width: 750px) {
+  .section.store-locator-header {
+    height: auto; }
+    .section.store-locator-header .full-container {
+      height: auto; }
+      .section.store-locator-header .full-container > .third, .section.store-locator-header .full-container > .two-thirds {
+        display: block;
+        width: 100%; }
   .section.torn-paper-break:after {
     display: none;
     content: ''; }

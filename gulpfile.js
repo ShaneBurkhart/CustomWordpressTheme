@@ -12,7 +12,7 @@ var image = require('gulp-image');
 
 var SITE_OUTPUT_DIR = 'public/';
 
-gulp.task('build', ['pug', 'sass', 'images', 'favicons', 'fonts']);
+gulp.task('build', ['pug', 'sass', 'images', 'favicons', 'fonts', 'js']);
 
 gulp.task('clean', function () {
   gulp.src('./public').pipe(clean({ force: true }));
@@ -37,6 +37,11 @@ gulp.task('sass', function () {
 gulp.task('misc', function () {
   return gulp.src(['assets/misc/**/*'])
     .pipe(gulp.dest('public'));
+});
+
+gulp.task('js', function () {
+  return gulp.src(['assets/js/**/*'])
+    .pipe(gulp.dest('public/assets/js'));
 });
 
 gulp.task('fonts', function () {
