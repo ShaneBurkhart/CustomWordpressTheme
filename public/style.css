@@ -2674,6 +2674,28 @@ ul {
 .page-nav a {
   color: #4f4f4f; }
 
+@media only screen and (max-width: 750px) {
+  .section.parallax > .content {
+    position: relative;
+    padding-top: 75px;
+    height: auto; }
+    .section.parallax > .content .promo {
+      position: absolute;
+      display: block;
+      width: 100%;
+      margin-top: 15px;
+      float: none; }
+    .section.parallax > .content .jumbotron {
+      display: block;
+      width: 100%;
+      margin-top: 15px; }
+  .product-group-thumbnail {
+    margin-bottom: 45px; }
+    .product-group-thumbnail img {
+      display: block;
+      width: 80%;
+      margin: 0px auto; } }
+
 @media only screen and (max-width: 500px) {
   footer.section .fluid-container {
     text-align: center; }
@@ -2960,7 +2982,28 @@ ul {
     .section .fluid-container > .third .thumbnail-page-preview {
       margin-bottom: 25px; }
       .section .fluid-container > .third .thumbnail-page-preview p {
-        height: auto; } }
+        height: auto; }
+  .section.parallax > .float {
+    height: 100%; }
+  .section.parallax > .content {
+    position: relative;
+    padding: 200px 0px 300px;
+    height: auto; }
+    .section.parallax > .content .promo {
+      background-color: #fcb210;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0px;
+      padding: 20px 3% 60px;
+      display: block;
+      width: 100%;
+      margin-top: 15px;
+      float: none; }
+    .section.parallax > .content .jumbotron {
+      display: block;
+      width: 100%;
+      margin-top: 15px; } }
 
 @media only screen and (max-width: 400px) {
   .section.product-section .container .graphic, .section.product-section .container .description {
