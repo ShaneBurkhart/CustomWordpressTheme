@@ -14,12 +14,12 @@
             <div class="section no-padding white store-locator-header">
                 <div class="full-container">
                     <div class="two-thirds light-gray" style="padding: 60px 20px;">
-                        <h1>Save $2 On Your Next Purchase</h1>
-                        <p>Find Twist'd Q products near you.</p>
+                        <h1><?php the_field('heading'); ?></h1>
+                        <p><?php the_field('description'); ?></p>
                     </div>
                     <div class="third orange text-center" style="padding: 60px 20px;">
-                        <h2>Save $2 On Your Next Purchase</h2>
-                        <a class="button">Print Coupon</a>
+                        <h2><?php the_field('promo_heading'); ?></h2>
+                        <a class="button" href="<?php the_field('promo_page'); ?>"><?php the_field('promo_button_text'); ?></a>
                     </div>
                 </div>
             </div>
