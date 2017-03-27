@@ -2740,37 +2740,50 @@ ul {
     right: 0;
     margin: 0px;
     text-align: center; }
-  .section.image-with-glow:before {
-    background-color: #ffffff;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    height: 5px;
-    border-radius: 50%;
-    margin-top: -3px;
-    box-shadow: 0px 0px 35px 75px white;
-    content: ''; }
-  .section.image-with-glow > .content {
-    position: absolute;
-    text-align: center;
-    width: 80%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1005; }
-    .section.image-with-glow > .content h1, .section.image-with-glow > .content h2, .section.image-with-glow > .content h3, .section.image-with-glow > .content h4, .section.image-with-glow > .content p {
-      margin-bottom: 5px; }
-  .section.image-with-popup > .popup {
-    color: #ffffff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 650px;
-    background-color: rgba(41, 41, 41, 0.9);
-    padding: 40px;
-    text-align: center;
-    transform: translate(-50%, -50%); }
+  .section.image-with-glow {
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 400px; }
+    .section.image-with-glow:before {
+      background-color: #ffffff;
+      position: absolute;
+      top: 50%;
+      width: 80%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 75px;
+      border-radius: 50%;
+      margin-top: -3px;
+      box-shadow: 0px 0px 35px 75px white;
+      content: ''; }
+    .section.image-with-glow > .content {
+      position: absolute;
+      text-align: center;
+      width: 80%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1005; }
+      .section.image-with-glow > .content h1, .section.image-with-glow > .content h2, .section.image-with-glow > .content h3, .section.image-with-glow > .content h4, .section.image-with-glow > .content p {
+        margin-bottom: 5px; }
+  .section.image-with-popup {
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+    .section.image-with-popup .popup {
+      color: #ffffff;
+      width: 650px;
+      background-color: rgba(41, 41, 41, 0.9);
+      padding: 40px;
+      text-align: center;
+      margin: 0px auto; }
   .section.image-with-two-popups {
     background-repeat: no-repeat;
     background-position: center center;
@@ -2918,6 +2931,37 @@ ul {
     top: 0;
     left: 0; }
 
+@media only screen and (max-width: 1150px) {
+  .section.image-with-two-popups .half {
+    display: block;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 20px;
+    text-align: center; }
+    .section.image-with-two-popups .half:last-child {
+      margin-bottom: 0; }
+    .section.image-with-two-popups .half .popup {
+      margin: 0px auto; }
+  .section.image-with-popup .popup {
+    width: 95%; }
+  .thumbnail-page-preview p {
+    height: 200px; } }
+
+@media only screen and (max-width: 900px) {
+  .section > .container {
+    width: 95%; } }
+
+@media only screen and (max-width: 750px) {
+  .section > .small-container {
+    width: 95%; }
+  .section .fluid-container > .third {
+    width: 100%;
+    display: block; }
+    .section .fluid-container > .third .thumbnail-page-preview {
+      margin-bottom: 25px; }
+      .section .fluid-container > .third .thumbnail-page-preview p {
+        height: auto; } }
+
 @media only screen and (max-width: 400px) {
   .section.product-section .container .graphic, .section.product-section .container .description {
     display: block;
@@ -2930,32 +2974,10 @@ ul {
     overflow: auto;
     height: auto; }
   footer.section {
-    padding-bottom: 120px !important; } }
-
-@media only screen and (max-width: 500px) {
-  .section.image-with-two-popups .popup {
+    padding-bottom: 120px !important; }
+  .section.image-with-two-popups .popup, .section.image-with-popup .popup {
     width: 100%;
     padding: 40px 20px; } }
-
-@media only screen and (max-width: 900px) {
-  .section > .container {
-    width: 95%; } }
-
-@media only screen and (max-width: 750px) {
-  .section > .small-container {
-    width: 95%; } }
-
-@media only screen and (max-width: 1150px) {
-  .section.image-with-two-popups .half {
-    display: block;
-    width: 100%;
-    margin: 0;
-    margin-bottom: 20px;
-    text-align: center; }
-    .section.image-with-two-popups .half:last-child {
-      margin-bottom: 0; }
-    .section.image-with-two-popups .half .popup {
-      margin: 0px auto; } }
 
 header {
   position: fixed !important;
