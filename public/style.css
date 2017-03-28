@@ -2535,10 +2535,28 @@ ul {
   .products-previews-wrapper .product {
     display: inline-block;
     text-align: center;
-    width: 200px;
-    height: 250px; }
+    width: 200px; }
     .products-previews-wrapper .product a {
       display: block; }
+    .products-previews-wrapper .product:hover > a {
+      position: relative; }
+      .products-previews-wrapper .product:hover > a:after {
+        content: ' ';
+        display: block;
+        position: absolute;
+        bottom: -95px;
+        left: 0;
+        right: 0;
+        width: 200px;
+        height: 95px;
+        z-index: 10000;
+        background-image: url(assets/images/arrow-shadow.png);
+        background-repeat: repeat-x;
+        background-position: bottom left;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain; }
     .products-previews-wrapper .product:hover .promo-overlay {
       z-index: 1000; }
     .products-previews-wrapper .product .thumbnail {
