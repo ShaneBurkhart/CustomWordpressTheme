@@ -23,7 +23,7 @@
             <div class="section micro-padding-top torn-paper product-details-section">
                 <div class="container">
                     <div class="graphic">
-                        <img src="<?php the_field('product_image', $page->ID); ?>">
+                        <img src="<?php the_field('product_image', get_the_ID()); ?>">
                     </div>
                     <div class="description">
                         <h1><?php the_title(); ?></h1>
@@ -43,7 +43,7 @@
                         'category_name' => 'recipe',
                         'posts_per_page' => 3,
                         'meta_key' => 'related_products',
-                        'meta_value_num' => $page->ID,
+                        'meta_value_num' => get_the_ID(),
                     ));
                     include(locate_template('three-page-previews.php', false, false));
                 ?>
