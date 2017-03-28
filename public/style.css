@@ -3019,6 +3019,14 @@ ul {
       width: 55%; }
     .section .fluid-container > .graphic, .section .full-container > .graphic, .section .large-container > .graphic, .section .container > .graphic, .section .small-container > .graphic {
       width: 41%; }
+      .section .fluid-container > .graphic.background, .section .full-container > .graphic.background, .section .large-container > .graphic.background, .section .container > .graphic.background, .section .small-container > .graphic.background {
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover; }
 
 .group-wrapper {
   position: relative; }

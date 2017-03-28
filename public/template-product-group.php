@@ -42,8 +42,7 @@
                                         <img class="thumbnail" src="<?php the_field('product_image', $page->ID); ?>">
                                     </a>
                                     <div class="full-container promo-overlay">
-                                        <div class="graphic">
-                                            <img src="<?php the_field('promo_image', $page->ID); ?>">
+                                        <div class="graphic background" style="background-image: url(<?php the_field('promo_image', $page->ID); ?>);">
                                         </div>
                                         <div class="info">
                                             <h3><?php echo $page->post_title; ?></h3>
