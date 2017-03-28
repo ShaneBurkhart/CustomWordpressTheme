@@ -41,7 +41,9 @@
                 <?php
                     $pages = get_posts(array(
                         'category_name' => 'recipe',
-                        'posts_per_page' => 3
+                        'posts_per_page' => 3,
+                        'meta_key' => 'related_products',
+                        'meta_value_num' => $page->ID,
                     ));
                     include(locate_template('three-page-previews.php', false, false));
                 ?>
