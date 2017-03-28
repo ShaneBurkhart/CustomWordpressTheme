@@ -8,5 +8,5 @@ function product_page_relationship($args, $field, $post) {
     return $args;
 }
 
-add_filter('acf/fields/post_object/query/name=related_products', 'product_page_relationship', 10, 3);
+add_filter('acf/fields/relationship/query/name=related_products', 'product_page_relationship', 10, 3);
 ?>
