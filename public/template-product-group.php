@@ -47,6 +47,7 @@
                                         <div class="info">
                                             <h3><?php echo $page->post_title; ?></h3>
                                             <p><?php the_field('products_group_page_description', $page->ID); ?></p>
+                                            <p><a href="<?php echo get_permalink($page->ID); ?>" class="button circle-arrow fa fa-arrow-right"></a></p>
                                         </div>
                                     </div>
                                 </div>

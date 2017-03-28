@@ -2461,6 +2461,17 @@ ul {
     background-color: #f33660; }
     .button.pink:hover, button.pink:hover {
       background-color: #de4a6a; }
+  .button.circle-arrow, button.circle-arrow {
+    color: #000000;
+    font-size: 20px;
+    border: 1px solid #000000;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    margin: 0;
+    line-height: 50px;
+    border-radius: 50%;
+    text-align: center; }
 
 .jumbotron {
   width: 550px;
@@ -2908,15 +2919,6 @@ ul {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover; }
-    .section.product-section .description a.fa {
-      color: #000000;
-      font-size: 20px;
-      border: 1px solid #000000;
-      width: 50px;
-      height: 50px;
-      line-height: 50px;
-      border-radius: 50%;
-      text-align: center; }
   .section.product-details-section {
     background-color: #e0e0e0; }
     .section.product-details-section h1 {

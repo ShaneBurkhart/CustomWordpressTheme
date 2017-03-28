@@ -42,7 +42,7 @@
                         <div class="description">
                             <h3><?php echo $page->post_title; ?></h3>
                             <p><?php the_field('products_page_description', $page->ID); ?></>
-                            <p><a href="<?php echo get_permalink($page->ID); ?>" class="fa fa-arrow-right"></a></p>
+                            <p><a href="<?php echo get_permalink($page->ID); ?>" class="button circle-arrow fa fa-arrow-right"></a></p>
                         </div>
                         <?php if ($i % 2 == 1) { ?>
                             <div class="graphic">
