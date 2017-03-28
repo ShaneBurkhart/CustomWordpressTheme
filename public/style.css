@@ -2729,6 +2729,8 @@ ul {
       width: auto;
       padding: 40px 3%;
       border-bottom: 1px solid #999999; }
+      .products-previews-wrapper .product:hover a:after {
+        content: none; }
       .products-previews-wrapper .product a {
         width: 41%;
         display: inline-block; }

@@ -732,6 +732,10 @@ ul {
             padding: 40px 3%;
             border-bottom: 1px solid #999999;
 
+            &:hover a:after {
+                content: none;
+            }
+
             a {
                 width: 41%;
                 display: inline-block;
