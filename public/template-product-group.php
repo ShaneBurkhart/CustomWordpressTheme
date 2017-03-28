@@ -32,7 +32,10 @@
                                     'post_type' => 'page'
                                 ));
 
+                                $page_children_ids = array();
+
                                 foreach($pages as $page) {
+                                    $page_children_ids[] = $page->ID;
                             ?>
                                 <div class="product">
                                     <a href="<?php echo get_permalink($page->ID); ?>">
@@ -61,9 +64,21 @@
                 </div>
 
                 <?php
+                    $queries = array();
+                    $queries['relation'] = 'OR';
+
+                    foreach($page_children_ids as $id) {
+                        $queries[] = array(
+                            'key' => 'related_products',
+                            'value' => '"'.$id.'"',
+                            'compare' => 'LIKE',
+                        );
+                    }
+
                     $pages = get_posts(array(
                         'category_name' => 'recipe',
-                        'posts_per_page' => 3
+                        'posts_per_page' => 3,
+                        'meta_query' => $queries,
                     ));
                     include(locate_template('three-page-previews.php', false, false));
                 ?>
