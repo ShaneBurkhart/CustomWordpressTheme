@@ -16,13 +16,42 @@
                 <h2 class="text-center">Recipes</h2>
             </div>
                 <?php
+                    $keyword = $_GET['keyword'];
+                    $productID = $_GET['product'];
+                    $meat = $_GET['meat'];
+                    $heat = $_GET['heat'];
+
+                    $query = array('relation' => 'AND');
+                    if (strlen($product)) {
+                        $query[] = array(
+                            'key' => 'related_products',
+                            'value' => '"'.$productID.'"',
+                            'compare' => 'LIKE',
+                        );
+                    }
+                    if (strlen($meat)) {
+                        $query[] = array(
+                            'key' => 'recipe_meat',
+                            'value' => '"'.$meat.'"',
+                            'compare' => 'LIKE',
+                        );
+                    }
+                    if (strlen($heat)) {
+                        $query[] = array(
+                            'key' => 'recipe_heat',
+                            'value' => $heat,
+                        );
+                    }
+
                     $page_num = get_query_var('paged') ? get_query_var('paged') : 1;
                     $offset = 9 * ($page_num - 1);
-                    $all_pages = get_posts(array(
+                    $all_pages = new WP_Query(array(
                         'category_name' => 'recipe',
-                        'posts_per_page' => -1
+                        'posts_per_page' => -1,
+                        's' => $keyword,
+                        'meta_query' => $query,
                     ));
-                    $recipes_on_page = array_slice($all_pages, $offset, 9);
+                    $recipes_on_page = array_slice($all_pages->posts, $offset, 9);
                 ?>
             <div class="section white micro">
                 <?php
