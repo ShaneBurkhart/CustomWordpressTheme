@@ -2982,10 +2982,10 @@ ul {
         background-image: url(assets/images/yellow-hero-gradient.png);
         background-position: bottom right;
         background-repeat: no-repeat;
-        -webkit-background-size: auto cover;
-        -moz-background-size: auto cover;
-        -o-background-size: auto cover;
-        background-size: auto cover; }
+        -webkit-background-size: auto 100%;
+        -moz-background-size: auto 100%;
+        -o-background-size: auto 100%;
+        background-size: auto 100%; }
   .section.torn-paper:after {
     display: block;
     content: ' ';
