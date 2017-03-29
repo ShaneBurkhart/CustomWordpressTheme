@@ -68,10 +68,45 @@
             </div>
             <div class="section large white micro-padding-top">
                 <?php
-                    $pages = get_posts(array(
-                        'category_name' => 'uncategorized',
-                        'posts_per_page' => 3
+                    $recipe = new WP_Query(array(
+                        'category_name' => 'recipe',
+                        'posts_per_page' => 1
                     ));
+                    $blogPosts = new WP_Query(array(
+                        'category_name' => 'uncategorized',
+                        // Get 2 posts since we need an extra if no video.
+                        'posts_per_page' => 2,
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'post_format',
+                                'field' => 'slug',
+                                'terms' => array('post-format-video'),
+                                'operator' => 'NOT IN',
+                            )
+                        ),
+                    ));
+                    $videoPosts = new WP_Query(array(
+                        'category_name' => 'uncategorized',
+                        'posts_per_page' => 1,
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'post_format',
+                                'field' => 'slug',
+                                'terms' => array('post-format-video'),
+                                'operator' => 'IN',
+                            )
+                        ),
+                    ));
+
+
+                    $pages = $recipe->posts;
+                    if (sizeof($videoPosts->posts) < 1) {
+                        $pages = array_merge($pages, $blogPosts->posts);
+                    } else {
+                        echo "second";
+                        $pages = array_merge($pages, array($blogPosts->posts[0]), $videoPosts->posts);
+                    }
+
                     include(locate_template('three-page-previews.php', false, false));
                 ?>
             </div>

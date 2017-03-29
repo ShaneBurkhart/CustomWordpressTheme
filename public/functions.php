@@ -9,4 +9,6 @@ function product_page_relationship($args, $field, $post) {
 }
 
 add_filter('acf/fields/relationship/query/name=related_products', 'product_page_relationship', 10, 3);
+
+add_theme_support('post-formats', array('video'));
 ?>
