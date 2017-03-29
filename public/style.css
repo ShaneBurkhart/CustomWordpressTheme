@@ -2776,8 +2776,22 @@ ul {
     width: 64%;
     height: 100%; }
 
+#recipe-container ul.recipe-meta {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden; }
+  #recipe-container ul.recipe-meta li {
+    display: inline-block;
+    padding: 7px 15px;
+    border: 2px solid #fec701;
+    border-right: none;
+    float: left; }
+    #recipe-container ul.recipe-meta li:last-child {
+      border-right: 2px solid #fec701; }
+
 #recipe-container .full-container {
-  height: 700px;
+  height: 600px;
   position: relative; }
   #recipe-container .full-container .graphic {
     width: 50%; }

@@ -788,8 +788,27 @@ ul {
 }
 
 #recipe-container {
+    ul.recipe-meta {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+
+        li {
+            display: inline-block;
+            padding: 7px 15px;
+            border: 2px solid #fec701;
+            border-right: none;
+            float: left;
+
+            &:last-child {
+                border-right: 2px solid #fec701;
+            }
+        }
+    }
+
     .full-container {
-        height: 700px;
+        height: 600px;
         position: relative;
 
         .graphic {

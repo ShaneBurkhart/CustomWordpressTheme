@@ -42,18 +42,30 @@
                         </div>
                         <div class="description">
                             <h1><?php echo get_the_title(); ?></h1>
-                            <div class="third">
-                                <p class="bold">Serving Size</p>
-                                <p><?php the_field('recipe_serving_size'); ?></p>
-                            </div>
-                            <div class="third">
-                                <p class="bold">Prep Time</p>
-                                <p><?php the_field('recipe_prep_time'); ?></p>
-                            </div>
-                            <div class="third">
-                                <p class="bold">Cook Time</p>
-                                <p><?php the_field('recipe_cook_time'); ?></p>
-                            </div>
+                            <ul class="recipe-meta">
+                                <li>
+                                    <span class="bold">Difficulty</span>
+                                    <?php if (get_field('recipe_difficulty') == 1) { ?>
+                                        <i class="fa fa-circle"></i>
+                                        <i class="fa fa-circle-o"></i>
+                                        <i class="fa fa-circle-o"></i>
+                                    <?php } else if (get_field('recipe_difficulty') == 2) { ?>
+                                        <i class="fa fa-circle"></i>
+                                        <i class="fa fa-circle"></i>
+                                        <i class="fa fa-circle-o"></i>
+                                    <?php } else { ?>
+                                        <i class="fa fa-circle"></i>
+                                        <i class="fa fa-circle"></i>
+                                        <i class="fa fa-circle"></i>
+                                    <?php } ?>
+                                </li>
+                                <?php if (get_field('recipe_serving_size')) { ?>
+                                    <li>
+                                        <span class="bold">Serving Size</span>
+                                        <?php the_field('recipe_serving_size'); ?>
+                                    </li>
+                                <?php } ?>
+                            </ul>
                             <hr>
                             <?php the_content(); ?>
                         </div>
