@@ -19,48 +19,57 @@
                     <?php } ?>
                 </div>
             </div>
-            <div class="section no-padding white post-image-section" style="background-image: url(<?php the_field('banner_image') ?>);">
-            </div>
-            <div class="section tiny white">
-                <div class="container">
-                    <?php if ($is_recipe) { ?>
-                        <div class="third blog-side-bar">
-                            <h3>Subscribe To Q'Club</h3>
-                            <p></p>
-                        </div>
-                        <div class="two-thirds blog-post">
-                            <h1><?php echo get_the_title(); ?></h1>
-                            <p class="recipe-snippet"><?php the_field('recipe_snippet'); ?></p>
-                            <div class="recipe-meta">
-                                <div class="full-container">
-                                    <div class="third">
-                                        <p class="bold">Serving Size</p>
-                                        <p><?php the_field('recipe_serving_size'); ?></p>
-                                    </div>
-                                    <div class="third">
-                                        <p class="bold">Prep Time</p>
-                                        <p><?php the_field('recipe_prep_time'); ?></p>
-                                    </div>
-                                    <div class="third">
-                                        <p class="bold">Cook Time</p>
-                                        <p><?php the_field('recipe_cook_time'); ?></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <?php the_content(); ?>
-                        </div>
-                    <?php } else { ?>
-                        <div class="third blog-side-bar">
-                            <h3>Subscribe To Q'Club</h3>
-                            <p></p>
-                        </div>
-                        <div class="two-thirds blog-post">
-                            <h1><?php echo get_the_title(); ?></h1>
-                            <?php the_content(); ?>
-                        </div>
-                    <?php } ?>
+
+            <?php if (!$is_recipe) { ?>
+                <div class="section no-padding white post-image-section" style="background-image: url(<?php the_field('banner_image') ?>);">
                 </div>
-            </div>
+                <div class="section tiny white">
+                    <div class="container">
+                            <div class="third blog-side-bar">
+                                <h3>Subscribe To Q'Club</h3>
+                                <p></p>
+                            </div>
+                            <div class="two-thirds blog-post">
+                                <h1><?php echo get_the_title(); ?></h1>
+                                <?php the_content(); ?>
+                            </div>
+                    </div>
+                </div>
+            <?php } else { ?>
+                <div id="recipe-container" class="section no-padding white">
+                    <div class="full-container">
+                    <div class="graphic background" style="background-image: url(<?php the_field('banner_image'); ?>);">
+                        </div>
+                        <div class="description">
+                            <h1><?php echo get_the_title(); ?></h1>
+                            <div class="third">
+                                <p class="bold">Serving Size</p>
+                                <p><?php the_field('recipe_serving_size'); ?></p>
+                            </div>
+                            <div class="third">
+                                <p class="bold">Prep Time</p>
+                                <p><?php the_field('recipe_prep_time'); ?></p>
+                            </div>
+                            <div class="third">
+                                <p class="bold">Cook Time</p>
+                                <p><?php the_field('recipe_cook_time'); ?></p>
+                            </div>
+                            <hr>
+                            <?php the_content(); ?>
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
+
+            <?php if ($is_recipe) { ?>
+                <div class="section white">
+                    <div class="micro-container">
+                        <div class="full">
+                            <h2 class="capitalize text-center">You'll Dig These Recipes, Too.</h2>
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
             <div class="section white">
                 <?php
                     $category = 'uncategorized';

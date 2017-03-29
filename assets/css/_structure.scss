@@ -283,7 +283,12 @@
         width: 700px;
     }
 
-    .fluid-container, .full-container, .large-container, .container, .small-container {
+    .micro-container {
+        width: 500px;
+        margin: 0px auto;
+    }
+
+    .micro-container, .fluid-container, .full-container, .large-container, .container, .small-container {
         &:after {
             content: '';
             display: table;
@@ -496,6 +501,11 @@
 
 @media only screen and (max-width : 500px) {
     .section, .section.product-section {
+        .micro-container {
+            width: 94%;
+            margin: 0px 3%;
+        }
+
         .fluid-container, .full-container {
             .half {
                 display: block;

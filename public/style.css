@@ -2759,6 +2759,30 @@ ul {
     width: 64%;
     height: 100%; }
 
+#recipe-container .full-container {
+  height: 700px;
+  position: relative; }
+  #recipe-container .full-container .graphic {
+    width: 50%; }
+  #recipe-container .full-container .description {
+    position: absolute;
+    overflow: scroll;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 60%;
+    padding: 50px 3% 30px 8%;
+    background-image: url(assets/images/cut-out-paper-background.png);
+    background-repeat: no-repeat;
+    background-position: center left;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+    #recipe-container .full-container .description h1 {
+      color: #4f4f4f;
+      font-size: 24px; }
+
 @media only screen and (max-width: 750px) {
   .products-previews-wrapper {
     border-top: 1px solid #999999; }
@@ -3032,45 +3056,48 @@ ul {
     width: 850px; }
   .section .small-container {
     width: 700px; }
-  .section .fluid-container:after, .section .full-container:after, .section .large-container:after, .section .container:after, .section .small-container:after {
+  .section .micro-container {
+    width: 500px;
+    margin: 0px auto; }
+  .section .micro-container:after, .section .fluid-container:after, .section .full-container:after, .section .large-container:after, .section .container:after, .section .small-container:after {
     content: '';
     display: table;
     clear: both; }
-  .section .fluid-container > *, .section .full-container > *, .section .large-container > *, .section .container > *, .section .small-container > * {
+  .section .micro-container > *, .section .fluid-container > *, .section .full-container > *, .section .large-container > *, .section .container > *, .section .small-container > * {
     vertical-align: top;
     display: inline-block;
     float: left;
     margin-right: 4%; }
-    .section .fluid-container > *:last-child, .section .full-container > *:last-child, .section .large-container > *:last-child, .section .container > *:last-child, .section .small-container > *:last-child {
+    .section .micro-container > *:last-child, .section .fluid-container > *:last-child, .section .full-container > *:last-child, .section .large-container > *:last-child, .section .container > *:last-child, .section .small-container > *:last-child {
       margin-right: 0px; }
-  .section .fluid-container > .two-thirds.light-gray, .section .full-container > .two-thirds.light-gray, .section .large-container > .two-thirds.light-gray, .section .container > .two-thirds.light-gray, .section .small-container > .two-thirds.light-gray {
+  .section .micro-container > .two-thirds.light-gray, .section .fluid-container > .two-thirds.light-gray, .section .full-container > .two-thirds.light-gray, .section .large-container > .two-thirds.light-gray, .section .container > .two-thirds.light-gray, .section .small-container > .two-thirds.light-gray {
     background-color: #f6f6f6;
     width: 69.2%;
     margin-right: 0;
     height: 100%; }
-  .section .fluid-container > .orange, .section .full-container > .orange, .section .large-container > .orange, .section .container > .orange, .section .small-container > .orange {
+  .section .micro-container > .orange, .section .fluid-container > .orange, .section .full-container > .orange, .section .large-container > .orange, .section .container > .orange, .section .small-container > .orange {
     color: #ffffff;
     background-color: #ffa800;
     height: 100%; }
-    .section .fluid-container > .orange h2, .section .full-container > .orange h2, .section .large-container > .orange h2, .section .container > .orange h2, .section .small-container > .orange h2 {
+    .section .micro-container > .orange h2, .section .fluid-container > .orange h2, .section .full-container > .orange h2, .section .large-container > .orange h2, .section .container > .orange h2, .section .small-container > .orange h2 {
       font-size: 30px;
       color: #ffffff;
       text-transform: uppercase; }
-  .section .fluid-container > .full, .section .full-container > .full, .section .large-container > .full, .section .container > .full, .section .small-container > .full {
+  .section .micro-container > .full, .section .fluid-container > .full, .section .full-container > .full, .section .large-container > .full, .section .container > .full, .section .small-container > .full {
     width: 100%; }
-  .section .fluid-container > .half, .section .full-container > .half, .section .large-container > .half, .section .container > .half, .section .small-container > .half {
+  .section .micro-container > .half, .section .fluid-container > .half, .section .full-container > .half, .section .large-container > .half, .section .container > .half, .section .small-container > .half {
     width: 48%; }
-  .section .fluid-container > .two-thirds, .section .full-container > .two-thirds, .section .large-container > .two-thirds, .section .container > .two-thirds, .section .small-container > .two-thirds {
+  .section .micro-container > .two-thirds, .section .fluid-container > .two-thirds, .section .full-container > .two-thirds, .section .large-container > .two-thirds, .section .container > .two-thirds, .section .small-container > .two-thirds {
     width: 65.2%; }
-  .section .fluid-container > .third, .section .full-container > .third, .section .large-container > .third, .section .container > .third, .section .small-container > .third {
+  .section .micro-container > .third, .section .fluid-container > .third, .section .full-container > .third, .section .large-container > .third, .section .container > .third, .section .small-container > .third {
     width: 30.6%; }
-  .section .fluid-container > .fifth, .section .full-container > .fifth, .section .large-container > .fifth, .section .container > .fifth, .section .small-container > .fifth {
+  .section .micro-container > .fifth, .section .fluid-container > .fifth, .section .full-container > .fifth, .section .large-container > .fifth, .section .container > .fifth, .section .small-container > .fifth {
     width: 16.5%; }
-  .section .fluid-container > .description, .section .full-container > .description, .section .large-container > .description, .section .container > .description, .section .small-container > .description {
+  .section .micro-container > .description, .section .fluid-container > .description, .section .full-container > .description, .section .large-container > .description, .section .container > .description, .section .small-container > .description {
     width: 55%; }
-  .section .fluid-container > .graphic, .section .full-container > .graphic, .section .large-container > .graphic, .section .container > .graphic, .section .small-container > .graphic {
+  .section .micro-container > .graphic, .section .fluid-container > .graphic, .section .full-container > .graphic, .section .large-container > .graphic, .section .container > .graphic, .section .small-container > .graphic {
     width: 41%; }
-    .section .fluid-container > .graphic.background, .section .full-container > .graphic.background, .section .large-container > .graphic.background, .section .container > .graphic.background, .section .small-container > .graphic.background {
+    .section .micro-container > .graphic.background, .section .fluid-container > .graphic.background, .section .full-container > .graphic.background, .section .large-container > .graphic.background, .section .container > .graphic.background, .section .small-container > .graphic.background {
       height: 100%;
       background-repeat: no-repeat;
       background-position: center center;
@@ -3157,6 +3184,9 @@ ul {
       margin-top: 15px; } }
 
 @media only screen and (max-width: 500px) {
+  .section .micro-container, .section.product-section .micro-container {
+    width: 94%;
+    margin: 0px 3%; }
   .section .fluid-container .half, .section .full-container .half, .section.product-section .fluid-container .half, .section.product-section .full-container .half {
     display: block;
     width: 100%; }
