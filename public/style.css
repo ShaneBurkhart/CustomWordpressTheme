@@ -3211,6 +3211,8 @@ ul {
       display: none; }
   .section.parallax > .float {
     height: 100%; }
+    .section.parallax > .float:after {
+      content: none; }
   .section.parallax > .content {
     position: relative;
     padding: 200px 0px 300px;

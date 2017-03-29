@@ -473,6 +473,10 @@
         &.parallax {
             & > .float {
                 height: 100%;
+
+                &:after {
+                    content: none;
+                }
             }
 
             & > .content {
