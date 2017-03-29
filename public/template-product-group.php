@@ -40,6 +40,7 @@
                                 <div class="product">
                                     <a href="<?php echo get_permalink($page->ID); ?>">
                                         <img class="thumbnail" src="<?php the_field('product_image', $page->ID); ?>">
+                                        <h4><?php echo $page->post_title; ?></h4>
                                     </a>
                                     <div class="full-container promo-overlay">
                                         <div class="graphic background" style="background-image: url(<?php the_field('promo_image', $page->ID); ?>);">
