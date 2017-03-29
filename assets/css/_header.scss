@@ -20,7 +20,7 @@ header {
         #site-logo {
             background-image: url(assets/images/logo-white.png);
             height: 35px;
-            width: 113px;
+            width: 100px;
             margin-top: 10px;
         }
 
@@ -51,6 +51,10 @@ header {
     }
 
     .full > ul > li {
+        &.mobile-drawer {
+            display: none;
+        }
+
         & > ul.drop-down-items {
             background-color: #87a9cb;
             display: none;
@@ -58,7 +62,7 @@ header {
             padding: 10px 0px;
 
             & > li {
-                padding: 7px 20px;
+                padding: 7px 15px;
                 margin: 0;
 
                 &:hover {
@@ -148,3 +152,130 @@ header {
     background-size: contain;
 }
 
+.mobile-nav-drawer {
+    display: none;
+}
+
+@media only screen and (max-width : 850px) {
+    header {
+        &.scroll-collapse {
+            .full > ul > li {
+                display: none;
+
+                &.mobile-drawer {
+                    display: block;
+                    font-size: 24px;
+                    margin-top: 6px;
+                }
+            }
+        }
+
+        .full > ul > li {
+            display: none;
+
+            &.mobile-drawer {
+                display: block;
+                font-size: 24px;
+                margin-top: 28px;
+            }
+        }
+
+        .mobile-nav-drawer {
+            position: fixed;
+            display: block;
+            right: 100%;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #87a9cb;
+
+            .search-section {
+                border-bottom: 3px solid #6d8aaa;
+                padding: 15px 30px;
+
+                .input-container {
+                    position: relative;
+                    display: inline-block;
+                    width: 80%;
+
+                    i.fa {
+                        color: #ffffff;
+                        font-family: 'FontAwesome';
+                        content: '\f002';
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        bottom: 0;
+                        font-size: 24px;
+                        padding: 11px 15px;
+                    }
+
+                    input {
+                        position: relative;
+                        color: #ffffff;
+                        display: inline-block;
+                        width: 100%;
+                        padding: 13px 24px;
+                        font-size: 18px;
+                        background-color: lighten(#87a9cb, 10%);
+                        border: none;
+                    }
+                }
+
+                button {
+                    color: darken(#6d8aaa, 10%);
+                    float: right;
+                    border-color: darken(#6d8aaa, 10%);
+
+                    &:hover {
+                        color: #87a9cb;
+                        border-color: #87a9cb;
+                        background-color: darken(#6d8aaa, 10%);
+                    }
+                }
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+                li {
+                    text-transform: uppercase;
+                    width: 100%;
+                    margin: 0;
+
+                    a {
+                        color: #ffffff;
+                        display: block;
+                        width: 100%;
+                        padding: 13px 30px;
+                        border-bottom: 2px solid #6d8aaa;
+
+                        &:hover {
+                            background-color: #6d8aaa;
+                            border-bottom: 2px solid #87a9cb;
+                        }
+                    }
+
+                    ul.drop-down-items {
+                        background-color: #6d8aaa;
+
+                        li a {
+                            color: lighten(#87a9cb, 10%);
+                            font-size: bold;
+                            border-bottom: 2px solid #87a9cb;
+                            padding: 13px 30px 13px 60px;
+
+                            &:hover {
+                                color: #ffffff;
+                                background-color: #6d8aaa;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
