@@ -1,8 +1,6 @@
 <footer class="section small dark-gray">
     <ul class="social-buttons-group">
-        <li><a href=""><i class="fa fa-facebook-f"></i></a></li>
-        <li><a href=""><i class="fa fa-twitter"></i></a></li>
-        <li><a href=""><i class="fa fa-youtube"></i></a></li>
+        <li><a href="https://www.facebook.com/Twistd-Q-Seasonings-141077326384362/"><i class="fa fa-facebook-f"></i></a></li>
     </ul>
     <div class="fluid-container">
         <div class="full">

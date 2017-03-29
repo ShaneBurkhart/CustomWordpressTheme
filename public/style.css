@@ -2256,12 +2256,12 @@ footer {
     padding: 0px;
     margin: 0px;
     width: 100px;
-    height: 100%; }
+    height: 100%;
+    border-left: 1px solid #333333; }
     footer ul.social-buttons-group li {
       height: 33.3330%;
       margin: 0px;
-      border-bottom: 1px solid #333333;
-      border-left: 1px solid #333333; }
+      border-bottom: 1px solid #333333; }
       footer ul.social-buttons-group li:last-child {
         border-bottom: none; }
       footer ul.social-buttons-group li a {

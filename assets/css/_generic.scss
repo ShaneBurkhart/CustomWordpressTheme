@@ -62,12 +62,12 @@ footer {
         margin: 0px;
         width: 100px;
         height: 100%;
+        border-left: 1px solid #333333;
 
         li {
             height: 33.3330%;
             margin: 0px;
             border-bottom: 1px solid #333333;
-            border-left: 1px solid #333333;
 
             &:last-child {
                 border-bottom: none;
