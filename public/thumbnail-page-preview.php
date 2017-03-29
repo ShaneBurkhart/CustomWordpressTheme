@@ -9,7 +9,7 @@ if (in_category('recipe', $page)) {
 ?>
 
 <article class="thumbnail-page-preview <?php echo $thumbnail_class; ?>">
-    <div class="image-wrapper" style="background-image: url('<?php the_field('preview_image', $page->ID); ?>">
+    <div class="image-wrapper" style="background-image: url('<?php the_field('banner_image', $page->ID); ?>">
     </div>
     <h3><?php echo $page->post_title ?></h3>
     <p><?php the_field('snippet', $page->ID); ?></p>
