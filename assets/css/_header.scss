@@ -6,6 +6,43 @@ header {
     z-index: 100001;
     height: 100px;
 
+    &.scroll-collapse {
+        color: #ffffff;
+        background-color: #87a9cb;
+        height: 55px;
+
+        #site-logo {
+            height: 35px;
+            width: 113px;
+            margin-top: 10px;
+        }
+
+        ul li {
+            margin-top: 17px;
+            font-size: 12px;
+
+            a {
+                color: #ffffff;
+            }
+
+        }
+
+        a.button {
+            color: #ffffff;
+            margin-top: 11px;
+            border-color: #ffffff;
+
+            i.fa {
+                font-size: 16px;
+            }
+
+            span {
+                font-size: 10px;
+                line-height: 16px;
+            }
+        }
+    }
+
     a {
         color: #000000;
     }

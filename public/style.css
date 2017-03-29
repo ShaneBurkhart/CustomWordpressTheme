@@ -3156,6 +3156,28 @@ header {
   right: 0;
   z-index: 100001;
   height: 100px; }
+  header.scroll-collapse {
+    color: #ffffff;
+    background-color: #87a9cb;
+    height: 55px; }
+    header.scroll-collapse #site-logo {
+      height: 35px;
+      width: 113px;
+      margin-top: 10px; }
+    header.scroll-collapse ul li {
+      margin-top: 17px;
+      font-size: 12px; }
+      header.scroll-collapse ul li a {
+        color: #ffffff; }
+    header.scroll-collapse a.button {
+      color: #ffffff;
+      margin-top: 11px;
+      border-color: #ffffff; }
+      header.scroll-collapse a.button i.fa {
+        font-size: 16px; }
+      header.scroll-collapse a.button span {
+        font-size: 10px;
+        line-height: 16px; }
   header a {
     color: #000000; }
   header .button {

@@ -38,4 +38,6 @@
     </div>
 </footer>
 
+<script src="/wp-content/themes/custom/assets/js/site-header.js"></script>
+
 <?php wp_footer(); ?>
