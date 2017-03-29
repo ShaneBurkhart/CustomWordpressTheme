@@ -62,7 +62,7 @@
             <?php } ?>
 
             <?php if ($is_recipe) { ?>
-                <div class="section white">
+                <div class="section tiny micro">
                     <div class="micro-container">
                         <div class="full">
                             <h2 class="capitalize text-center">You'll Dig These Recipes, Too.</h2>
@@ -70,7 +70,7 @@
                     </div>
                 </div>
             <?php } ?>
-            <div class="section white">
+            <div class="section small white">
                 <?php
                     $category = 'uncategorized';
                     if ($is_recipe) {
