@@ -27,7 +27,7 @@
 
                 $pages = get_children(array('post_parent' => $products_page->ID));
                 usort($pages, function ($a, $b) {
-                    return strcmp($b->product_group_position, $a->product_group_position);
+                    return strcmp($a->product_group_position, $b->product_group_position);
                 });
 
                 $i = 0;
