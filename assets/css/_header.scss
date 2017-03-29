@@ -11,6 +11,12 @@ header {
         background-color: #87a9cb;
         height: 55px;
 
+        .button:hover {
+            color: #87a9cb;
+            background-color: #ffffff;
+            border-color: #87a9cb;
+        }
+
         #site-logo {
             background-image: url(assets/images/logo-white.png);
             height: 35px;
