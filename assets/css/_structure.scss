@@ -276,7 +276,7 @@
     }
 
     .container {
-        width: 850px;
+        width: 900px;
     }
 
     .small-container {
@@ -416,7 +416,7 @@
     }
 }
 
-@media only screen and (max-width : 900px) {
+@media only screen and (max-width : 950px) {
 
     .section {
         & > .container {
@@ -449,9 +449,13 @@
             width: 95%;
         }
 
-        .fluid-container > .third {
+        .container > .third, .fluid-container > .third {
             width: 100%;
             display: block;
+
+            .image-wrapper {
+                height: 225px;
+            }
 
             .thumbnail-page-preview {
                 margin-bottom: 25px;

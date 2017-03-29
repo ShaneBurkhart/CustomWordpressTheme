@@ -1,4 +1,4 @@
-<div class="fluid-container">
+<div class="container">
     <?php
     foreach($pages as $page) {
     ?>
@@ -7,7 +7,7 @@
         </div>
     <?php } ?>
 </div>
-<div class="fluid-container">
+<div class="container">
     <?php
     foreach($pages as $page) {
     ?>
