@@ -12,12 +12,13 @@ header {
         height: 55px;
 
         #site-logo {
+            background-image: url(assets/images/logo-white.png);
             height: 35px;
             width: 113px;
             margin-top: 10px;
         }
 
-        ul li {
+        .full > ul > li {
             margin-top: 17px;
             font-size: 12px;
 
@@ -43,6 +44,52 @@ header {
         }
     }
 
+    .full > ul > li {
+        & > ul.drop-down-items {
+            background-color: #87a9cb;
+            display: none;
+            margin: 0;
+            padding: 10px 0px;
+
+            & > li {
+                padding: 7px 20px;
+                margin: 0;
+
+                &:hover {
+                    background-color: darken(#87a9cb, 10%);
+                }
+
+                & > a {
+                    display: inline-block;
+                }
+            }
+        }
+
+        &:hover {
+            position: relative;
+
+            & > ul.drop-down-items {
+                display: block;
+                position: absolute;
+                left: -20px;
+                top: 100%;
+                list-style: none;
+                z-index: 10000;
+                background-color: #87a9cb;
+
+                li {
+                    display: block;
+
+                    a {
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+
     a {
         color: #000000;
     }
@@ -63,13 +110,13 @@ header {
         }
     }
 
-    ul {
+    .full > ul {
         list-style: none;
         padding: 0;
         margin: 0;
         display: inline-block;
 
-        li {
+        & > li {
             display: inline-block;
             text-transform: uppercase;
             margin: 35px 40px 0px 0px;
@@ -86,7 +133,7 @@ header {
     width: 150px;
     margin-top: 20px;
     margin-right: 20px;
-    background-image: url(assets/images/twistdq-logo.png);
+    background-image: url(assets/images/logo-black.png);
     background-repeat: no-repeat;
     background-position: top left;
     -webkit-background-size: contain;

@@ -3002,50 +3002,52 @@ ul {
     width: 850px; }
   .section .small-container {
     width: 700px; }
-  .section .fluid-container, .section .full-container, .section .large-container, .section .container, .section .small-container {
-    overflow: hidden; }
-    .section .fluid-container > *, .section .full-container > *, .section .large-container > *, .section .container > *, .section .small-container > * {
-      vertical-align: top;
-      display: inline-block;
-      float: left;
-      margin-right: 4%; }
-      .section .fluid-container > *:last-child, .section .full-container > *:last-child, .section .large-container > *:last-child, .section .container > *:last-child, .section .small-container > *:last-child {
-        margin-right: 0px; }
-    .section .fluid-container > .two-thirds.light-gray, .section .full-container > .two-thirds.light-gray, .section .large-container > .two-thirds.light-gray, .section .container > .two-thirds.light-gray, .section .small-container > .two-thirds.light-gray {
-      background-color: #f6f6f6;
-      width: 69.2%;
-      margin-right: 0;
-      height: 100%; }
-    .section .fluid-container > .orange, .section .full-container > .orange, .section .large-container > .orange, .section .container > .orange, .section .small-container > .orange {
+  .section .fluid-container:after, .section .full-container:after, .section .large-container:after, .section .container:after, .section .small-container:after {
+    content: '';
+    display: table;
+    clear: both; }
+  .section .fluid-container > *, .section .full-container > *, .section .large-container > *, .section .container > *, .section .small-container > * {
+    vertical-align: top;
+    display: inline-block;
+    float: left;
+    margin-right: 4%; }
+    .section .fluid-container > *:last-child, .section .full-container > *:last-child, .section .large-container > *:last-child, .section .container > *:last-child, .section .small-container > *:last-child {
+      margin-right: 0px; }
+  .section .fluid-container > .two-thirds.light-gray, .section .full-container > .two-thirds.light-gray, .section .large-container > .two-thirds.light-gray, .section .container > .two-thirds.light-gray, .section .small-container > .two-thirds.light-gray {
+    background-color: #f6f6f6;
+    width: 69.2%;
+    margin-right: 0;
+    height: 100%; }
+  .section .fluid-container > .orange, .section .full-container > .orange, .section .large-container > .orange, .section .container > .orange, .section .small-container > .orange {
+    color: #ffffff;
+    background-color: #ffa800;
+    height: 100%; }
+    .section .fluid-container > .orange h2, .section .full-container > .orange h2, .section .large-container > .orange h2, .section .container > .orange h2, .section .small-container > .orange h2 {
+      font-size: 30px;
       color: #ffffff;
-      background-color: #ffa800;
-      height: 100%; }
-      .section .fluid-container > .orange h2, .section .full-container > .orange h2, .section .large-container > .orange h2, .section .container > .orange h2, .section .small-container > .orange h2 {
-        font-size: 30px;
-        color: #ffffff;
-        text-transform: uppercase; }
-    .section .fluid-container > .full, .section .full-container > .full, .section .large-container > .full, .section .container > .full, .section .small-container > .full {
-      width: 100%; }
-    .section .fluid-container > .half, .section .full-container > .half, .section .large-container > .half, .section .container > .half, .section .small-container > .half {
-      width: 48%; }
-    .section .fluid-container > .two-thirds, .section .full-container > .two-thirds, .section .large-container > .two-thirds, .section .container > .two-thirds, .section .small-container > .two-thirds {
-      width: 65.2%; }
-    .section .fluid-container > .third, .section .full-container > .third, .section .large-container > .third, .section .container > .third, .section .small-container > .third {
-      width: 30.6%; }
-    .section .fluid-container > .fifth, .section .full-container > .fifth, .section .large-container > .fifth, .section .container > .fifth, .section .small-container > .fifth {
-      width: 16.5%; }
-    .section .fluid-container > .description, .section .full-container > .description, .section .large-container > .description, .section .container > .description, .section .small-container > .description {
-      width: 55%; }
-    .section .fluid-container > .graphic, .section .full-container > .graphic, .section .large-container > .graphic, .section .container > .graphic, .section .small-container > .graphic {
-      width: 41%; }
-      .section .fluid-container > .graphic.background, .section .full-container > .graphic.background, .section .large-container > .graphic.background, .section .container > .graphic.background, .section .small-container > .graphic.background {
-        height: 100%;
-        background-repeat: no-repeat;
-        background-position: center center;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover; }
+      text-transform: uppercase; }
+  .section .fluid-container > .full, .section .full-container > .full, .section .large-container > .full, .section .container > .full, .section .small-container > .full {
+    width: 100%; }
+  .section .fluid-container > .half, .section .full-container > .half, .section .large-container > .half, .section .container > .half, .section .small-container > .half {
+    width: 48%; }
+  .section .fluid-container > .two-thirds, .section .full-container > .two-thirds, .section .large-container > .two-thirds, .section .container > .two-thirds, .section .small-container > .two-thirds {
+    width: 65.2%; }
+  .section .fluid-container > .third, .section .full-container > .third, .section .large-container > .third, .section .container > .third, .section .small-container > .third {
+    width: 30.6%; }
+  .section .fluid-container > .fifth, .section .full-container > .fifth, .section .large-container > .fifth, .section .container > .fifth, .section .small-container > .fifth {
+    width: 16.5%; }
+  .section .fluid-container > .description, .section .full-container > .description, .section .large-container > .description, .section .container > .description, .section .small-container > .description {
+    width: 55%; }
+  .section .fluid-container > .graphic, .section .full-container > .graphic, .section .large-container > .graphic, .section .container > .graphic, .section .small-container > .graphic {
+    width: 41%; }
+    .section .fluid-container > .graphic.background, .section .full-container > .graphic.background, .section .large-container > .graphic.background, .section .container > .graphic.background, .section .small-container > .graphic.background {
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover; }
 
 .group-wrapper {
   position: relative; }
@@ -3161,13 +3163,14 @@ header {
     background-color: #87a9cb;
     height: 55px; }
     header.scroll-collapse #site-logo {
+      background-image: url(assets/images/logo-white.png);
       height: 35px;
       width: 113px;
       margin-top: 10px; }
-    header.scroll-collapse ul li {
+    header.scroll-collapse .full > ul > li {
       margin-top: 17px;
       font-size: 12px; }
-      header.scroll-collapse ul li a {
+      header.scroll-collapse .full > ul > li a {
         color: #ffffff; }
     header.scroll-collapse a.button {
       color: #ffffff;
@@ -3178,6 +3181,34 @@ header {
       header.scroll-collapse a.button span {
         font-size: 10px;
         line-height: 16px; }
+  header .full > ul > li > ul.drop-down-items {
+    background-color: #87a9cb;
+    display: none;
+    margin: 0;
+    padding: 10px 0px; }
+    header .full > ul > li > ul.drop-down-items > li {
+      padding: 7px 20px;
+      margin: 0; }
+      header .full > ul > li > ul.drop-down-items > li:hover {
+        background-color: #6390bc; }
+      header .full > ul > li > ul.drop-down-items > li > a {
+        display: inline-block; }
+  header .full > ul > li:hover {
+    position: relative; }
+    header .full > ul > li:hover > ul.drop-down-items {
+      display: block;
+      position: absolute;
+      left: -20px;
+      top: 100%;
+      list-style: none;
+      z-index: 10000;
+      background-color: #87a9cb; }
+      header .full > ul > li:hover > ul.drop-down-items li {
+        display: block; }
+        header .full > ul > li:hover > ul.drop-down-items li a {
+          font-size: 14px;
+          font-weight: 400;
+          color: #ffffff; }
   header a {
     color: #000000; }
   header .button {
@@ -3190,12 +3221,12 @@ header {
       margin-right: 10px; }
     header .button span {
       line-height: 24px; }
-  header ul {
+  header .full > ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: inline-block; }
-    header ul li {
+    header .full > ul > li {
       display: inline-block;
       text-transform: uppercase;
       margin: 35px 40px 0px 0px;
@@ -3209,7 +3240,7 @@ header {
   width: 150px;
   margin-top: 20px;
   margin-right: 20px;
-  background-image: url(assets/images/twistdq-logo.png);
+  background-image: url(assets/images/logo-black.png);
   background-repeat: no-repeat;
   background-position: top left;
   -webkit-background-size: contain;
