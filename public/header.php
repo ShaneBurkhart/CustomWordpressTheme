@@ -22,9 +22,9 @@
                         <?php } ?>
                     </ul>
                 </li>
+                <li><a href="/blog">Blog</a></li>
                 <li><a href="/q-club">Q' Club</a></li>
                 <li><a href="/recipes">Recipes</a></li>
-                <li><a href="/blog">Blog</a></li>
                 <li><a href=""><i class="fa fa-search"></i></a></li>
             </ul>
             <a class="button pull-right capitalize" href="/store-locator">
