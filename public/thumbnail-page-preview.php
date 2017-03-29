@@ -13,8 +13,7 @@ if (in_category('recipe', $page)) {
     </div>
     <h3><?php echo $page->post_title ?></h3>
     <p><?php the_field('snippet', $page->ID); ?></p>
-
-    <div class="text-center"><a href="<?php echo get_permalink($page->ID); ?>" class="button">
+    <div class="mobile-button text-center"><a href="<?php echo get_permalink($page->ID); ?>" class="button">
         <?php if (in_category('recipe', $page->ID)) { ?>
             View Recipe
         <?php } else { ?>

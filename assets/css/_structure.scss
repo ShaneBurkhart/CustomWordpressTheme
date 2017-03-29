@@ -409,12 +409,6 @@
             width: 95%;
         }
     }
-
-    .thumbnail-page-preview {
-        p {
-            height: 200px;
-        }
-    }
 }
 
 @media only screen and (max-width : 900px) {
@@ -456,9 +450,14 @@
 
             .thumbnail-page-preview {
                 margin-bottom: 25px;
-                p {
-                    height: auto;
+
+                .mobile-button {
+                    display: block;
                 }
+            }
+
+            &.thumbnail-page-preview-bottom {
+                display: none;
             }
         }
 
