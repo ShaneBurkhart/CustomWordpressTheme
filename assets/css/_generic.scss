@@ -801,6 +801,10 @@ ul {
             border-right: none;
             float: left;
 
+            span {
+                margin-right: 12px;
+            }
+
             &:last-child {
                 border-right: 2px solid #fec701;
             }
