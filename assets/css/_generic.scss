@@ -435,6 +435,7 @@ ul {
         background-repeat: no-repeat;
         background-position: 50% 50%;
         margin-bottom: 35px;
+
     }
 
     h3 {
@@ -443,6 +444,41 @@ ul {
 
     p {
         height: 125px;
+    }
+
+    &.blog-post, &.video-post, &.recipe-post {
+        .image-wrapper {
+            position: relative;
+
+            &:after {
+                content: ' ';
+                display: block;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100px;
+                width: 130px;
+                background-position: bottom right;
+                background-repeat: no-repeat;
+                -webkit-background-size: contain;
+                -moz-background-size: contain;
+                -o-background-size: contain;
+                background-size: contain;
+            }
+        }
+    }
+
+    &.blog-post .image-wrapper:after {
+        background-image: url(assets/images/blog-thumbnail-overlay.png);
+    }
+
+    &.video-post .image-wrapper:after {
+        background-image: url(assets/images/video-thumbnail-overlay.png);
+    }
+
+    &.recipe-post .image-wrapper:after {
+        background-image: url(assets/images/recipe-thumbnail-overlay.png);
     }
 }
 
