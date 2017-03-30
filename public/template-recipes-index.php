@@ -19,18 +19,6 @@
             <div class="section no-padding white image-with-text">
                 <img src="<?php the_field('banner_image') ?>">
                 <h2 class="text-center"><?php the_field('page_heading') ?></h2>
-                <div class="container">
-                    <form id="recipe-search-form" action="/recipes" method="GET">
-                        <div class="input-group">
-                            <input name="keyword">
-                        </div>
-                        <div class="input-group">
-                            <select name="product">
-                                <option></option>
-                            </select>
-                        </div>
-                    </form>
-                </div>
             </div>
                 <?php
                     $keyword = $_GET['keyword'];
