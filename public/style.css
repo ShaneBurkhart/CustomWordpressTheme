@@ -2843,6 +2843,55 @@ input[type=text], select, textarea {
       color: #4f4f4f;
       font-size: 24px; }
 
+form#find-store-by-zipcode {
+  display: inline-block;
+  font-size: 0px;
+  padding: 0px; }
+  form#find-store-by-zipcode input[type="text"] {
+    font-size: 14px;
+    color: #cccccc;
+    width: 250px;
+    height: 43px;
+    padding: 12px 25px !important;
+    margin: 0;
+    background-color: #000000;
+    border: none;
+    line-height: normal;
+    display: inline-block;
+    vertical-align: top; }
+  form#find-store-by-zipcode button {
+    background-color: #fdb01c;
+    position: relative;
+    display: inline-block;
+    width: 43px;
+    height: 43px;
+    padding: 0;
+    margin: 0;
+    line-height: normal;
+    border-radius: 0px 5px 5px 0px;
+    vertical-align: top; }
+    form#find-store-by-zipcode button:before {
+      font-size: 18px;
+      color: #ffffff;
+      content: "\f061";
+      font-family: FontAwesome;
+      text-align: center;
+      line-height: 43px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      pointer-events: none; }
+    form#find-store-by-zipcode button .button {
+      font-size: 14px;
+      width: 100%;
+      height: 43px;
+      border-radius: 0;
+      padding: 0;
+      margin: 0;
+      border: none; }
+
 @media only screen and (max-width: 750px) {
   #recipe-container .full-container {
     height: auto; }

@@ -3,7 +3,10 @@
         <div class="half">
             <div class="popup text-left">
                 <h3>Find me some Twist'd Q.</h3>
-
+                <form id="find-store-by-zipcode" action="/store-locator" method="GET">
+                    <input name="zipcode" type="text" placeholder="Enter your Zipcode">
+                    <button></button>
+                </form>
             </div>
         </div>
         <div class="half text-right">
