@@ -9,7 +9,7 @@
     </div>
     <div class="fluid-container">
         <div class="fifth">
-            <p>Description about the company or disclaimer</p>
+            <p>Twist’d Q is a premium line of rubs, seasonings and sauces that have been created from the handcrafted, competition-tested recipes of BBQ pitmaster champions. Get unbeatable BBQ with a side of rave reviews.</p>
         </div>
         <div class="fifth">
             <p class="capitalize"><a href="/products">Products</a></p>
@@ -27,11 +27,6 @@
             <p class="capitalize"><a href="/blog">Blog</a></p>
             <p class="capitalize"><a href="/contact">Contact</a></p>
             <p class="capitalize"><a href="/privacy-policy">Privacy Policy</a></p>
-        </div>
-    </div>
-    <div class="fluid-container">
-        <div class="full">
-            <p>Copyright</p>
         </div>
     </div>
 </footer>
