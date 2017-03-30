@@ -19,11 +19,13 @@
                 <div class="content">
                     <div class="fluid-container">
                         <div class="full">
-                            <div class="promo pull-right">
-                                <h3><?php the_field('hero_promo_headline'); ?></h3>
-                                <p><?php the_field('hero_promo_subheading'); ?></p>
-                                <a href="<?php the_field('hero_promo_button_destination'); ?>" class="button"><?php the_field('hero_promo_button_text'); ?></a>
-                            </div>
+                            <?php if (the_field('coupon_callout')) { ?>
+                                <div class="promo pull-right">
+                                    <h3><?php the_field('hero_promo_headline'); ?></h3>
+                                    <p><?php the_field('hero_promo_subheading'); ?></p>
+                                    <a href="<?php the_field('hero_promo_button_destination'); ?>" class="button"><?php the_field('hero_promo_button_text'); ?></a>
+                                </div>
+                            <?php } ?>
                             <div class="jumbotron">
                                 <h1><?php the_field('main_headline'); ?></h1>
                                 <p><?php the_field('main_subheading'); ?></p>
