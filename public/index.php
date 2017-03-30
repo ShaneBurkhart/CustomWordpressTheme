@@ -19,15 +19,47 @@
                 </div>
             </div>
             <?php
+                $categoryQuery = $_GET['category'];
+                $categories = get_categories();
+                $categories = array_filter($categories, 'remove_recipes');
+
                 $page_num = get_query_var('paged') ? get_query_var('paged') : 1;
                 $offset = 9 * ($page_num - 1);
-                $all_pages = get_posts(array(
-                    'category__not_in' => array(get_cat_ID('recipe')),
+                $args = array(
                     'posts_per_page' => -1
-                ));
+                );
+
+                if ($categoryQuery) {
+                    $args['category_name'] = $categoryQuery;
+                } else {
+                    $args['category__not_in'] = array(get_cat_ID('recipe'));
+                }
+
+                $all_pages = get_posts($args);
                 $posts_on_page = array_slice($all_pages, $offset, 9);
+
+                function remove_recipes($var) {
+                    return $var->name != 'Recipe';
+                }
             ?>
             <div class="section white micro">
+                <div class="container">
+                    <div class="full text-right">
+                        <div class="select_wrapper">
+                            <select id="category-select">
+                                <option disabled <?php if (!$categoryQuery) echo 'selected'; ?>>Filter by Category</option>
+                                <option value="">All Categories</option>
+                                <?php
+                                    foreach ($categories as $category) {
+                                ?>
+                                    <option <?php if ($category->name == $categoryQuery) echo 'selected'; ?> value="<?php echo $category->name; ?>">
+                                        <?php echo $category->name; ?>
+                                    </option>
+                                <?php } ?>
+                            </select>
+                        </div>
+                    </div>
+                </div>
                 <?php
                     $pages = array_slice($posts_on_page, 0, 3);
                     include(locate_template('three-page-previews.php', false, false));

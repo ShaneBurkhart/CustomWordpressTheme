@@ -2423,6 +2423,27 @@ ul {
 #paypal-form {
   text-align: center; }
 
+input[type=text], select, textarea {
+  padding: 13px 24px;
+  border-radius: 0px; }
+
+.select_wrapper {
+  position: relative; }
+  .select_wrapper:before {
+    content: "\f0d7";
+    font-family: FontAwesome;
+    font-size: 20px;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 15px;
+    padding-top: 10px;
+    pointer-events: none; }
+  .select_wrapper select {
+    -webkit-appearance: none;
+    padding-right: 48px; }
+
 .gform_wrapper form input[type=text], .gform_wrapper form select, .gform_wrapper form textarea {
   padding: 13px 24px !important;
   border-radius: 0px; }

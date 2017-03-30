@@ -32,5 +32,6 @@
 </footer>
 
 <script src="/wp-content/themes/custom/assets/js/site-header.js"></script>
+<script src="/wp-content/themes/custom/assets/js/misc.js"></script>
 
 <?php wp_footer(); ?>

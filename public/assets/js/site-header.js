@@ -8,7 +8,6 @@ $(document).ready(function () {
   // Change header when scrolling
   $(document).scroll(function (e) {
     var documentScrollTop = $(document).scrollTop();
-    console.log(documentScrollTop);
 
     if (documentScrollTop) {
       if (!$header.hasClass('scroll-collapse')) {
