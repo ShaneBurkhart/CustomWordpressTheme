@@ -812,7 +812,7 @@ ul {
     }
 
     .full-container {
-        height: 600px;
+        height: 100vh;
         position: relative;
 
         .graphic {
@@ -826,7 +826,7 @@ ul {
             right: 0;
             bottom: 0;
             width: 60%;
-            padding: 50px 3% 30px 80px;
+            padding: 50px 3% 30px 100px;
             background-image: url(assets/images/cut-out-paper-background.png);
             background-repeat: no-repeat;
             background-position: center left;
@@ -844,6 +844,7 @@ ul {
 }
 
 #recipe-search-form {
+
 }
 
 @media only screen and (max-width : 750px) {

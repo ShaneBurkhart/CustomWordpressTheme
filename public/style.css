@@ -2793,7 +2793,7 @@ ul {
       border-right: 2px solid #fec701; }
 
 #recipe-container .full-container {
-  height: 600px;
+  height: 100vh;
   position: relative; }
   #recipe-container .full-container .graphic {
     width: 50%; }
@@ -2804,7 +2804,7 @@ ul {
     right: 0;
     bottom: 0;
     width: 60%;
-    padding: 50px 3% 30px 80px;
+    padding: 50px 3% 30px 100px;
     background-image: url(assets/images/cut-out-paper-background.png);
     background-repeat: no-repeat;
     background-position: center left;
