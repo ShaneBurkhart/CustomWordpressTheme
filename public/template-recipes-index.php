@@ -2,6 +2,67 @@
     /**
     * Template Name: Recipes Page
     */
+
+    $keyword = $_GET['keyword'];
+    $productID = $_GET['product'];
+    $meat = $_GET['meat'];
+    $heat = $_GET['heat'];
+
+    $query = array('relation' => 'AND');
+    if (strlen($productID)) {
+        $query[] = array(
+            'key' => 'related_products',
+            'value' => '"'.$productID.'"',
+            'compare' => 'LIKE',
+        );
+    }
+    if (strlen($meat)) {
+        $query[] = array(
+            'key' => 'recipe_meat',
+            'value' => '"'.$meat.'"',
+            'compare' => 'LIKE',
+        );
+    }
+    if (strlen($heat)) {
+        $query[] = array(
+            'key' => 'recipe_heat',
+            'value' => $heat,
+        );
+    }
+
+    $page_num = get_query_var('paged') ? get_query_var('paged') : 1;
+    $offset = 9 * ($page_num - 1);
+    $all_pages = new WP_Query(array(
+        'category_name' => 'recipe',
+        'posts_per_page' => -1,
+        's' => $keyword,
+        'meta_query' => $query,
+    ));
+    $recipes_on_page = array_slice($all_pages->posts, $offset, 9);
+
+    $recipeQuery = new WP_Query(array(
+        'category_name' => 'recipe',
+        'posts_per_page' => 1,
+    ));
+    $recipePost = $recipeQuery->posts[0];
+    $meatField = get_field_object('recipe_meat', $recipePost->ID);
+    $heatField = get_field_object('recipe_heat', $recipePost->ID);
+    $productQuery = new WP_Query(array(
+        'post_type' => 'page',
+        'meta_key' => '_wp_page_template',
+        'meta_value' => 'template-product.php',
+    ));
+    $productPages = $productQuery->posts;
+
+    $meatChoices = array();
+    if ($meatField) $meatChoices = $meatField['choices'];
+    $heatChoices = array();
+    if ($heatField) $heatChoices = $heatField['choices'];
+
+    $productChoices = array();
+    foreach ($productPages as $productPage) {
+        $productChoices[$productPage->post_title] = $productPage->ID;
+    }
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
     <?php get_template_part('head'); ?>
@@ -10,54 +71,64 @@
 
         <?php get_header(); ?>
 
-        <?php
-            $meatField = get_field('field_recipe_meat');
-            echo var_dump($meatField['choices']);
-        ?>
-
         <main>
             <div class="section no-padding white image-with-text">
                 <img src="<?php the_field('banner_image') ?>">
                 <h2 class="text-center"><?php the_field('page_heading') ?></h2>
             </div>
-                <?php
-                    $keyword = $_GET['keyword'];
-                    $productID = $_GET['product'];
-                    $meat = $_GET['meat'];
-                    $heat = $_GET['heat'];
-
-                    $query = array('relation' => 'AND');
-                    if (strlen($product)) {
-                        $query[] = array(
-                            'key' => 'related_products',
-                            'value' => '"'.$productID.'"',
-                            'compare' => 'LIKE',
-                        );
-                    }
-                    if (strlen($meat)) {
-                        $query[] = array(
-                            'key' => 'recipe_meat',
-                            'value' => '"'.$meat.'"',
-                            'compare' => 'LIKE',
-                        );
-                    }
-                    if (strlen($heat)) {
-                        $query[] = array(
-                            'key' => 'recipe_heat',
-                            'value' => $heat,
-                        );
-                    }
-
-                    $page_num = get_query_var('paged') ? get_query_var('paged') : 1;
-                    $offset = 9 * ($page_num - 1);
-                    $all_pages = new WP_Query(array(
-                        'category_name' => 'recipe',
-                        'posts_per_page' => -1,
-                        's' => $keyword,
-                        'meta_query' => $query,
-                    ));
-                    $recipes_on_page = array_slice($all_pages->posts, $offset, 9);
-                ?>
+            <div class="section white micro">
+                <form id="recipe-search-form" class="container" action="/recipes" method="GET">
+                    <div class="fifth">
+                        <input class="block" name="keyword" type="text" placeholder="Keyword" value="<?php echo $keyword; ?>">
+                    </div>
+                    <div class="fifth">
+                        <div class="select_wrapper block">
+                            <select name="product">
+                                <option <?php if (!$product) echo "selected"; ?> disabled value="">
+                                    Filter by Product
+                                </option>
+                                <?php foreach ($productChoices as $key => $value) { ?>
+                                    <option <?php if ($value == $productID) echo "selected"; ?> value="<?php echo $value; ?>">
+                                        <?php echo $key; ?>
+                                    </option>
+                                <?php } ?>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="fifth">
+                        <div class="select_wrapper block">
+                            <select name="meat">
+                                <option <?php if (!$meat) echo "selected"; ?> disabled value="">
+                                    Filter by Meat
+                                </option>
+                                <?php var_dump($meatChoices); ?>
+                                <?php foreach ($meatChoices as $key => $value) { ?>
+                                    <option <?php if ($value == $meat) echo "selected"; ?> value="<?php echo $value; ?>">
+                                        <?php echo $key; ?>
+                                    </option>
+                                <?php } ?>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="fifth">
+                        <div class="select_wrapper block">
+                            <select name="heat">
+                                <option <?php if (!$heat) echo "selected"; ?> disabled value="">
+                                    Filter by Heat
+                                </option>
+                                <?php foreach ($heatChoices as $key => $value) { ?>
+                                    <option <?php if ($value == $heat) echo "selected"; ?> value="<?php echo $value; ?>">
+                                        <?php echo $key; ?>
+                                    </option>
+                                <?php } ?>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="fifth text-right">
+                        <button class="yellow capitalize">Search</button>
+                    </div>
+                </form>
+            </div>
             <div class="section white micro">
                 <?php
                     $pages = array_slice($recipes_on_page, 0, 3);

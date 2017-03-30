@@ -2431,7 +2431,12 @@ ul {
 
 input[type=text], select, textarea {
   padding: 13px 24px;
-  border-radius: 0px; }
+  border-radius: 0px;
+  background-color: #ffffff;
+  border: 1px solid #a6a6a6; }
+  input[type=text].block, select.block, textarea.block {
+    display: block;
+    width: 100%; }
 
 .select_wrapper {
   position: relative; }
@@ -2446,7 +2451,12 @@ input[type=text], select, textarea {
     right: 15px;
     padding-top: 10px;
     pointer-events: none; }
+  .select_wrapper.block {
+    display: block;
+    width: 100%; }
   .select_wrapper select {
+    display: block;
+    width: 100%;
     -webkit-appearance: none;
     padding-right: 48px; }
 
@@ -2480,9 +2490,12 @@ input[type=text], select, textarea {
     width: 100%;
     text-align: center; }
   .button.yellow, button.yellow {
-    background-color: #a29910; }
+    color: #4f4f4f;
+    background-color: #fcbe11;
+    border: none; }
     .button.yellow:hover, button.yellow:hover {
-      background-color: #827a0d; }
+      color: #ffffff;
+      background-color: #4f4f4f; }
   .button.bright-yellow, button.bright-yellow {
     background-color: #baae12;
     text-shadow: 0px 0px 2px #888888; }

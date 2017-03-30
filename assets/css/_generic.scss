@@ -306,6 +306,13 @@ ul {
 input[type=text], select, textarea {
     padding: 13px 24px;
     border-radius: 0px;
+    background-color: #ffffff;
+    border: 1px solid rgb(166, 166, 166);
+
+    &.block {
+        display: block;
+        width: 100%;
+    }
 }
 
 .select_wrapper {
@@ -324,7 +331,14 @@ input[type=text], select, textarea {
         pointer-events: none;
     }
 
+    &.block {
+        display: block;
+        width: 100%;
+    }
+
     select {
+        display: block;
+        width: 100%;
         -webkit-appearance: none;
         padding-right: 48px;
     }
@@ -369,10 +383,13 @@ input[type=text], select, textarea {
     }
 
     &.yellow {
-        background-color: #a29910;
+        color: #4f4f4f;
+        background-color: #fcbe11;
+        border: none;
 
         &:hover {
-            background-color: #827a0d;
+            color: #ffffff;
+            background-color: #4f4f4f;
         }
     }
 
