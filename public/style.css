@@ -2637,7 +2637,7 @@ input[type=text], select, textarea {
         z-index: 10000;
         background-image: url(assets/images/arrow-shadow.png);
         background-repeat: repeat-x;
-        background-position: bottom left;
+        background-position: top left;
         -webkit-background-size: contain;
         -moz-background-size: contain;
         -o-background-size: contain;
