@@ -26,9 +26,9 @@
                         <?php } ?>
                     </ul>
                 </li>
+                <li><a href="/recipes">Recipes</a></li>
                 <li><a href="/blog">Blog</a></li>
                 <li><a href="/q-club">Q' Club</a></li>
-                <li><a href="/recipes">Recipes</a></li>
                 <li><a href=""><i class="fa fa-search"></i></a></li>
                 <li id="mobile-drawer-button" class="mobile-drawer"><a href="javascript:void(0)"><i class=" fa fa-bars"></i></a></li>
             </ul>
