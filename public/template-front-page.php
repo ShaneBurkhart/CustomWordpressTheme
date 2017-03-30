@@ -19,7 +19,7 @@
                 <div class="content">
                     <div class="fluid-container">
                         <div class="full">
-                            <?php if (the_field('coupon_callout')) { ?>
+                            <?php if (get_field('coupon_callout')) { ?>
                                 <div class="promo pull-right">
                                     <h3><?php the_field('hero_promo_headline'); ?></h3>
                                     <p><?php the_field('hero_promo_subheading'); ?></p>
