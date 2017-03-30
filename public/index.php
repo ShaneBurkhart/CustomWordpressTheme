@@ -7,19 +7,26 @@
         <?php get_header(); ?>
 
         <main>
-            <div class="section no-padding white image-with-text">
-                <img src="<?php the_field('banner_image', get_option('page_for_posts')) ?>">
-                <h2 class="text-center"><?php the_field('page_heading') ?></h2>
+            <div class="section tiny">
+                <div class="fluid-container">
+                    <div class="graphic">
+                        <img src="<?php the_field('banner_image', get_option('page_for_posts')) ?>">
+                    </div>
+                    <div class="description">
+                        <h2><?php the_field('page_heading', get_option('page_for_posts')); ?></h2>
+                        <p><?php the_field('page_description', get_option('page_for_posts')); ?></h2>
+                    </div>
+                </div>
             </div>
-                <?php
-                    $page_num = get_query_var('paged') ? get_query_var('paged') : 1;
-                    $offset = 9 * ($page_num - 1);
-                    $all_pages = get_posts(array(
-                        'category_name' => 'uncategorized',
-                        'posts_per_page' => -1
-                    ));
-                    $posts_on_page = array_slice($all_pages, $offset, 9);
-                ?>
+            <?php
+                $page_num = get_query_var('paged') ? get_query_var('paged') : 1;
+                $offset = 9 * ($page_num - 1);
+                $all_pages = get_posts(array(
+                    'category_name' => 'uncategorized',
+                    'posts_per_page' => -1
+                ));
+                $posts_on_page = array_slice($all_pages, $offset, 9);
+            ?>
             <div class="section white micro">
                 <?php
                     $pages = array_slice($posts_on_page, 0, 3);
