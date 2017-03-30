@@ -84,16 +84,18 @@
             <?php } ?>
             <div class="section micro-padding-top white">
                 <?php
-                    $category = 'uncategorized';
-                    if ($is_recipe) {
-                        $category = 'recipe';
-                    }
-
-                    $pages = get_posts(array(
-                        'category_name' => $category,
+                    $args = array(
                         'posts_per_page' => 3,
                         'exclude' => get_the_ID()
-                    ));
+                    );
+
+                    if ($is_recipe) {
+                        $args['category_name'] = 'recipe';
+                    } else {
+                        $args['category__not_in'] = array(get_cat_ID('recipe'));
+                    }
+
+                    $pages = get_posts($args);
 
                     include(locate_template('three-page-previews.php', false, false));
                 ?>

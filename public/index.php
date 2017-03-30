@@ -22,7 +22,7 @@
                 $page_num = get_query_var('paged') ? get_query_var('paged') : 1;
                 $offset = 9 * ($page_num - 1);
                 $all_pages = get_posts(array(
-                    'category_name' => 'uncategorized',
+                    'category__not_in' => array(get_cat_ID('recipe')),
                     'posts_per_page' => -1
                 ));
                 $posts_on_page = array_slice($all_pages, $offset, 9);

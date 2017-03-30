@@ -73,7 +73,7 @@
                         'posts_per_page' => 1
                     ));
                     $blogPosts = new WP_Query(array(
-                        'category_name' => 'uncategorized',
+                        'category__not_in' => array(get_cat_ID('recipe')),
                         // Get 2 posts since we need an extra if no video.
                         'posts_per_page' => 2,
                         'tax_query' => array(
@@ -86,7 +86,7 @@
                         ),
                     ));
                     $videoPosts = new WP_Query(array(
-                        'category_name' => 'uncategorized',
+                        'category__not_in' => array(get_cat_ID('recipe')),
                         'posts_per_page' => 1,
                         'tax_query' => array(
                             array(

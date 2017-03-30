@@ -21,7 +21,7 @@
                 <h3 class="text-center capitalize">Something Else You Might Enjoy</h3>
                 <?php
                     $pages = get_posts(array(
-                        'category_name' => 'uncategorized',
+                        'category__not_in' => array(get_cat_ID('recipe')),
                         'posts_per_page' => 3
                     ));
 
