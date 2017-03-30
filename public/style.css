@@ -2606,7 +2606,7 @@ input[type=text], select, textarea {
   .products-previews-wrapper:after {
     display: block;
     width: 100%;
-    height: 400px;
+    height: 500px;
     content: ''; }
   .products-previews-wrapper .product {
     display: inline-block;
@@ -2653,7 +2653,7 @@ input[type=text], select, textarea {
       left: 0;
       right: 0;
       bottom: 0;
-      height: 400px;
+      height: 500px;
       background-color: #f6f6f6;
       text-align: left;
       vertical-align: top; }
@@ -2661,14 +2661,14 @@ input[type=text], select, textarea {
         display: block;
         float: left;
         width: 60%;
-        height: 400px; }
+        height: 500px; }
         .products-previews-wrapper .product .promo-overlay .graphic img {
           height: 100%;
           width: 100%; }
       .products-previews-wrapper .product .promo-overlay .info {
         width: 36%;
         display: inline-block;
-        padding-top: 35px;
+        padding-top: 85px;
         padding-right: 4%; }
         .products-previews-wrapper .product .promo-overlay .info h3 {
           margin-bottom: 10px; }
