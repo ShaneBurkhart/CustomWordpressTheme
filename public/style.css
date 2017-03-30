@@ -2614,6 +2614,7 @@ input[type=text], select, textarea {
     width: 150px;
     vertical-align: bottom; }
     .products-previews-wrapper .product h4 {
+      color: #4f4f4f;
       margin: 0;
       padding-bottom: 10px;
       height: 120px;
