@@ -3104,7 +3104,7 @@ form#find-store-by-zipcode {
     -o-background-size: cover;
     background-size: cover; }
   .section.product-section {
-    height: 350px;
+    height: 400px;
     overflow: hidden;
     background-repeat: none;
     background-position: center center;
@@ -3112,6 +3112,12 @@ form#find-store-by-zipcode {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover; }
+    .section.product-section .description.left {
+      margin-top: 40px;
+      padding-left: 20%; }
+    .section.product-section .description.right {
+      margin-top: 50px;
+      padding-right: 15%; }
   .section.product-details-section {
     background-color: #e0e0e0; }
     .section.product-details-section h1 {

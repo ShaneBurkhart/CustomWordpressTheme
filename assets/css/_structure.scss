@@ -152,7 +152,7 @@
     }
 
     &.product-section {
-        height: 350px;
+        height: 400px;
         overflow: hidden;
         background-repeat: none;
         background-position: center center;
@@ -160,6 +160,16 @@
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+
+        .description.left {
+            margin-top: 40px;
+            padding-left: 20%;
+        }
+
+        .description.right {
+            margin-top: 50px;
+            padding-right: 15%;
+        }
     }
 
     &.product-details-section {
