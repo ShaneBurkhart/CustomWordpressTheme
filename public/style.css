@@ -2611,7 +2611,7 @@ input[type=text], select, textarea {
   .products-previews-wrapper .product {
     display: inline-block;
     text-align: center;
-    width: 200px;
+    width: 150px;
     vertical-align: bottom; }
     .products-previews-wrapper .product h4 {
       margin: 0;
