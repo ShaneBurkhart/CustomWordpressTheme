@@ -9,7 +9,7 @@
         <main>
             <div class="section no-padding white image-with-text">
                 <img src="<?php the_field('banner_image', get_option('page_for_posts')) ?>">
-                <h2 class="text-center">Blog Posts</h2>
+                <h2 class="text-center"><?php the_field('page_heading') ?></h2>
             </div>
                 <?php
                     $page_num = get_query_var('paged') ? get_query_var('paged') : 1;
