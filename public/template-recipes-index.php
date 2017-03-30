@@ -31,14 +31,15 @@
     }
 
     $page_num = get_query_var('paged') ? get_query_var('paged') : 1;
-    $offset = 9 * ($page_num - 1);
-    $all_pages = new WP_Query(array(
+    global $wp_query;
+    $wp_query = NULL;
+    $wp_query = new WP_Query(array(
         'category_name' => 'recipe',
-        'posts_per_page' => -1,
+        'posts_per_page' => 9,
+        'paged' => $page_num,
         's' => $keyword,
         'meta_query' => $query,
     ));
-    $recipes_on_page = array_slice($all_pages->posts, $offset, 9);
 
     $recipeQuery = new WP_Query(array(
         'category_name' => 'recipe',
@@ -131,21 +132,21 @@
             </div>
             <div class="section white micro">
                 <?php
-                    $pages = array_slice($recipes_on_page, 0, 3);
+                    $pages = array_slice($wp_query->posts, 0, 3);
                     include(locate_template('three-page-previews.php', false, false));
                 ?>
             </div>
 
             <div class="section white micro">
                 <?php
-                    $pages = array_slice($recipes_on_page, 3, 3);
+                    $pages = array_slice($wp_query->posts, 3, 3);
                     include(locate_template('three-page-previews.php', false, false));
                 ?>
             </div>
 
             <div class="section white micro">
                 <?php
-                    $pages = array_slice($recipes_on_page, 6, 3);
+                    $pages = array_slice($wp_query->posts, 6, 3);
                     include(locate_template('three-page-previews.php', false, false));
                 ?>
             </div>
@@ -154,16 +155,12 @@
                 <div class="container-fluid">
                     <div class="full text-center">
                         <?php
-                            if (sizeof($all_pages) > $offset + 9) {
-                        ?>
-                                <a class="button" href="/recipes/page/<?php echo $page_num + 1; ?>">More Recipes</a>
-                        <?php } ?>
+                            $previousLink = previous_posts_link('Previous');
+                            if ($previousLink) { echo $previousLink; }
 
-                        <?php
-                            if ($offset > 0) {
+                            $nextLink = next_posts_link('More Recipes', $wp_query->max_num_pages);
+                            if ($nextLink) { echo $nextLink; }
                         ?>
-                                <a class="button" href="/recipes/page/<?php echo $page_num - 1; ?>">Back</a>
-                        <?php } ?>
                     </div>
                 </div>
             </div>
