@@ -1,6 +1,6 @@
 <?php
     /**
-    * Template Name: Product Page
+    * Template Name: Individual Product Page
     */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -26,7 +26,7 @@
                         <img src="<?php the_field('product_image', get_the_ID()); ?>">
                     </div>
                     <div class="description">
-                        <h1><?php the_title(); ?></h1>
+                        <h1><?php the_field('product_name'); ?></h1>
                         <p><?php the_field('product_description'); ?></p>
                     </div>
                 </div>
