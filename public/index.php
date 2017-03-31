@@ -61,6 +61,7 @@
                     </div>
                 </div>
                 <?php
+                    $no_overlay = true;
                     $pages = array_slice($posts_on_page, 0, 3);
                     include(locate_template('three-page-previews.php', false, false));
                 ?>
@@ -68,6 +69,7 @@
 
             <div class="section white micro">
                 <?php
+                    $no_overlay = true;
                     $pages = array_slice($posts_on_page, 3, 3);
                     include(locate_template('three-page-previews.php', false, false));
                 ?>
@@ -75,6 +77,7 @@
 
             <div class="section white micro">
                 <?php
+                    $no_overlay = true;
                     $pages = array_slice($posts_on_page, 6, 3);
                     include(locate_template('three-page-previews.php', false, false));
                 ?>

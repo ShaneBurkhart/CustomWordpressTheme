@@ -514,6 +514,10 @@ input[type=text], select, textarea {
         .image-wrapper {
             position: relative;
 
+            &.no-overlay:after {
+                content: none;
+            }
+
             &:after {
                 content: ' ';
                 display: block;

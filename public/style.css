@@ -2583,6 +2583,8 @@ input[type=text], select, textarea {
 
 .thumbnail-page-preview.blog-post .image-wrapper, .thumbnail-page-preview.video-post .image-wrapper, .thumbnail-page-preview.recipe-post .image-wrapper {
   position: relative; }
+  .thumbnail-page-preview.blog-post .image-wrapper.no-overlay:after, .thumbnail-page-preview.video-post .image-wrapper.no-overlay:after, .thumbnail-page-preview.recipe-post .image-wrapper.no-overlay:after {
+    content: none; }
   .thumbnail-page-preview.blog-post .image-wrapper:after, .thumbnail-page-preview.video-post .image-wrapper:after, .thumbnail-page-preview.recipe-post .image-wrapper:after {
     content: ' ';
     display: block;
