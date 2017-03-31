@@ -22,8 +22,8 @@
             </div>
             <div class="section micro-padding-top torn-paper product-details-section">
                 <div class="container">
-                    <div class="graphic">
-                        <img src="<?php the_field('product_image', get_the_ID()); ?>">
+                    <div class="graphic text-center">
+                        <img src="<?php the_field('product_image', get_the_ID()); ?>" style="max-height: 400px;">
                     </div>
                     <div class="description">
                         <h1><?php the_field('product_name'); ?></h1>
