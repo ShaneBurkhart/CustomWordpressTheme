@@ -29,15 +29,15 @@
                 <li><a href="/recipes">Recipes</a></li>
                 <li><a href="/blog">Blog</a></li>
                 <li><a href="/q-club">Q' Club</a></li>
-                <li><a href=""><i class="fa fa-search"></i></a></li>
+                <li id="desktop-search-button"><a href="javascript:void(0)"><i class="fa fa-search"></i></a></li>
                 <li id="mobile-drawer-button" class="mobile-drawer"><a href="javascript:void(0)"><i class=" fa fa-bars"></i></a></li>
             </ul>
             <div class="mobile-nav-drawer">
                 <div class="search-section">
-                    <form action="/" method="get">
+                    <form action="/" method="GET">
                         <div class="input-container">
-                            <input name="query">
-                            <i class="fa fa-search"></i>
+                            <input name="s">
+                            <button class="fa fa-search"></button>
                         </div>
                         <button type="button" id="mobile-drawer-close-button" class="circle-arrow fa fa-arrow-right"></button>
                     </form>
@@ -64,3 +64,10 @@
         </div>
     </div>
 </header>
+<div id="desktop-search-overlay">
+    <a href="javascript:void(0)" id="exit-button" class="fa fa-times"></a>
+    <form action="/" method="GET">
+        <input name="s" type="text" placeholder="Start searching">
+        <button class="fa fa-search"></button>
+    </form>
+</div>

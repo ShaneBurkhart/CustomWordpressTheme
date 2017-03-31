@@ -221,7 +221,7 @@ header {
                     display: inline-block;
                     width: 80%;
 
-                    i.fa {
+                    button.fa {
                         color: #ffffff;
                         font-family: 'FontAwesome';
                         content: '\f002';
@@ -231,6 +231,11 @@ header {
                         bottom: 0;
                         font-size: 24px;
                         padding: 11px 15px;
+                        border: none;
+
+                        &:hover {
+                            background-color: transparent;
+                        }
                     }
 
                     input {

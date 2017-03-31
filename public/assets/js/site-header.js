@@ -3,6 +3,10 @@ $(document).ready(function () {
   var $mobileNavDrawer = $('header .mobile-nav-drawer');
   var $mobileDrawerButton = $('#mobile-drawer-button');
   var $mobileDrawerCloseButton = $('#mobile-drawer-close-button');
+  var $desktopSearchButton = $('#desktop-search-button');
+  var $desktopSearchOverlay = $('#desktop-search-overlay');
+  var $desktopSearchFormButton = $desktopSearchOverlay.find('.fa-search');
+  var $desktopSearchOverlayExitButton  = $desktopSearchOverlay.find('#exit-button');
   var isFirst = true;
 
   // Change header when scrolling
@@ -39,5 +43,13 @@ $(document).ready(function () {
     } else {
       $mobileNavDrawer.animate({ 'right': '100%' }, 200).removeClass('nav-open')
     }
+  });
+
+  $desktopSearchButton.click(function (e) {
+    $desktopSearchOverlay.css('display', 'block');
+  });
+
+  $desktopSearchOverlayExitButton.click(function (e) {
+    $desktopSearchOverlay.css('display', 'none');
   });
 });
