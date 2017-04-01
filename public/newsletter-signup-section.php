@@ -1,4 +1,4 @@
-<div class="section white image-with-popup" style="background-image: url(<?php echo get_template_directory_uri() ?>/assets/images/banners/free-sample-subtle-background.png);">
+<div class="section white image-with-popup" style="background-image: url(<?php the_field('q_club_signup_section_background_image', get_option('page_on_front')); ?>);">
     <div class="fluid-container">
         <div class="full text-center">
             <div class="popup">
