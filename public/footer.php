@@ -17,7 +17,7 @@
                 $footer_products = wp_get_nav_menu_items('Footer Products');
                 foreach ($footer_products as $item) {
             ?>
-                <p class="normal-casing"><a href="<?php echo $item->url; ?>"><?php echo $item->title; ?></a></p>
+                <p class="normal-casing"><a href="<?php echo $item->url; ?>"><?php echo strtolower($item->title); ?></a></p>
             <?php } ?>
         </div>
         <div class="fifth">
