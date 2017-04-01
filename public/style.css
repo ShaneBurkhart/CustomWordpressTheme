@@ -2837,7 +2837,7 @@ input[type=text], select, textarea {
     width: 50%; }
   #recipe-container .full-container .description {
     position: absolute;
-    overflow: scroll;
+    overflow-y: scroll;
     top: 0;
     right: 0;
     bottom: 0;
