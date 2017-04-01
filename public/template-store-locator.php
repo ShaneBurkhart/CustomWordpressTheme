@@ -26,34 +26,11 @@
             <div class="section no-padding white">
                 <div class="full-container">
                     <div id="store-locator-map" class="full">
-                        <div id="bh-sl-map-container" class="bh-sl-map-container">
-                            <div class="bh-sl-loc-list">
-                                <ul class="list"></ul>
-                            </div>
-                            <div id="bh-sl-map" class="bh-sl-map"></div>
-                        </div>
+                        <?php echo do_shortcode("[wpsl]"); ?>
                     </div>
                 </div>
             </div>
         </main>
-
-        <script>
-            $(function() {
-                $('#store-locator-map').storeLocator({
-                    'noForm': true,
-                    'fullMapStart': true,
-                    'slideMap': false,
-                    'listColor1': '#ffffff',
-                    'listColor2': '#ffffff',
-                    'defaultLoc': true,
-                    'defaultLat': 43.9695148,
-                    'defaultLng': -99.9018131,
-                    'distanceAlert': -1,
-                    'dataType': 'json',
-                    'dataLocation': '/wp-content/themes/custom/assets/js/data/store.json'
-                });
-            });
-        </script>
 
         <?php get_footer(); ?>
 

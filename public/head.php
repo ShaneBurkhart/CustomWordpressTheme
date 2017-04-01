@@ -12,7 +12,6 @@
       integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
       crossorigin="anonymous"></script>
     <script src="/wp-content/themes/custom/assets/js/handlebars-v4.0.5.js"></script>
-    <script src="/wp-content/themes/custom/assets/js/store-locator.min.js"></script>
 
     <title><?php echo get_the_title(); ?></title>
 
