@@ -2977,6 +2977,12 @@ ul#blog-share-links {
     ul#blog-share-links li a {
       color: #888888;
       font-size: 32px; }
+    ul#blog-share-links li#print-button {
+      float: right; }
+      ul#blog-share-links li#print-button a {
+        font-size: 12px;
+        color: #ffffff;
+        padding: 8px 16px; }
 
 @media only screen and (max-width: 750px) {
   #recipe-container .full-container {
@@ -3689,3 +3695,22 @@ header {
             header .mobile-nav-drawer ul li ul.drop-down-items li a:hover {
               color: #ffffff;
               background-color: #6d8aaa; } }
+
+@media print {
+  main {
+    margin: 0;
+    padding: 0; }
+  body *, main * {
+    display: none; }
+  main, main #section-to-print, #section-to-print * {
+    display: block; }
+    main #recipe-container > .full-container > .description, main #section-to-print #recipe-container > .full-container > .description, #section-to-print * #recipe-container > .full-container > .description {
+      background-image: none;
+      width: 100%;
+      padding: 30px;
+      overflow: auto;
+      position: static; }
+      main #recipe-container > .full-container > .description ul.recipe-meta > li > i, main #recipe-container > .full-container > .description ul.recipe-meta > li > span, main #section-to-print #recipe-container > .full-container > .description ul.recipe-meta > li > i, main #section-to-print #recipe-container > .full-container > .description ul.recipe-meta > li > span, #section-to-print * #recipe-container > .full-container > .description ul.recipe-meta > li > i, #section-to-print * #recipe-container > .full-container > .description ul.recipe-meta > li > span {
+        display: inline-block; }
+  #section-to-print {
+    margin: 0; } }
