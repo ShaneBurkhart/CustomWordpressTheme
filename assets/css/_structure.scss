@@ -518,6 +518,17 @@
             width: 95%;
         }
 
+        .container, .fluid-container {
+            .graphic, .description {
+                display: block;
+                width: 100%;
+            }
+
+            .graphic {
+                float: left;
+            }
+        }
+
         .container > .third, .fluid-container > .third {
             width: 100%;
             display: block;
@@ -609,17 +620,6 @@
                 .bg {
                     padding: 0px 40px;
                 }
-            }
-        }
-
-        .container, .fluid-container {
-            .graphic, .description {
-                display: block;
-                width: 100%;
-            }
-
-            .graphic {
-                float: left;
             }
         }
     }

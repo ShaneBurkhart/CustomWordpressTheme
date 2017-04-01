@@ -397,6 +397,11 @@ input[type=text], select, textarea {
         text-align: center;
     }
 
+    &.small {
+        font-size: 10px;
+        padding: 10px 20px;
+    }
+
     &.yellow {
         color: #4f4f4f;
         background-color: #fcbe11;

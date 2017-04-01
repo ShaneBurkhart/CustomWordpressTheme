@@ -2499,6 +2499,9 @@ input[type=text], select, textarea {
     display: block;
     width: 100%;
     text-align: center; }
+  .button.small, button.small {
+    font-size: 10px;
+    padding: 10px 20px; }
   .button.yellow, button.yellow {
     color: #4f4f4f;
     background-color: #fcbe11;
@@ -3417,6 +3420,11 @@ ul#blog-share-links {
     content: ''; }
   .section > .small-container {
     width: 95%; }
+  .section .container .graphic, .section .container .description, .section .fluid-container .graphic, .section .fluid-container .description {
+    display: block;
+    width: 100%; }
+  .section .container .graphic, .section .fluid-container .graphic {
+    float: left; }
   .section .container > .third, .section .fluid-container > .third {
     width: 100%;
     display: block; }
@@ -3470,12 +3478,7 @@ ul#blog-share-links {
       margin-top: 30px;
       padding: 0px 3%; }
     .section .fluid-container .half .bg, .section .full-container .half .bg, .section.product-section .fluid-container .half .bg, .section.product-section .full-container .half .bg {
-      padding: 0px 40px; }
-  .section .container .graphic, .section .container .description, .section .fluid-container .graphic, .section .fluid-container .description, .section.product-section .container .graphic, .section.product-section .container .description, .section.product-section .fluid-container .graphic, .section.product-section .fluid-container .description {
-    display: block;
-    width: 100%; }
-  .section .container .graphic, .section .fluid-container .graphic, .section.product-section .container .graphic, .section.product-section .fluid-container .graphic {
-    float: left; } }
+      padding: 0px 40px; } }
 
 @media only screen and (max-width: 500px) {
   .section.product-section {

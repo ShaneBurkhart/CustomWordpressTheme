@@ -28,6 +28,17 @@
                     <div class="description">
                         <h1><?php the_field('product_name'); ?></h1>
                         <p><?php the_field('product_description'); ?></p>
+                        <div class="full-container">
+                            <div class="third">
+                                <a class="button small block yellow capitalize">Print Coupon</a>
+                            </div>
+                            <div class="third">
+                                <a class="button small block capitalize">Nutrition Facts</a>
+                            </div>
+                            <div class="third">
+                                <a class="button small block capitalize">Ingredients</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
