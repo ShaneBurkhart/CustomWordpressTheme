@@ -21,25 +21,33 @@
             </div>
 
             <?php if (!$is_recipe) { ?>
-                <div class="section no-padding white post-image-section" style="background-image: url(<?php the_field('banner_image') ?>);">
-                </div>
+                <div class="section no-padding white post-image-section" style="background-image: url(<?php the_field('banner_image') ?>);"></div>
                 <div class="section tiny white">
                     <div class="container">
-                            <div class="third blog-side-bar">
-                                <h3>Subscribe To Q'Club</h3>
-                                <p></p>
-                            </div>
-                            <div class="two-thirds blog-post">
-                                <h1 class="post-title"><?php echo get_the_title(); ?></h1>
-                                <?php the_content(); ?>
-                            </div>
+                        <div class="two-thirds blog-post">
+                            <h1 class="post-title"><?php echo get_the_title(); ?></h1>
+                            <?php the_content(); ?>
+                        </div>
+                        <div class="third blog-side-bar">
+                            <ul id="blog-share-links">
+                                <?php
+                                    $url_encoded = urlencode(get_permalink());
+                                    $tweet_text = urlencode(get_the_title() . " - " . get_permalink());
+                                ?>
+                                <li><a href="http://pinterest.com/pin/create/link/?url=<?php echo $url_encoded; ?>" class="fa fa-pinterest" target="_blank"></a></li>
+                                <li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $url_encoded; ?>" class="fa fa-facebook" target="_blank"></a></li>
+                                <li><a href="https://twitter.com/intent/tweet?text=<?php echo $tweet_text; ?>" class="fa fa-twitter" target="_blank"></a></li>
+                            </ul>
+                            <h3>Subscribe To Q'Club</h3>
+                            <p>Get the latest straight to your inbox. Sign up today.</p>
+                            <?php gravity_form(4, false, false, false, '', false); ?>
+                        </div>
                     </div>
                 </div>
             <?php } else { ?>
                 <div id="recipe-container" class="section no-padding white">
                     <div class="full-container">
-                    <div class="graphic background" style="background-image: url(<?php the_field('banner_image'); ?>);">
-                        </div>
+                        <div class="graphic background" style="background-image: url(<?php the_field('banner_image'); ?>);"></div>
                         <div class="description">
                             <h1 class="post-title"><?php echo get_the_title(); ?></h1>
                             <ul class="recipe-meta">

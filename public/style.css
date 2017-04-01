@@ -2215,9 +2215,15 @@
   font-style: normal; }
 
 @font-face {
-  font-family: 'GothamMedium';
-  src: url("assets/fonts/GothamMedium.eot?#iefix") format("embedded-opentype"), url("assets/fonts/GothamMedium.woff") format("woff"), url("assets/fonts/GothamMedium.ttf") format("truetype"), url("assets/fonts/GothamMedium.svg#GothamMedium") format("svg");
+  font-family: 'Gotham';
+  src: url("assets/fonts/gotham-light-webfont.woff2") format("woff2"), url("assets/fonts/gotham-light-webfont.woff") format("woff");
   font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Gotham';
+  src: url("assets/fonts/gotham-bold-webfont.woff2") format("woff2"), url("assets/fonts/gotham-bold-webfont.woff") format("woff");
+  font-weight: bold;
   font-style: normal; }
 
 html {
@@ -2226,7 +2232,7 @@ html {
 body, html {
   color: #4f4f4f;
   margin: 0;
-  font-family: "GothamMedium", "Open Sans", sans-serif; }
+  font-family: "Gotham", "Open Sans", sans-serif; }
 
 body {
   min-height: 100%;
@@ -2251,7 +2257,7 @@ footer {
     margin-bottom: 0px; }
     footer p.capitalize {
       font-size: 14px;
-      font-weight: 700;
+      font-weight: bold;
       text-transform: uppercase; }
   footer ul.social-buttons-group {
     position: absolute;
@@ -2363,13 +2369,13 @@ a, a:hover {
   text-decoration: none; }
 
 h1.bold, h1 .bold, h1 b, h2.bold, h2 .bold, h2 b, h3.bold, h3 .bold, h3 b, h4.bold, h4 .bold, h4 b, h5.bold, h5 .bold, h5 b, h6.bold, h6 .bold, h6 b, p.bold, p .bold, p b, span.bold, span .bold, span b, a.bold, a .bold, a b {
-  font-weight: 700 !important; }
+  font-weight: bold !important; }
 
 h1.light, h1 .light, h2.light, h2 .light, h3.light, h3 .light, h4.light, h4 .light, h5.light, h5 .light, h6.light, h6 .light, p.light, p .light, span.light, span .light, a.light, a .light {
   font-weight: 300 !important; }
 
 h1.normal, h1 .normal, h2.normal, h2 .normal, h3.normal, h3 .normal, h4.normal, h4 .normal, h5.normal, h5 .normal, h6.normal, h6 .normal, p.normal, p .normal, span.normal, span .normal, a.normal, a .normal {
-  font-weight: 400 !important; }
+  font-weight: normal !important; }
 
 .capitalize {
   text-transform: uppercase; }
@@ -2777,20 +2783,6 @@ input[type=text], select, textarea {
         margin: 0;
         border: none; }
 
-.blog-post .recipe-snippet {
-  font-size: 14px;
-  margin-bottom: 15px; }
-
-.blog-post .recipe-meta {
-  background-color: #363636;
-  padding: 10px 20px;
-  margin-bottom: 20px; }
-  .blog-post .recipe-meta p {
-    color: #d0d0d0;
-    margin-bottom: 0px; }
-    .blog-post .recipe-meta p.bold {
-      color: #ffffff; }
-
 .page-nav a {
   color: #4f4f4f; }
 
@@ -2970,6 +2962,18 @@ form#find-store-by-zipcode {
 .pagination-nav a.button {
   margin: 0px 10px; }
 
+ul#blog-share-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px; }
+  ul#blog-share-links li {
+    display: inline-block;
+    margin-right: 25px; }
+    ul#blog-share-links li a {
+      color: #888888;
+      font-size: 32px; }
+
 @media only screen and (max-width: 750px) {
   #recipe-container .full-container {
     height: auto; }
@@ -3036,11 +3040,6 @@ form#find-store-by-zipcode {
       margin: 0px auto; } }
 
 @media only screen and (max-width: 500px) {
-  .section .container > .blog-side-bar {
-    display: none; }
-  .section .container > .two-thirds.blog-post {
-    width: 100%;
-    display: block; }
   footer.section .fluid-container {
     text-align: center; }
     footer.section .fluid-container #site-logo {
@@ -3327,6 +3326,38 @@ form#find-store-by-zipcode {
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover; }
+  .section .container > .third.blog-side-bar {
+    margin-right: 4%; }
+    .section .container > .third.blog-side-bar #gform_4 {
+      text-align: left; }
+      .section .container > .third.blog-side-bar #gform_4 label {
+        display: none; }
+      .section .container > .third.blog-side-bar #gform_4 #gform_fields_4 input {
+        width: 220px; }
+      .section .container > .third.blog-side-bar #gform_4 .gform_footer {
+        text-align: left; }
+        .section .container > .third.blog-side-bar #gform_4 .gform_footer input {
+          color: #4f4f4f;
+          background-color: #fcbe11;
+          border: none; }
+          .section .container > .third.blog-side-bar #gform_4 .gform_footer input:hover {
+            color: #ffffff;
+            background-color: #4f4f4f; }
+  .section .container > .two-thirds.blog-post {
+    float: right;
+    margin-right: 0; }
+    .section .container > .two-thirds.blog-post .recipe-snippet {
+      font-size: 14px;
+      margin-bottom: 15px; }
+    .section .container > .two-thirds.blog-post .recipe-meta {
+      background-color: #363636;
+      padding: 10px 20px;
+      margin-bottom: 20px; }
+      .section .container > .two-thirds.blog-post .recipe-meta p {
+        color: #d0d0d0;
+        margin-bottom: 0px; }
+        .section .container > .two-thirds.blog-post .recipe-meta p.bold {
+          color: #ffffff; }
 
 .group-wrapper {
   position: relative; }
@@ -3385,6 +3416,11 @@ form#find-store-by-zipcode {
         display: block; }
     .section .container > .third.thumbnail-page-preview-bottom, .section .fluid-container > .third.thumbnail-page-preview-bottom {
       display: none; }
+  .section .container > .two-thirds.blog-post, .section .container > .third.blog-side-bar {
+    width: 100%;
+    display: block; }
+  .section .container > .third.blog-side-bar {
+    padding-top: 20px; }
   .section.parallax > .float {
     height: 100%; }
     .section.parallax > .float:after {
