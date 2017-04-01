@@ -116,8 +116,10 @@
         background-size: cover;
 
         .popup {
+            display: inline-block;
             color: #ffffff;
             width: 500px;
+            height: 175px;
             background-color: rgba(41, 41, 41, .9);
             padding: 40px;
             text-align: left;
@@ -250,6 +252,10 @@
 
     &.large {
         padding: 160px 0px;
+    }
+
+    &.medium-large {
+        padding: 120px 0px;
     }
 
     &.small {

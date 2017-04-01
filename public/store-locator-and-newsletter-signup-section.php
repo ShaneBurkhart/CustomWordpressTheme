@@ -1,10 +1,10 @@
-<div class="section white image-with-two-popups" style="background-image: url(<?php echo get_template_directory_uri() ?>/assets/images/banners/free-sample-subtle-background.png);">
+<div class="section large white image-with-two-popups" style="background-image: url(<?php the_field('store_locator_and_q_club_background_image', get_option('page_on_front')); ?>);">
     <div class="fluid-container">
         <div class="half">
             <div class="popup text-left">
-                <h3>Find me some Twist'd Q.</h3>
+                <h4>Find me some Twist'd Q.</h4>
                 <form id="find-store-by-zipcode" action="/store-locator" method="GET">
-                    <input name="zipcode" type="text" placeholder="Enter your Zipcode">
+                    <input name="zipcode" type="text" placeholder="ZIP Code">
                     <button></button>
                 </form>
             </div>

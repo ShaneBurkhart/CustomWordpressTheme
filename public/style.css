@@ -3187,8 +3187,10 @@ ul#blog-share-links {
     -o-background-size: cover;
     background-size: cover; }
     .section.image-with-two-popups .popup {
+      display: inline-block;
       color: #ffffff;
       width: 500px;
+      height: 175px;
       background-color: rgba(41, 41, 41, 0.9);
       padding: 40px;
       text-align: left; }
@@ -3286,6 +3288,8 @@ ul#blog-share-links {
     background-size: contain; }
   .section.large {
     padding: 160px 0px; }
+  .section.medium-large {
+    padding: 120px 0px; }
   .section.small {
     padding: 60px 0px; }
   .section.tiny {
