@@ -16,7 +16,6 @@
             <p><a href="/products/seasonings">Seasonings</a></p>
             <p><a href="/products/rubs">Rubs</a></p>
             <p><a href="/products/sauces">Sauces</a></p>
-            <p><a href="/products/brines">Brines</a></p>
         </div>
         <div class="fifth">
             <p class="capitalize"><a href="/store-locator">Store Locator</a></p>
