@@ -921,6 +921,7 @@ input[type=text], select, textarea {
     }
 }
 
+#desktop-overlay,
 #desktop-search-overlay {
     display: none;
     position: fixed;
@@ -939,6 +940,15 @@ input[type=text], select, textarea {
         margin: 0;
         padding: 10px 20px;
         color: inherit;
+    }
+
+    img {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        max-width: 90%;
+        max-height: 90%;
+        transform: translate(-50%, -50%);
     }
 
     form {

@@ -2874,6 +2874,7 @@ input[type=text], select, textarea {
   .search-result .description p {
     margin-bottom: 0; }
 
+#desktop-overlay,
 #desktop-search-overlay {
   display: none;
   position: fixed;
@@ -2883,6 +2884,7 @@ input[type=text], select, textarea {
   height: 100%;
   z-index: 100009;
   background-color: rgba(255, 255, 255, 0.7); }
+  #desktop-overlay #exit-button,
   #desktop-search-overlay #exit-button {
     position: fixed;
     top: 0;
@@ -2891,12 +2893,22 @@ input[type=text], select, textarea {
     margin: 0;
     padding: 10px 20px;
     color: inherit; }
+  #desktop-overlay img,
+  #desktop-search-overlay img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    max-width: 90%;
+    max-height: 90%;
+    transform: translate(-50%, -50%); }
+  #desktop-overlay form,
   #desktop-search-overlay form {
     position: fixed;
     top: 40%;
     left: 50%;
     width: 400px;
     transform: translate(-50%, -50%); }
+    #desktop-overlay form input,
     #desktop-search-overlay form input {
       background-color: transparent;
       width: 100%;
@@ -2904,6 +2916,7 @@ input[type=text], select, textarea {
       border-bottom: 1px solid #999999;
       padding: 8px 40px 8px 0px;
       font-size: 18px; }
+    #desktop-overlay form button,
     #desktop-search-overlay form button {
       color: inherit;
       position: absolute;
@@ -2914,6 +2927,7 @@ input[type=text], select, textarea {
       margin: 0;
       border: none;
       font-size: 32px; }
+      #desktop-overlay form button:hover,
       #desktop-search-overlay form button:hover {
         background-color: transparent; }
 

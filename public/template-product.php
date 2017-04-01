@@ -30,13 +30,19 @@
                         <p><?php the_field('product_description'); ?></p>
                         <div class="full-container">
                             <div class="third">
-                                <a class="button small block yellow capitalize">Print Coupon</a>
+                                <?php if (get_field('coupon_page')) { ?>
+                                    <a href="<?php the_field('coupon_page'); ?>" class="button small block yellow capitalize">Print Coupon</a>
+                                <?php } ?>
                             </div>
                             <div class="third">
-                                <a class="button small block capitalize">Nutrition Facts</a>
+                                <?php if (get_field('nutrition_facts_image')) { ?>
+                                    <a id="recipe-nutrition-facts" href="javascript:void(0);" data-image="<?php the_field('nutrition_facts_image'); ?>" class="button small block capitalize">Nutrition Facts</a>
+                                <?php } ?>
                             </div>
                             <div class="third">
-                                <a class="button small block capitalize">Ingredients</a>
+                                <?php if (get_field('ingredients_image')) { ?>
+                                    <a id="recipe-ingredients" href="javascript:void(0);" data-image="<?php the_field('ingredients_image'); ?>" class="button small block capitalize">Ingredients</a>
+                                <?php } ?>
                             </div>
                         </div>
                     </div>
@@ -70,6 +76,10 @@
 
         <?php get_footer(); ?>
 
+        <div id="desktop-overlay">
+            <a href="javascript:void(0)" id="exit-button" class="fa fa-times"></a>
+            <img src="">
+        </div>
     </body>
 </html>
 
