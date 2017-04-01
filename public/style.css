@@ -3611,7 +3611,7 @@ header {
 .mobile-nav-drawer {
   display: none; }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 950px) {
   header.scroll-collapse .full > ul > li {
     display: none; }
     header.scroll-collapse .full > ul > li.mobile-drawer {
