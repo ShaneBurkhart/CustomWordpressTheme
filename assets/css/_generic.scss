@@ -350,6 +350,11 @@ input[type=text], select, textarea {
         pointer-events: none;
     }
 
+    &.fixed {
+        width: 250px;
+        display: inline-block;
+    }
+
     &.block {
         display: block;
         width: 100%;
@@ -1084,7 +1089,6 @@ ul#blog-share-links {
         }
     }
 }
-
 
 @media only screen and (max-width : 750px) {
     #recipe-container {

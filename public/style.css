@@ -2463,6 +2463,9 @@ input[type=text], select, textarea {
     right: 15px;
     padding-top: 10px;
     pointer-events: none; }
+  .select_wrapper.fixed {
+    width: 250px;
+    display: inline-block; }
   .select_wrapper.block {
     display: block;
     width: 100%; }

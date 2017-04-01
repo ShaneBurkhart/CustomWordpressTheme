@@ -42,10 +42,10 @@
                     return $var->name != 'Recipe';
                 }
             ?>
-            <div class="section white micro">
+            <div class="section white no-padding">
                 <div class="container">
                     <div class="full text-right">
-                        <div class="select_wrapper">
+                        <div class="select_wrapper fixed">
                             <select id="category-select">
                                 <option disabled <?php if (!$categoryQuery) echo 'selected'; ?>>Filter by Category</option>
                                 <option value="">All Categories</option>
@@ -60,6 +60,8 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="section white micro">
                 <?php
                     $no_overlay = true;
                     $pages = array_slice($posts_on_page, 0, 3);
