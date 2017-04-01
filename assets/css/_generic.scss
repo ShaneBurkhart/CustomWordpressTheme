@@ -142,8 +142,13 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     color: #fcbe11;
     font-weight: 900;
-    font-size: 48px;
+    font-size: 68px;
     text-transform: uppercase;
+
+    &.post-title {
+        font-size: 32px;
+        color: #525252;
+    }
 }
 
 h2 {
@@ -427,7 +432,6 @@ input[type=text], select, textarea {
 
 .jumbotron {
     width: 550px;
-    margin-top: 75px;
 
     h1 {
         text-transform: uppercase;
@@ -775,12 +779,6 @@ input[type=text], select, textarea {
 }
 
 .blog-post {
-    h1 {
-        color: #4f4f4f;
-        font-size: 28px;
-        text-transform: uppercase;
-    }
-
     .recipe-snippet {
         font-size: 14px;
         margin-bottom: 15px;
@@ -892,11 +890,6 @@ input[type=text], select, textarea {
             -moz-background-size: cover;
             -o-background-size: cover;
             background-size: cover;
-
-            h1 {
-                color: #4f4f4f;
-                font-size: 24px;
-            }
         }
     }
 }

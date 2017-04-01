@@ -2318,8 +2318,11 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   color: #fcbe11;
   font-weight: 900;
-  font-size: 48px;
+  font-size: 68px;
   text-transform: uppercase; }
+  h1.post-title {
+    font-size: 32px;
+    color: #525252; }
 
 h2 {
   color: #fcbe11;
@@ -2519,8 +2522,7 @@ input[type=text], select, textarea {
     text-align: center; }
 
 .jumbotron {
-  width: 550px;
-  margin-top: 75px; }
+  width: 550px; }
   .jumbotron h1 {
     text-transform: uppercase;
     line-height: 1;
@@ -2775,11 +2777,6 @@ input[type=text], select, textarea {
         margin: 0;
         border: none; }
 
-.blog-post h1 {
-  color: #4f4f4f;
-  font-size: 28px;
-  text-transform: uppercase; }
-
 .blog-post .recipe-snippet {
   font-size: 14px;
   margin-bottom: 15px; }
@@ -2857,9 +2854,6 @@ input[type=text], select, textarea {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover; }
-    #recipe-container .full-container .description h1 {
-      color: #4f4f4f;
-      font-size: 24px; }
 
 .search-result {
   margin-bottom: 60px; }
@@ -3349,7 +3343,7 @@ form#find-store-by-zipcode {
     display: block;
     width: 100%; }
     .section .half .jumbotron p {
-      width: 100 !important; }
+      width: 100% !important; }
   .section.image-with-two-popups .half {
     display: block;
     width: 100%;
@@ -3413,7 +3407,9 @@ form#find-store-by-zipcode {
     .section.parallax > .content .jumbotron {
       display: block;
       width: 100%;
-      margin-top: 15px; } }
+      margin-top: 15px; }
+      .section.parallax > .content .jumbotron h1 {
+        font-size: 54px; } }
 
 @media only screen and (max-width: 500px) {
   .section .micro-container, .section.product-section .micro-container {

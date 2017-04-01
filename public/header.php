@@ -16,19 +16,29 @@
         <div class="full">
             <a id="site-logo" href="/"></a>
             <ul>
-                <li>
-                    <a href="/products">Products</a>
-                    <ul class="drop-down-items">
-                        <?php
-                            foreach($pages as $page) {
-                        ?>
-                                <li><a href="<?php echo get_permalink($page->ID); ?>"><?php echo $page->post_title; ?></a></li>
+                <?php
+                    $site_header_menu = wp_get_nav_menu_items('Site Navigation');
+                    foreach ($site_header_menu as $item) {
+                        if ($item->title == "Products") {
+                ?>
+                            <li>
+                                <a href="<?php echo $item->url; ?>">Products</a>
+                                <ul class="drop-down-items">
+                                    <?php
+                                        foreach($pages as $page) {
+                                    ?>
+                                            <li><a href="<?php echo get_permalink($page->ID); ?>">
+                                                <?php echo $page->post_title; ?>
+                                            </a></li>
+                                    <?php } ?>
+                                </ul>
+                            </li>
+                        <?php } else if ($item->title == "Blog") { ?>
+                            <li><a href="<?php echo get_permalink(get_option('page_for_posts')); ?>"><?php echo $item->title; ?></a></li>
+                        <?php } else { ?>
+                            <li><a href="<?php echo $item->url; ?>"><?php echo $item->title; ?></a></li>
                         <?php } ?>
-                    </ul>
-                </li>
-                <li><a href="/recipes">Recipes</a></li>
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="/q-club">Q' Club</a></li>
+                <?php } ?>
                 <li id="desktop-search-button"><a href="javascript:void(0)"><i class="fa fa-search"></i></a></li>
                 <li id="mobile-drawer-button" class="mobile-drawer"><a href="javascript:void(0)"><i class=" fa fa-bars"></i></a></li>
             </ul>

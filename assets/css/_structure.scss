@@ -397,7 +397,7 @@
             display: block;
             width: 100%;
 
-            p { width: 100 !important; }
+            p { width: 100% !important; }
         }
     }
 
@@ -511,6 +511,10 @@
                     display: block;
                     width: 100%;
                     margin-top: 15px;
+
+                    h1 {
+                        font-size: 54px;
+                    }
                 }
             }
         }

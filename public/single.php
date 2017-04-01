@@ -30,7 +30,7 @@
                                 <p></p>
                             </div>
                             <div class="two-thirds blog-post">
-                                <h1><?php echo get_the_title(); ?></h1>
+                                <h1 class="post-title"><?php echo get_the_title(); ?></h1>
                                 <?php the_content(); ?>
                             </div>
                     </div>
@@ -41,7 +41,7 @@
                     <div class="graphic background" style="background-image: url(<?php the_field('banner_image'); ?>);">
                         </div>
                         <div class="description">
-                            <h1><?php echo get_the_title(); ?></h1>
+                            <h1 class="post-title"><?php echo get_the_title(); ?></h1>
                             <ul class="recipe-meta">
                                 <li>
                                     <span class="bold">Difficulty</span>
