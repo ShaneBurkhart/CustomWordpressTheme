@@ -11,7 +11,7 @@
         </div>
         <div class="half text-right">
             <div class="popup">
-                <h4>Get pro-style tips, tricks and recipes straight to your inbox.</h4>
+                <h4><?php the_field('q_club_signup_headline', get_option('page_on_front')); ?></h4>
                 <?php gravity_form(3, false, false, false, '', false); ?>
             </div>
         </div>
