@@ -2255,6 +2255,8 @@ footer {
   footer p {
     font-size: 12px;
     margin-bottom: 0px; }
+    footer p.normal-casing {
+      text-transform: capitalize; }
     footer p.capitalize {
       font-size: 14px;
       font-weight: bold;
