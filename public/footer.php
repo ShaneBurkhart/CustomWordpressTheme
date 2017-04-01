@@ -13,9 +13,12 @@
         </div>
         <div class="fifth">
             <p class="capitalize"><a href="/products">Products</a></p>
-            <p><a href="/products/seasonings">Seasonings</a></p>
-            <p><a href="/products/rubs">Rubs</a></p>
-            <p><a href="/products/sauces">Sauces</a></p>
+            <?php
+                $footer_products = wp_get_nav_menu_items('Footer Products');
+                foreach ($footer_products as $item) {
+            ?>
+                <p><a href="<?php echo $item->url; ?>"><?php echo $item->title; ?></a></p>
+            <?php } ?>
         </div>
         <div class="fifth">
             <p class="capitalize"><a href="/store-locator">Store Locator</a></p>
