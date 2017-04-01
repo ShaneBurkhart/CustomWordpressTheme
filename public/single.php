@@ -50,6 +50,15 @@
                         <div class="graphic background" style="background-image: url(<?php the_field('banner_image'); ?>);"></div>
                         <div class="description">
                             <h1 class="post-title"><?php echo get_the_title(); ?></h1>
+                            <ul id="blog-share-links">
+                                <?php
+                                    $url_encoded = urlencode(get_permalink());
+                                    $tweet_text = urlencode(get_the_title() . " - " . get_permalink());
+                                ?>
+                                <li><a href="http://pinterest.com/pin/create/link/?url=<?php echo $url_encoded; ?>" class="fa fa-pinterest" target="_blank"></a></li>
+                                <li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $url_encoded; ?>" class="fa fa-facebook" target="_blank"></a></li>
+                                <li><a href="https://twitter.com/intent/tweet?text=<?php echo $tweet_text; ?>" class="fa fa-twitter" target="_blank"></a></li>
+                            </ul>
                             <ul class="recipe-meta">
                                 <li>
                                     <span class="bold">Difficulty</span>

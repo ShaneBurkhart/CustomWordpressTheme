@@ -2810,6 +2810,10 @@ input[type=text], select, textarea {
     width: 64%;
     height: 100%; }
 
+#recipe-container ul#blog-share-links {
+  margin-bottom: 0;
+  padding: 15px 0; }
+
 #recipe-container ul.recipe-meta {
   list-style: none;
   padding: 0;

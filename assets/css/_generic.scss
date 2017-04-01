@@ -831,6 +831,11 @@ input[type=text], select, textarea {
 }
 
 #recipe-container {
+    ul#blog-share-links {
+        margin-bottom: 0;
+        padding: 15px 0;
+    }
+
     ul.recipe-meta {
         list-style: none;
         padding: 0;
