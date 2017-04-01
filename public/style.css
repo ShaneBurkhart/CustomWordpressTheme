@@ -3557,6 +3557,9 @@ header {
       header.scroll-collapse a.button span {
         font-size: 10px;
         line-height: 16px; }
+  header .fluid-container {
+    max-width: 1300px;
+    margin: 0px auto; }
   header .full > ul > li.mobile-drawer {
     display: none; }
   header .full > ul > li > ul.drop-down-items {
@@ -3607,7 +3610,7 @@ header {
     header .full > ul > li {
       display: inline-block;
       text-transform: uppercase;
-      margin: 35px 40px 0px 0px;
+      margin: 35px 35px 0px 0px;
       font-size: 14px;
       font-weight: bold; }
 

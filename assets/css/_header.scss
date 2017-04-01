@@ -72,6 +72,11 @@ header {
         }
     }
 
+    .fluid-container {
+        max-width: 1300px;
+        margin: 0px auto;
+    }
+
     .full > ul > li {
         &.mobile-drawer {
             display: none;
@@ -151,7 +156,7 @@ header {
         & > li {
             display: inline-block;
             text-transform: uppercase;
-            margin: 35px 40px 0px 0px;
+            margin: 35px 35px 0px 0px;
             font-size: 14px;
             font-weight: bold;
         }
