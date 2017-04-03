@@ -1123,6 +1123,11 @@ ul#blog-share-links {
 
 @media only screen and (max-width : 750px) {
     #wpsl-wrap {
+        .wpsl-search {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
         #wpsl-gmap {
             display: none;
         }
@@ -1134,7 +1139,7 @@ ul#blog-share-links {
 
         .wpsl-input {
             width: 100% !important;
-            margin-bottom: 15px;
+            margin-bottom: 15px !important;
 
             input {
                 width: 100% !important;

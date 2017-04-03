@@ -3028,6 +3028,9 @@ ul#blog-share-links {
     display: none !important; }
 
 @media only screen and (max-width: 750px) {
+  #wpsl-wrap .wpsl-search {
+    padding-top: 40px;
+    padding-bottom: 40px; }
   #wpsl-wrap #wpsl-gmap {
     display: none; }
   #wpsl-wrap #wpsl-stores, #wpsl-wrap #wpsl-direction-details, #wpsl-wrap #wpsl-gmap {
@@ -3035,7 +3038,7 @@ ul#blog-share-links {
     padding: 0px 3%; }
   #wpsl-wrap .wpsl-input {
     width: 100% !important;
-    margin-bottom: 15px; }
+    margin-bottom: 15px !important; }
     #wpsl-wrap .wpsl-input input {
       width: 100% !important; }
     #wpsl-wrap .wpsl-input:before {
