@@ -3079,7 +3079,9 @@ ul#blog-share-links {
     width: 550px;
     margin-top: 75px; }
     .jumbotron h1 {
-      font-size: 48px; } }
+      font-size: 48px; }
+  .product .promo-overlay .info {
+    padding-top: 40px; } }
 
 @media only screen and (max-width: 750px) {
   main {
