@@ -2544,8 +2544,7 @@ input[type=text], select, textarea {
     margin-bottom: 0px; }
   .jumbotron p {
     color: #5f5e59;
-    font-size: 14px;
-    font-weight: bold; }
+    font-size: 14px; }
 
 .promo {
   width: 250px;
