@@ -1122,6 +1122,60 @@ ul#blog-share-links {
 }
 
 @media only screen and (max-width : 750px) {
+    #wpsl-wrap {
+        #wpsl-gmap {
+            display: none;
+        }
+
+        #wpsl-stores, #wpsl-direction-details, #wpsl-gmap {
+            height: auto !important;
+            padding: 0px 3%;
+        }
+
+        .wpsl-input {
+            &:before {
+                content: "Find Twist'd Q products near you.";
+                display: block;
+                margin-bottom: 15px;
+                line-height: 1.8;
+                font-weight: bold;
+            }
+
+            label {
+                display: none !important;
+            }
+        }
+
+        .wpsl-search-btn-wrap {
+            width: 100%;
+            display: block;
+            text-align: center;
+
+            input {
+                display: inline-block;
+                float: none !important;
+                color: #4f4f4f;
+                background-color: #fcbe11;
+                border: none;
+                margin-bottom: 10px;
+                padding: 14px 25px;
+                border-radius: 18px;
+                font-size: 12px;
+                text-shadow: 0px 0px 1px #888888;
+                text-transform: uppercase;
+                cursor: pointer;
+                -webkit-appearance:none;
+                -webkit-print-color-adjust: exact;
+                background-image: none;
+
+                &:hover {
+                    color: #ffffff;
+                    background-color: #4f4f4f;
+                }
+            }
+        }
+    }
+
     #recipe-container {
         .full-container {
             height: auto;
