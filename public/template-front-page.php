@@ -28,7 +28,7 @@
                                     <?php if (get_field('hero_promo_subheading')) { ?>
                                         <p><?php the_field('hero_promo_subheading'); ?></p>
                                     <?php } ?>
-                                    <?php if (get_field('hero_promo_button_destination')) { ?>
+                                    <?php if (get_field('hero_promo_button_text')) { ?>
                                         <a href="<?php the_field('hero_promo_button_destination'); ?>" class="button"><?php the_field('hero_promo_button_text'); ?></a>
                                     <?php } ?>
                                 </div>
