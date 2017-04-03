@@ -2649,7 +2649,7 @@ input[type=text], select, textarea {
   .products-previews-wrapper .product {
     display: inline-block;
     text-align: center;
-    width: 150px;
+    max-width: 150px;
     vertical-align: bottom;
     margin: 0px 10px 30px; }
     .products-previews-wrapper .product h4 {

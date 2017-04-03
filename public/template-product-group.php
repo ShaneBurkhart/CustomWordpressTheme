@@ -33,11 +33,12 @@
                                 ));
 
                                 $page_children_ids = array();
+                                $width = round(100.0 / sizeof($pages), 4);
 
                                 foreach($pages as $page) {
                                     $page_children_ids[] = $page->ID;
                             ?>
-                                <div class="product">
+                                <div class="product" style="width: <?php echo $width ?>%;">
                                     <a href="<?php echo get_permalink($page->ID); ?>">
                                         <img class="thumbnail" src="<?php the_field('product_image', $page->ID); ?>">
                                         <h4><?php the_field('product_name', $page->ID); ?></h4>
