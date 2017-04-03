@@ -37,7 +37,11 @@
                                     <?php } ?>
                                     <div class="description">
                                         <h3><a href="<?php echo get_permalink(get_the_ID()); ?>"><?php the_title(); ?></a></h3>
+                                    <?php if (get_field('product_description')) { ?>
+                                        <p><?php the_field('product_description'); ?></p>
+                                    <?php } else { ?>
                                         <?php the_excerpt(); ?>
+                                    <?php } ?>
                                     </div>
                                 </div>
                     <?php

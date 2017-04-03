@@ -5,6 +5,7 @@ $(document).ready(function () {
   var $mobileDrawerCloseButton = $('#mobile-drawer-close-button');
   var $desktopSearchButton = $('#desktop-search-button');
   var $desktopSearchOverlay = $('#desktop-search-overlay');
+  var $desktopSearchInput = $desktopSearchOverlay.find('input');
   var $desktopSearchFormButton = $desktopSearchOverlay.find('.fa-search');
   var $desktopSearchOverlayExitButton  = $desktopSearchOverlay.find('#exit-button');
   var isFirst = true;
@@ -47,6 +48,7 @@ $(document).ready(function () {
 
   $desktopSearchButton.click(function (e) {
     $desktopSearchOverlay.css('display', 'block');
+    $desktopSearchInput.focus();
   });
 
   $desktopSearchOverlayExitButton.click(function (e) {
