@@ -112,7 +112,6 @@
                     if (sizeof($videoPosts->posts) < 1) {
                         $pages = array_merge($pages, $blogPosts->posts);
                     } else {
-                        echo "second";
                         $pages = array_merge($pages, array($blogPosts->posts[0]), $videoPosts->posts);
                     }
 
