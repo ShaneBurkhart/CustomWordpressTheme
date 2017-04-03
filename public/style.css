@@ -2554,7 +2554,7 @@ input[type=text], select, textarea {
   width: 275px; }
   .promo img {
     width: 100%;
-    max-height: 300px; }
+    max-width: 250px; }
   .promo h3 {
     color: #ffffff;
     font-size: 36px;
