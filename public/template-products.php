@@ -14,7 +14,7 @@
             <div class="section tiny">
                 <div class="container">
                     <div class="full">
-                        <h1 class="text-center"><?php the_field('headline'); ?></h1>
+                        <h2 class="text-center"><?php the_field('headline'); ?></h2>
                         <p><?php the_field('description'); ?></p>
                     </div>
                 </div>
