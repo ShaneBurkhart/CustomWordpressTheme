@@ -3118,7 +3118,7 @@ ul#blog-share-links {
   position: relative;
   padding: 80px 0px; }
   .section h1, .section h2, .section h3, .section h4 {
-    margin-bottom: 10px; }
+    padding-bottom: 10px; }
   .section.white {
     background-color: #ffffff; }
   .section.dark-gray {
@@ -3131,8 +3131,7 @@ ul#blog-share-links {
     .section.orange h1, .section.orange h2 {
       color: #ffffff; }
   .section.image, .section.image-with-text, .section.image-with-glow, .section.image-with-popup, .section.image-with-two-popups {
-    position: relative;
-    background-color: #ffffff; }
+    position: relative; }
     .section.image > img, .section.image-with-text > img, .section.image-with-glow > img, .section.image-with-popup > img, .section.image-with-two-popups > img {
       width: 100%;
       display: block; }
