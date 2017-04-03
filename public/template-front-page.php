@@ -41,7 +41,7 @@
                     </div>
                 </div>
             </div>
-            <div class="section white">
+            <div class="section tiny white">
                 <div class="fluid-container">
                     <div class="full">
                         <h2 class="text-center"><?php the_field('products_section_headline'); ?></h2>
