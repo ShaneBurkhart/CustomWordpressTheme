@@ -18,7 +18,7 @@
                 </div>
             </div>
             <div class="section tiny white micro-padding-top">
-                <h3 class="text-center capitalize">GET A TASTE OF OUR BLOGS</h3>
+                <h3 class="text-center capitalize"><?php the_field('blog_section_headline'); ?></h3>
                 <?php
                     $pages = get_posts(array(
                         'category__not_in' => array(get_cat_ID('recipe')),
