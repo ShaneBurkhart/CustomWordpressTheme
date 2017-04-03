@@ -1,4 +1,12 @@
-<div class="section large white image-with-two-popups" style="background-image: url(<?php the_field('store_locator_and_q_club_background_image', get_option('page_on_front')); ?>);">
+<style>
+    .section.large.white.image-with-two-popups.guy:after {
+        background-image: url(<?php the_field('footer_guy'); ?>);
+    }
+    .section.large.white.image-with-two-popups.guy:before {
+        background-image: url(<?php the_field('store_locator_and_q_club_background_image', get_option('page_on_front')); ?>);
+    }
+</style>
+<div class="section large white image-with-two-popups guy">
     <div class="fluid-container">
         <div class="half">
             <div class="popup text-left">
