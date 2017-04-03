@@ -2501,8 +2501,8 @@ input[type=text], select, textarea {
   -webkit-appearance: none;
   -webkit-print-color-adjust: exact; }
   .button:hover, button:hover {
-    color: #ffffff;
-    background-color: #494949;
+    color: #4f4f4f;
+    background-color: #ffc600;
     border-color: #494949; }
   .button.block, button.block {
     display: block;
