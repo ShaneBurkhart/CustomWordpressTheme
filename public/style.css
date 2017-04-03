@@ -2662,7 +2662,7 @@ input[type=text], select, textarea {
       width: 90%;
       margin: 0 auto;
       font-size: 14px; }
-    .products-previews-wrapper .product a {
+    .products-previews-wrapper .product > a {
       display: block; }
     .products-previews-wrapper .product:hover > a {
       position: relative; }
@@ -3162,7 +3162,7 @@ ul#blog-share-links {
       border-bottom: 1px solid #999999; }
       .products-previews-wrapper .product:hover a:after {
         content: none; }
-      .products-previews-wrapper .product a {
+      .products-previews-wrapper .product > a {
         width: 41%;
         display: inline-block; }
       .products-previews-wrapper .product .promo-overlay {

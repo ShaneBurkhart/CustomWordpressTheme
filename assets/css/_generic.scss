@@ -624,7 +624,7 @@ input[type=text], select, textarea {
             font-size: 14px;
         }
 
-        a {
+        & > a {
             display: block;
         }
 
@@ -1316,7 +1316,7 @@ ul#blog-share-links {
                 content: none;
             }
 
-            a {
+            & > a {
                 width: 41%;
                 display: inline-block;
             }

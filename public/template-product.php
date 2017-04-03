@@ -51,7 +51,7 @@
             <div class="section tiny white">
                 <div class="fluid-container">
                     <div class="full">
-                        <h2 class="text-center capitalize">FAMOUS RECIPES WORTH SEASONIN’</h2>
+                        <h2 class="text-center capitalize"><?php the_field('individual_product_recipes_section_headline', $parent_post_id); ?></h2>
                     </div>
                 </div>
 
