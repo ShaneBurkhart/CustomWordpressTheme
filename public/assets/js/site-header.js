@@ -14,6 +14,8 @@ $(document).ready(function () {
   $(document).scroll(function (e) {
     var documentScrollTop = $(document).scrollTop();
 
+    if ($(document).width() <= 750) return;
+
     if (documentScrollTop) {
       if (!$header.hasClass('scroll-collapse')) {
         if (isFirst) {
@@ -27,6 +29,12 @@ $(document).ready(function () {
       if ($header.hasClass('scroll-collapse')) {
         $header.css({ 'height': '100px' }).removeClass('scroll-collapse');
       }
+    }
+  });
+
+  $(window).resize(function (e) {
+    if ($(document).width() <= 750) {
+      $header.css('height', '55px');
     }
   });
 

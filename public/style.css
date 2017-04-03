@@ -3753,6 +3753,43 @@ header {
               color: #ffffff;
               background-color: #6d8aaa; } }
 
+@media only screen and (max-width: 750px) {
+  header {
+    color: #ffffff;
+    background-color: #87a9cb;
+    height: 55px; }
+    header .full > ul > li {
+      display: none; }
+      header .full > ul > li.mobile-drawer {
+        display: block;
+        font-size: 24px;
+        margin-top: 6px; }
+    header:after {
+      content: none; }
+    header .button:hover {
+      color: #87a9cb;
+      background-color: #ffffff;
+      border-color: #87a9cb; }
+    header #site-logo {
+      background-image: url(assets/images/logo-white.png);
+      height: 35px;
+      width: 100px;
+      margin-top: 10px; }
+    header .full > ul > li {
+      margin-top: 17px;
+      font-size: 12px; }
+      header .full > ul > li a {
+        color: #ffffff; }
+    header a.button {
+      color: #ffffff;
+      margin-top: 11px;
+      border-color: #ffffff; }
+      header a.button i.fa {
+        font-size: 16px; }
+      header a.button span {
+        font-size: 10px;
+        line-height: 16px; } }
+
 #section-to-print {
   display: none; }
 

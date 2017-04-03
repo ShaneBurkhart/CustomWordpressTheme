@@ -14,6 +14,8 @@ $(document).ready(function () {
   $(document).scroll(function (e) {
     var documentScrollTop = $(document).scrollTop();
 
+    if ($(document).width() <= 750) return;
+
     if (documentScrollTop) {
       if (!$header.hasClass('scroll-collapse')) {
         if (isFirst) {
