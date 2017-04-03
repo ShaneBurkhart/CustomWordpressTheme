@@ -3364,6 +3364,9 @@ ul#blog-share-links {
     width: 16.5%; }
   .section .micro-container > .description, .section .fluid-container > .description, .section .full-container > .description, .section .large-container > .description, .section .container > .description, .section .small-container > .description {
     width: 55%; }
+    .section .micro-container > .description h1, .section .micro-container > .description h2, .section .micro-container > .description h3, .section .micro-container > .description p, .section .fluid-container > .description h1, .section .fluid-container > .description h2, .section .fluid-container > .description h3, .section .fluid-container > .description p, .section .full-container > .description h1, .section .full-container > .description h2, .section .full-container > .description h3, .section .full-container > .description p, .section .large-container > .description h1, .section .large-container > .description h2, .section .large-container > .description h3, .section .large-container > .description p, .section .container > .description h1, .section .container > .description h2, .section .container > .description h3, .section .container > .description p, .section .small-container > .description h1, .section .small-container > .description h2, .section .small-container > .description h3, .section .small-container > .description p {
+      margin-bottom: 10px;
+      padding-bottom: 0px; }
   .section .micro-container > .graphic, .section .fluid-container > .graphic, .section .full-container > .graphic, .section .large-container > .graphic, .section .container > .graphic, .section .small-container > .graphic {
     width: 41%; }
     .section .micro-container > .graphic.background, .section .fluid-container > .graphic.background, .section .full-container > .graphic.background, .section .large-container > .graphic.background, .section .container > .graphic.background, .section .small-container > .graphic.background {
