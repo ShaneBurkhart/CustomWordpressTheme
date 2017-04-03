@@ -3168,6 +3168,10 @@ ul#blog-share-links {
         -moz-background-size: contain;
         -o-background-size: contain;
         background-size: contain; }
+      #recipe-container .full-container .description ul li, #recipe-container .full-container .description ol li {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 10px; }
   .products-previews-wrapper {
     border-top: 1px solid #999999; }
     .products-previews-wrapper:after {
