@@ -158,6 +158,7 @@ h1 {
     font-weight: 900;
     font-size: 68px;
     text-transform: uppercase;
+    letter-spacing: 5px;
 
     &.post-title {
         font-size: 32px;
@@ -168,6 +169,7 @@ h1 {
 h2 {
     color: #fcbe11;
     font-size: 48px;
+    letter-spacing: 5px;
 }
 
 h3 {
@@ -456,7 +458,7 @@ input[type=text], select, textarea {
 }
 
 .jumbotron {
-    width: 550px;
+    width: 600px;
 
     h1 {
         text-transform: uppercase;
@@ -1176,6 +1178,17 @@ ul#blog-share-links {
 
         .wpsl-direction-wrap {
             display: none !important;
+        }
+    }
+}
+
+@media only screen and (max-width : 1000px) {
+    .jumbotron {
+        width: 550px;
+        margin-top: 75px;
+
+        h1 {
+            font-size: 48px;
         }
     }
 }

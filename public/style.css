@@ -2328,14 +2328,16 @@ h1 {
   color: #fcbe11;
   font-weight: 900;
   font-size: 68px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  letter-spacing: 5px; }
   h1.post-title {
     font-size: 32px;
     color: #525252; }
 
 h2 {
   color: #fcbe11;
-  font-size: 48px; }
+  font-size: 48px;
+  letter-spacing: 5px; }
 
 h3 {
   font-size: 22px; }
@@ -2538,7 +2540,7 @@ input[type=text], select, textarea {
     text-align: center; }
 
 .jumbotron {
-  width: 550px; }
+  width: 600px; }
   .jumbotron h1 {
     text-transform: uppercase;
     line-height: 1;
@@ -3069,6 +3071,13 @@ ul#blog-share-links {
             display: none; }
     #wpsl-wrap #wpsl-result-list .wpsl-direction-wrap {
       display: none !important; }
+
+@media only screen and (max-width: 1000px) {
+  .jumbotron {
+    width: 550px;
+    margin-top: 75px; }
+    .jumbotron h1 {
+      font-size: 48px; } }
 
 @media only screen and (max-width: 750px) {
   main {
