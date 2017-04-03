@@ -30,7 +30,7 @@
                         <p><?php the_field('product_description'); ?></p>
                         <div class="full-container">
                             <div class="third">
-                                <?php if (get_field('coupon_page')) { ?>
+                                <?php if (get_field('show_coupon') && get_field('coupon_page')) { ?>
                                     <a href="<?php the_field('coupon_page'); ?>" class="button small block yellow capitalize">Print Coupon</a>
                                 <?php } ?>
                             </div>
