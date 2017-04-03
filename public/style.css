@@ -3715,11 +3715,11 @@ header {
     margin: 0;
     padding: 10px 0px; }
     header .full > ul > li > ul.drop-down-items > li {
-      padding: 7px 15px;
       margin: 0; }
       header .full > ul > li > ul.drop-down-items > li:hover {
         background-color: #6390bc; }
       header .full > ul > li > ul.drop-down-items > li > a {
+        padding: 7px 15px;
         display: inline-block; }
   header .full > ul > li:hover {
     position: relative; }

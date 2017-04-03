@@ -89,7 +89,6 @@ header {
             padding: 10px 0px;
 
             & > li {
-                padding: 7px 15px;
                 margin: 0;
 
                 &:hover {
@@ -97,6 +96,7 @@ header {
                 }
 
                 & > a {
+                    padding: 7px 15px;
                     display: inline-block;
                 }
             }
