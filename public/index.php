@@ -61,44 +61,40 @@
                     </div>
                 </div>
             </div>
-            <div class="section white micro">
-                <?php
-                    $no_overlay = true;
-                    $pages = array_slice($posts_on_page, 0, 3);
-                    include(locate_template('three-page-previews.php', false, false));
-                ?>
-            </div>
+            <div id="posts-list">
+                <div class="section white micro">
+                    <?php
+                        $no_overlay = true;
+                        $pages = array_slice($posts_on_page, 0, 3);
+                        include(locate_template('three-page-previews.php', false, false));
+                    ?>
+                </div>
 
-            <div class="section white micro">
-                <?php
-                    $no_overlay = true;
-                    $pages = array_slice($posts_on_page, 3, 3);
-                    include(locate_template('three-page-previews.php', false, false));
-                ?>
-            </div>
+                <div class="section white micro">
+                    <?php
+                        $no_overlay = true;
+                        $pages = array_slice($posts_on_page, 3, 3);
+                        include(locate_template('three-page-previews.php', false, false));
+                    ?>
+                </div>
 
-            <div class="section white micro">
-                <?php
-                    $no_overlay = true;
-                    $pages = array_slice($posts_on_page, 6, 3);
-                    include(locate_template('three-page-previews.php', false, false));
-                ?>
-            </div>
+                <div class="section white micro">
+                    <?php
+                        $no_overlay = true;
+                        $pages = array_slice($posts_on_page, 6, 3);
+                        include(locate_template('three-page-previews.php', false, false));
+                    ?>
+                </div>
 
-            <div class="section white micro">
-                <div class="container-fluid">
-                    <div class="full text-center">
-                        <?php
-                            if (sizeof($all_pages) > $offset + 9) {
-                        ?>
-                                <a class="button" href="/blog/page/<?php echo $page_num + 1; ?>">More Posts</a>
-                        <?php } ?>
-
-                        <?php
-                            if ($offset > 0) {
-                        ?>
-                                <a class="button" href="/blog/page/<?php echo $page_num - 1; ?>">Back</a>
-                        <?php } ?>
+                <div class="section white micro">
+                    <div class="container-fluid">
+                        <div class="full text-center">
+                            <?php
+                                if (sizeof($all_pages) > $offset + 9) {
+                            ?>
+                                    <a class="button" href="/blog/page/<?php echo $page_num + 1; ?>">More Posts</a>
+                            <?php } ?>
+                        </div>
                     </div>
                 </div>
             </div>
