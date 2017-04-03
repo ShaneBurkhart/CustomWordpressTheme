@@ -3010,6 +3010,9 @@ ul#blog-share-links {
         ul#blog-share-links li#print-button a:hover {
           color: #ffffff; }
 
+#social-images {
+  display: none; }
+
 @media only screen and (max-width: 750px) {
   #recipe-container .full-container {
     height: auto; }

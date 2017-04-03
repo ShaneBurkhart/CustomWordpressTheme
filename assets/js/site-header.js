@@ -32,6 +32,12 @@ $(document).ready(function () {
     }
   });
 
+  $(window).resize(function (e) {
+    if ($(document).width() <= 750) {
+      $header.css('height', '55px');
+    }
+  });
+
   $mobileDrawerButton.click(function (e) {
     if (!$mobileNavDrawer.hasClass('nav-open')) {
       $mobileNavDrawer.animate({ 'right': 0 }, 200).addClass('nav-open')

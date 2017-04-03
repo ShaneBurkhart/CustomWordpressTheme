@@ -173,5 +173,8 @@
 
         <?php get_footer(); ?>
 
+        <div id="social-images">
+            <img src="<?php the_field('banner_image') ?>">
+        </div>
     </body>
 </html>
