@@ -1103,6 +1103,13 @@ ul#blog-share-links {
 }
 
 #wpsl-wrap {
+    margin-bottom: 0px !important;
+
+    .wpsl-search {
+        margin-bottom: 0px;
+        padding-bottom: 12px;
+    }
+
     #wpsl-search-wrap {
         background-color: #f6f6f6;
     }

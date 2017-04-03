@@ -3017,11 +3017,15 @@ ul#blog-share-links {
 #social-images {
   display: none; }
 
-#wpsl-wrap #wpsl-search-wrap {
-  background-color: #f6f6f6; }
-
-#wpsl-wrap #wpsl-result-list .wpsl-direction-wrap {
-  display: none !important; }
+#wpsl-wrap {
+  margin-bottom: 0px !important; }
+  #wpsl-wrap .wpsl-search {
+    margin-bottom: 0px;
+    padding-bottom: 12px; }
+  #wpsl-wrap #wpsl-search-wrap {
+    background-color: #f6f6f6; }
+  #wpsl-wrap #wpsl-result-list .wpsl-direction-wrap {
+    display: none !important; }
 
 @media only screen and (max-width: 750px) {
   #recipe-container .full-container {
