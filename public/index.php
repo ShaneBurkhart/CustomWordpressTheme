@@ -8,7 +8,7 @@
 
         <main>
             <div class="section tiny">
-                <div class="fluid-container">
+                <div class="container">
                     <div class="graphic">
                         <img src="<?php the_field('banner_image', get_option('page_for_posts')) ?>">
                     </div>
