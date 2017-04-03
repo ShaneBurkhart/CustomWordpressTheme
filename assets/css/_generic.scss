@@ -914,6 +914,14 @@ input[type=text], select, textarea {
             -moz-background-size: cover;
             -o-background-size: cover;
             background-size: cover;
+
+            ul, ol {
+                li {
+                    font-size: 16px;
+                    line-height: 1.5;
+                    margin-bottom: 10px;
+                }
+            }
         }
     }
 }
@@ -1325,14 +1333,6 @@ ul#blog-share-links {
                     -moz-background-size: contain;
                     -o-background-size: contain;
                     background-size: contain;
-                }
-
-                ul, ol {
-                    li {
-                        font-size: 16px;
-                        line-height: 1.5;
-                        margin-bottom: 10px;
-                    }
                 }
             }
         }
