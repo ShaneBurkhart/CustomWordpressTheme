@@ -3434,6 +3434,15 @@ ul#blog-share-links {
   .section > .full-mobile {
     width: 100%; } }
 
+@media only screen and (max-width: 800px) {
+  .section .container > .fifth {
+    display: block;
+    width: 100%;
+    padding: 0px 20%;
+    margin-bottom: 20px; }
+    .section .container > .fifth.text-right {
+      text-align: center; } }
+
 @media only screen and (max-width: 750px) {
   .section.store-locator-header {
     height: auto; }
@@ -3514,7 +3523,11 @@ ul#blog-share-links {
       margin-top: 30px;
       padding: 0px 3%; }
     .section .fluid-container .half .bg, .section .full-container .half .bg, .section.product-section .fluid-container .half .bg, .section.product-section .full-container .half .bg {
-      padding: 0px 40px; } }
+      padding: 0px 40px; }
+  .section .container > .fifth, .section.product-section .container > .fifth {
+    display: block;
+    width: 100%;
+    padding: 0; } }
 
 @media only screen and (max-width: 500px) {
   .section.product-section {

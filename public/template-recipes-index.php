@@ -74,7 +74,7 @@
         <?php get_header(); ?>
 
         <main>
-            <div class="section no-padding white image-with-text">
+            <div class="section no-padding white image">
                 <img src="<?php the_field('banner_image') ?>">
                 <h2 class="text-center"><?php the_field('page_heading') ?></h2>
             </div>

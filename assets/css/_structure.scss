@@ -504,6 +504,23 @@
     }
 }
 
+@media only screen and (max-width : 800px) {
+    .section {
+        .container {
+            & > .fifth {
+                display: block;
+                width: 100%;
+                padding: 0px 20%;
+                margin-bottom: 20px;
+
+                &.text-right {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
 @media only screen and (max-width : 750px) {
     .section.store-locator-header {
         height: auto;
@@ -647,6 +664,14 @@
                 .bg {
                     padding: 0px 40px;
                 }
+            }
+        }
+
+        .container {
+            & > .fifth {
+                display: block;
+                width: 100%;
+                padding: 0;
             }
         }
     }
