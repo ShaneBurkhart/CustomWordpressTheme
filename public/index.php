@@ -86,7 +86,7 @@
                     ?>
                 </div>
 
-                <div class="section white micro">
+                <div class="section white micro nav">
                     <div class="container-fluid">
                         <div class="full text-center">
                             <span id="next-page-button">
