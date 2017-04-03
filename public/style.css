@@ -2454,9 +2454,9 @@ input[type=text], select, textarea {
     display: block;
     width: 100%; }
 
-.select_wrapper {
+.ginput_container_select, .select_wrapper {
   position: relative; }
-  .select_wrapper:before {
+  .ginput_container_select:before, .select_wrapper:before {
     content: "\f0d7";
     font-family: FontAwesome;
     font-size: 20px;
@@ -2467,13 +2467,13 @@ input[type=text], select, textarea {
     right: 15px;
     padding-top: 10px;
     pointer-events: none; }
-  .select_wrapper.fixed {
+  .ginput_container_select.fixed, .select_wrapper.fixed {
     width: 250px;
     display: inline-block; }
-  .select_wrapper.block {
+  .ginput_container_select.block, .select_wrapper.block {
     display: block;
     width: 100%; }
-  .select_wrapper select {
+  .ginput_container_select select, .select_wrapper select {
     display: block;
     width: 100%;
     -webkit-appearance: none;

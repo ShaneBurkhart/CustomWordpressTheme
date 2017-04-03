@@ -338,7 +338,7 @@ input[type=text], select, textarea {
     }
 }
 
-.select_wrapper {
+.ginput_container_select, .select_wrapper {
     position: relative;
 
     &:before {
