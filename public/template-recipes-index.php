@@ -50,6 +50,7 @@
     $heatField = get_field_object('recipe_heat', $recipePost->ID);
     $productQuery = new WP_Query(array(
         'post_type' => 'page',
+        'posts_per_page' => -1,
         'meta_key' => '_wp_page_template',
         'meta_value' => 'template-product.php',
     ));
