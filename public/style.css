@@ -3079,6 +3079,9 @@ ul#blog-share-links {
     #wpsl-wrap #wpsl-result-list .wpsl-direction-wrap {
       display: none !important; }
 
+#input_2_10_3 {
+  display: none; }
+
 @media only screen and (max-width: 1000px) {
   .jumbotron {
     width: 550px;

@@ -24,4 +24,14 @@ function new_excerpt_more($more) {
     return '...';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
+
+function custom_validation( $result, $value, $form, $field ) {
+    if (!$value[0] ||  !$value[1]) {
+        $result['is_valid'] = false;
+    } else {
+        $result['is_valid'] = true;
+    }
+    return $result;
+}
+add_filter('gform_field_validation_2_10', 'custom_validation', 10, 4);
 ?>
