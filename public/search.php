@@ -43,7 +43,7 @@
                                         } else if (get_field('page_description')) {
                                             $matches = array();
                                             $page_desc = get_field('page_description');
-                                            preg_match('/(?:<p>|^)(.+?)(?:<\/p>|$)/', $page_desc, $matches);
+                                            preg_match('/(?:<p>|^)(.+?)(?:<p\/>|<\/p>|$)/', $page_desc, $matches);
                                     ?>
 
                                         <p><?php echo $matches[1]; ?></p>
