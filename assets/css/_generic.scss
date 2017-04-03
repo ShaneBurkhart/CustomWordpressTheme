@@ -639,11 +639,11 @@ input[type=text], select, textarea {
                     bottom: -95px;
                     left: 0;
                     right: 0;
-                    width: 150px;
+                    width: 100%;
                     height: 95px;
                     z-index: 10000;
                     background-image: url(assets/images/arrow-shadow.png);
-                    background-repeat: repeat-x;
+                    background-repeat: no-repeat;
                     background-position: top left;
                     -webkit-background-size: contain;
                     -moz-background-size: contain;
