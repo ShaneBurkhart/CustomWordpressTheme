@@ -29,6 +29,7 @@
 
     &.image, &.image-with-text, &.image-with-glow, &.image-with-popup, &.image-with-two-popups {
         position: relative;
+        background-color: #ffffff;
 
         & > img {
             width: 100%;
