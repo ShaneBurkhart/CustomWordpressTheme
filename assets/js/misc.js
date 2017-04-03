@@ -6,8 +6,10 @@ $(document).ready(function () {
   var $desktopOverlayImage = $('#desktop-overlay img');
   var $desktopOverlayExitButton  = $('#desktop-overlay #exit-button');
   var $products = $('.products-previews-wrapper .product');
-  var productWidth = $products[0].style.width;
-  var productMaxWidth = $products[0].style.maxWidth;
+  if ($products[0]) {
+    var productWidth = $products[0].style.width;
+    var productMaxWidth = $products[0].style.maxWidth;
+  }
 
   $categorySelect.change(function (e) {
     location.href = '/blog?category=' + $(e.currentTarget).val();
