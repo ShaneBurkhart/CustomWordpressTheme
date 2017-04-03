@@ -2659,7 +2659,7 @@ input[type=text], select, textarea {
       height: 95px;
       font-weight: 300;
       font-family: "Open Sans", sans-serif;
-      width: 90%;
+      width: 100%;
       margin: 0 auto;
       font-size: 14px; }
     .products-previews-wrapper .product > a {
