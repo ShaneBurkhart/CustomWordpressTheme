@@ -33,7 +33,7 @@
                                 ));
 
                                 $page_children_ids = array();
-                                $width = round(100.0 / sizeof($pages), 4);
+                                $width = floor(100.0 / sizeof($pages) * 10000) / 10000.0;
 
                                 foreach($pages as $page) {
                                     $page_children_ids[] = $page->ID;
