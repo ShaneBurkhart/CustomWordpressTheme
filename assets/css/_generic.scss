@@ -926,6 +926,16 @@ input[type=text], select, textarea {
     }
 }
 
+.blog-post {
+    ul, ol {
+        li {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+    }
+}
+
 .search-result {
     margin-bottom: 60px;
 

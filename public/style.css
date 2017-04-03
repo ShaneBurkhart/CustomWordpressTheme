@@ -2875,6 +2875,11 @@ input[type=text], select, textarea {
       line-height: 1.5;
       margin-bottom: 10px; }
 
+.blog-post ul li, .blog-post ol li {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px; }
+
 .search-result {
   margin-bottom: 60px; }
   .search-result .graphic {
