@@ -15,7 +15,7 @@
     <meta name="og:image" content="<?php the_field('banner_image'); ?>">
 
     <title><?php
-        if (is_category('Recipe')) {
+        if (is_category('recipe')) {
             echo wp_title('', false)." Recipes";
         } else {
             echo wp_title('', false);
