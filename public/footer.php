@@ -21,14 +21,20 @@
             <?php } ?>
         </div>
         <div class="fifth">
-            <p class="capitalize"><a href="/store-locator">Store Locator</a></p>
-            <p class="capitalize"><a href="/q-club">Q' Club</a></p>
-            <p class="capitalize"><a href="/recipes">Recipes</a></p>
+            <?php
+                $footer_items = wp_get_nav_menu_items('Footer Middle Menu');
+                foreach ($footer_items as $item) {
+            ?>
+                <p class="capitalize"><a href="<?php echo $item->url; ?>"><?php echo $item->title; ?></a></p>
+            <?php } ?>
         </div>
         <div class="fifth">
-            <p class="capitalize"><a href="/blog">Blog</a></p>
-            <p class="capitalize"><a href="/contact">Contact</a></p>
-            <p class="capitalize"><a href="/privacy-policy">Privacy Policy</a></p>
+            <?php
+                $footer_items = wp_get_nav_menu_items('Footer Right Menu');
+                foreach ($footer_items as $item) {
+            ?>
+                <p class="capitalize"><a href="<?php echo $item->url; ?>"><?php echo $item->title; ?></a></p>
+            <?php } ?>
         </div>
     </div>
 </footer>
