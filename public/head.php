@@ -14,5 +14,7 @@
 
     <meta name="og:image" content="<?php the_field('banner_image'); ?>">
 
+    <title><?php wp_title(''); ?></title>
+
     <?php wp_head(); ?>
 </head>
