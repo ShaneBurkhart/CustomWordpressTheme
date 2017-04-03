@@ -2549,7 +2549,10 @@ input[type=text], select, textarea {
 
 .promo {
   width: 250px;
-  margin-top: 75px; }
+  margin-top: 25px; }
+  .promo img {
+    max-width: 100%;
+    max-height: 225px; }
   .promo h3 {
     color: #ffffff;
     font-size: 36px;
@@ -2559,7 +2562,8 @@ input[type=text], select, textarea {
       font-size: 42px; }
   .promo p {
     color: #ffffff;
-    font-size: 14px; }
+    font-size: 14px;
+    margin-bottom: 10px; }
 
 .text-center {
   text-align: center; }
@@ -3508,7 +3512,16 @@ ul#blog-share-links {
       display: block;
       width: 100%;
       margin-top: 15px;
-      float: none; }
+      float: none;
+      padding-left: 300px; }
+      .section.parallax > .content .promo img {
+        position: absolute;
+        left: -75px;
+        bottom: 0px;
+        height: 300px;
+        width: auto;
+        max-height: none;
+        max-width: 100%; }
     .section.parallax > .content .jumbotron {
       display: block;
       width: 100%;
@@ -3531,7 +3544,30 @@ ul#blog-share-links {
   .section .container > .fifth, .section.product-section .container > .fifth {
     display: block;
     width: 100%;
-    padding: 0; } }
+    padding: 0; }
+  .section.parallax > .content .promo {
+    padding-left: 50%; }
+    .section.parallax > .content .promo img {
+      position: absolute;
+      left: -75px;
+      bottom: 0px;
+      height: auto;
+      width: auto;
+      max-width: 70%; }
+    .section.parallax > .content .promo h3 {
+      color: #ffffff;
+      font-size: 28px;
+      line-height: 1;
+      margin-bottom: 0px; }
+      .section.parallax > .content .promo h3 .large {
+        font-size: 34px; }
+    .section.parallax > .content .promo p {
+      color: #ffffff;
+      font-size: 12px;
+      margin-bottom: 10px; }
+    .section.parallax > .content .promo a {
+      font-size: 10px;
+      padding: 14px 25px; } }
 
 @media only screen and (max-width: 500px) {
   .section.product-section {

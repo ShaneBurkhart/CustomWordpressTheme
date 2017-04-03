@@ -21,6 +21,7 @@
                         <div class="full">
                             <?php if (get_field('coupon_callout')) { ?>
                                 <div class="promo pull-right">
+                                    <img src="<?php the_field('hero_promo_image'); ?>">
                                     <h3><?php the_field('hero_promo_headline'); ?></h3>
                                     <p><?php the_field('hero_promo_subheading'); ?></p>
                                     <a href="<?php the_field('hero_promo_button_destination'); ?>" class="button"><?php the_field('hero_promo_button_text'); ?></a>

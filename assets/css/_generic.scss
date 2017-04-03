@@ -472,7 +472,12 @@ input[type=text], select, textarea {
 
 .promo {
     width: 250px;
-    margin-top: 75px;
+    margin-top: 25px;
+
+    img {
+        max-width: 100%;
+        max-height: 225px;
+    }
 
     h3 {
         color: #ffffff;
@@ -488,6 +493,7 @@ input[type=text], select, textarea {
     p {
         color: #ffffff;
         font-size: 14px;
+        margin-bottom: 10px;
     }
 }
 

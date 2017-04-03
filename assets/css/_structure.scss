@@ -629,6 +629,17 @@
                     width: 100%;
                     margin-top: 15px;
                     float: none;
+                    padding-left: 300px;
+
+                    img {
+                        position: absolute;
+                        left: -75px;
+                        bottom: 0px;
+                        height: 300px;
+                        width: auto;
+                        max-height: none;
+                        max-width: 100%;
+                    }
                 }
 
                 .jumbotron {
@@ -673,6 +684,47 @@
                 display: block;
                 width: 100%;
                 padding: 0;
+            }
+        }
+    }
+
+    .section {
+        &.parallax {
+            & > .content {
+                .promo {
+                    padding-left: 50%;
+
+                    img {
+                        position: absolute;
+                        left: -75px;
+                        bottom: 0px;
+                        height: auto;
+                        width: auto;
+                        max-width: 70%;
+                    }
+
+                    h3 {
+                        color: #ffffff;
+                        font-size: 28px;
+                        line-height: 1;
+                        margin-bottom: 0px;
+
+                        & .large {
+                            font-size: 34px;
+                        }
+                    }
+
+                    p {
+                        color: #ffffff;
+                        font-size: 12px;
+                        margin-bottom: 10px;
+                    }
+
+                    a {
+                        font-size: 10px;
+                        padding: 14px 25px;
+                    }
+                }
             }
         }
     }
