@@ -4,7 +4,7 @@
             <div class="popup text-left">
                 <h4>Find me some Twist'd Q.</h4>
                 <form id="find-store-by-zipcode" action="/store-locator" method="GET">
-                    <input name="zipcode" type="text" placeholder="ZIP Code">
+                    <input name="loc" type="text" placeholder="ZIP Code">
                     <button></button>
                 </form>
             </div>

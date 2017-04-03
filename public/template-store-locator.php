@@ -16,6 +16,10 @@
                     <div class="two-thirds light-gray" style="padding: 60px 20px;">
                         <h1><?php the_field('heading'); ?></h1>
                         <p><?php the_field('description'); ?></p>
+                        <form id="find-store-by-zipcode" action="/store-locator" method="GET">
+                            <input name="loc" type="text" placeholder="Enter zip code" value="<?php echo $_GET['loc']; ?>">
+                            <button></button>
+                        </form>
                     </div>
                     <div class="third orange text-center" style="padding: 60px 20px;">
                         <h2><?php the_field('promo_heading'); ?></h2>
@@ -26,7 +30,12 @@
             <div class="section no-padding white">
                 <div class="full-container">
                     <div id="store-locator-map" class="full">
-                        <?php echo do_shortcode("[wpsl]"); ?>
+                        <style>
+                            #wpsl-result-list .wpsl-store-location:before {
+                                background-image: url(<?php the_field('store_details_icon'); ?>);
+                            }
+                        </style>
+                        <?php echo do_shortcode("[wpsl start_location='".$_GET['loc']."']"); ?>
                     </div>
                 </div>
             </div>
