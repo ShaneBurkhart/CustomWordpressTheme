@@ -20,6 +20,7 @@
                         <div class="jumbotron">
                             <h1 class="capitalize"><?php the_field('headline') ?></h1>
                             <p style="width: 80%;"><?php the_field('page_snippet') ?></p>
+                            <?php the_content(); ?>
                             <a class="button">Print Coupon</a>
                         </div>
                     </div>
