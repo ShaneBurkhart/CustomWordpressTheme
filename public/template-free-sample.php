@@ -12,7 +12,7 @@
 
         <main>
             <div class="section white">
-                <div class="full-container">
+                <div class="fluid-container">
                     <div class="half">
                         <img class="bg" src="<?php the_field('product_image') ?>">
                     </div>
