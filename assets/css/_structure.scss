@@ -498,10 +498,6 @@
         & > .container {
             width: 95%;
         }
-
-        & > .full-mobile {
-            width: 100%;
-        }
     }
 }
 
@@ -537,6 +533,10 @@
     }
 
     .section {
+        & > .full-mobile {
+            width: 100%;
+        }
+
         &.torn-paper-break:after {
             display: none;
             content: '';

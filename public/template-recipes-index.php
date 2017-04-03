@@ -134,40 +134,40 @@
                     </div>
                 </form>
             </div>
-            <div class="section white micro">
-                <?php
-                    $no_overlay = true;
-                    $pages = array_slice($wp_query->posts, 0, 3);
-                    include(locate_template('three-page-previews.php', false, false));
-                ?>
-            </div>
+            <div id="posts-list">
+                <div class="section white micro">
+                    <?php
+                        $no_overlay = true;
+                        $pages = array_slice($wp_query->posts, 0, 3);
+                        include(locate_template('three-page-previews.php', false, false));
+                    ?>
+                </div>
 
-            <div class="section white micro">
-                <?php
-                    $no_overlay = true;
-                    $pages = array_slice($wp_query->posts, 3, 3);
-                    include(locate_template('three-page-previews.php', false, false));
-                ?>
-            </div>
+                <div class="section white micro">
+                    <?php
+                        $no_overlay = true;
+                        $pages = array_slice($wp_query->posts, 3, 3);
+                        include(locate_template('three-page-previews.php', false, false));
+                    ?>
+                </div>
 
-            <div class="section white micro">
-                <?php
-                    $no_overlay = true;
-                    $pages = array_slice($wp_query->posts, 6, 3);
-                    include(locate_template('three-page-previews.php', false, false));
-                ?>
-            </div>
-
-            <div class="section white micro">
-                <div class="container-fluid">
-                    <div class="full text-center">
-                        <?php
-                            $previousLink = previous_posts_link('Previous');
-                            if ($previousLink) { echo $previousLink; }
-
-                            $nextLink = next_posts_link('More Recipes', $wp_query->max_num_pages);
-                            if ($nextLink) { echo $nextLink; }
-                        ?>
+                <div class="section white micro">
+                    <?php
+                        $no_overlay = true;
+                        $pages = array_slice($wp_query->posts, 6, 3);
+                        include(locate_template('three-page-previews.php', false, false));
+                    ?>
+                </div>
+                <div class="section white micro nav">
+                    <div class="container-fluid">
+                        <div class="full text-center">
+                            <span id="next-page-button">
+                                <?php
+                                    $nextLink = next_posts_link('More Recipes', $wp_query->max_num_pages);
+                                    if ($nextLink) { echo $nextLink; }
+                                ?>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>

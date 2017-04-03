@@ -24,4 +24,24 @@ $(document).ready(function () {
   $desktopOverlayExitButton.click(function (e) {
     $desktopOverlay.css('display', 'none');
   });
+
+
+  var $postsList = $('#posts-list');
+
+  $postsList.on('click', '#next-page-button a', function (e) {
+    e.preventDefault();
+
+    var $navSection = $postsList.find('.nav');
+    var $button = $(e.currentTarget);
+    var nextPageURL = $button.attr('href');
+
+    $.ajax(nextPageURL).done(function (data) {
+      $document = $(data);
+      $newPostsList = $document.find('#posts-list');
+      $navSection.remove();
+      $postsList.append($newPostsList.html());
+
+    }).fail();
+    // Load page and pull #posts-list
+  });
 });

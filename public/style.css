@@ -3434,9 +3434,7 @@ ul#blog-share-links {
 
 @media only screen and (max-width: 950px) {
   .section > .container {
-    width: 95%; }
-  .section > .full-mobile {
-    width: 100%; } }
+    width: 95%; } }
 
 @media only screen and (max-width: 800px) {
   .section .container > .fifth {
@@ -3455,6 +3453,8 @@ ul#blog-share-links {
       .section.store-locator-header .full-container > .third, .section.store-locator-header .full-container > .two-thirds {
         display: block;
         width: 100%; }
+  .section > .full-mobile {
+    width: 100%; }
   .section.torn-paper-break:after {
     display: none;
     content: ''; }
