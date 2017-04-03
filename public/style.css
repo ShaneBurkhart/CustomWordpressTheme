@@ -3014,6 +3014,8 @@ ul#blog-share-links {
   display: none; }
 
 @media only screen and (max-width: 750px) {
+  .section .jumbotron h1 {
+    font-size: 48px; }
   #recipe-container .full-container {
     height: auto; }
     #recipe-container .full-container .graphic {
