@@ -53,19 +53,28 @@
                     </form>
                 </div>
                 <ul>
-                    <li>
-                        <a href="/products">Products</a>
-                        <ul class="drop-down-items">
-                            <?php
-                                foreach($pages as $page) {
-                            ?>
-                                    <li><a href="<?php echo get_permalink($page->ID); ?>"><?php echo $page->post_title; ?></a></li>
+                    <?php
+                        foreach ($site_header_menu as $item) {
+                            if ($item->title == "Products") {
+                    ?>
+                                <li>
+                                    <a href="<?php echo $item->url; ?>">Products</a>
+                                    <ul class="drop-down-items">
+                                        <?php
+                                            foreach($pages as $page) {
+                                        ?>
+                                                <li><a href="<?php echo get_permalink($page->ID); ?>">
+                                                    <?php echo $page->post_title; ?>
+                                                </a></li>
+                                        <?php } ?>
+                                    </ul>
+                                </li>
+                            <?php } else if ($item->title == "Blog") { ?>
+                                <li><a href="<?php echo get_permalink(get_option('page_for_posts')); ?>"><?php echo $item->title; ?></a></li>
+                            <?php } else { ?>
+                                <li><a href="<?php echo $item->url; ?>"><?php echo $item->title; ?></a></li>
                             <?php } ?>
-                        </ul>
-                    </li>
-                    <li><a href="/blog">Blog</a></li>
-                    <li><a href="/q-club">Q' Club</a></li>
-                    <li><a href="/recipes">Recipes</a></li>
+                    <?php } ?>
                 </ul>
             </div>
             <a class="button pull-right capitalize" href="/store-locator">
