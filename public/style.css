@@ -3081,6 +3081,8 @@ ul#blog-share-links {
     margin-top: 75px; }
     .jumbotron h1 {
       font-size: 48px; }
+      .jumbotron h1 small {
+        font-size: 36px; }
   .products-previews-wrapper .product .promo-overlay .info {
     padding-top: 60px; }
     .products-previews-wrapper .product .promo-overlay .info p {
