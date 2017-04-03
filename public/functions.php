@@ -24,4 +24,11 @@ function new_excerpt_more($more) {
     return '...';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
+
+function add_to_title($title) {
+    if (is_category('Recipe')) return $title." - Recipes";
+    return $title;
+}
+add_filter('wpseo_title', 'add_to_title');
+
 ?>
