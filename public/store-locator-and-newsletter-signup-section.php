@@ -1,6 +1,13 @@
+<?php
+    $page_template = basename(get_page_template());
+    $guy_image = get_field('footer_guy');
+    if ($page_template == 'template-product.php') {
+        $guy_image = get_field('footer_guy', wp_get_post_parent(get_the_ID()));
+    }
+?>
 <style>
     .section.large.white.image-with-two-popups.guy:after {
-        background-image: url(<?php the_field('footer_guy'); ?>);
+        background-image: url(<?php echo $guy_image; ?>);
     }
     .section.large.white.image-with-two-popups.guy:before {
         background-image: url(<?php the_field('store_locator_and_q_club_background_image', get_option('page_on_front')); ?>);
