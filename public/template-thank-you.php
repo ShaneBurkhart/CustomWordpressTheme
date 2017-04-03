@@ -14,7 +14,7 @@
             <div class="section no-padding white image-with-glow" style="background-image: url(<?php the_field('hero_image'); ?>);">
                 <div class="content">
                     <h1><?php the_field('headline'); ?></h1>
-                    <p><?php the_field('subheading'); ?></p>
+                    <?php the_field('subheading'); ?>
                 </div>
             </div>
             <div class="section tiny white micro-padding-top">
