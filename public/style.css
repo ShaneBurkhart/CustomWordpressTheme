@@ -2323,6 +2323,8 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 30px;
   font-weight: normal; }
+  h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+    font-size: 48px; }
 
 h1 {
   color: #fcbe11;
