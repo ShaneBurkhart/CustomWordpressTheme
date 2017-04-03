@@ -534,6 +534,10 @@
         .full-container {
             height: auto;
 
+            & > .two-thirds {
+                text-align: center;
+            }
+
             & > .third, & > .two-thirds {
                 display: block;
                 width: 100%;

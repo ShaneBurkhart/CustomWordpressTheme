@@ -3469,6 +3469,8 @@ ul#blog-share-links {
     height: auto; }
     .section.store-locator-header .full-container {
       height: auto; }
+      .section.store-locator-header .full-container > .two-thirds {
+        text-align: center; }
       .section.store-locator-header .full-container > .third, .section.store-locator-header .full-container > .two-thirds {
         display: block;
         width: 100%; }
