@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container full-mobile">
     <?php
     foreach($pages as $page) {
     ?>

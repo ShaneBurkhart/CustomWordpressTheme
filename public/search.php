@@ -25,7 +25,7 @@
                 </div>
             </div>
             <div class="section white micro">
-                <div class="container">
+                <div class="container full-mobile">
                     <?php
                         if ( have_posts() ) {
                             while ( have_posts() ) {

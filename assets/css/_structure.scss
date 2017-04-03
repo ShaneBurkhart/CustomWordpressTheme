@@ -497,6 +497,10 @@
         & > .container {
             width: 95%;
         }
+
+        & > .full-mobile {
+            width: 100%;
+        }
     }
 }
 
@@ -532,6 +536,23 @@
 
             .graphic {
                 float: left;
+            }
+        }
+
+        .full-mobile {
+            width: 100%;
+
+            .graphic {
+                margin-bottom: 40px;
+            }
+
+            .description {
+                width: 95%;
+                margin: 0 auto;
+
+                h3 {
+                    margin-bottom: 10px;
+                }
             }
         }
 

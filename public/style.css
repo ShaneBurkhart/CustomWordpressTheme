@@ -3430,7 +3430,9 @@ ul#blog-share-links {
 
 @media only screen and (max-width: 950px) {
   .section > .container {
-    width: 95%; } }
+    width: 95%; }
+  .section > .full-mobile {
+    width: 100%; } }
 
 @media only screen and (max-width: 750px) {
   .section.store-locator-header {
@@ -3450,6 +3452,15 @@ ul#blog-share-links {
     width: 100%; }
   .section .container .graphic, .section .fluid-container .graphic {
     float: left; }
+  .section .full-mobile {
+    width: 100%; }
+    .section .full-mobile .graphic {
+      margin-bottom: 40px; }
+    .section .full-mobile .description {
+      width: 95%;
+      margin: 0 auto; }
+      .section .full-mobile .description h3 {
+        margin-bottom: 10px; }
   .section .container > .third, .section .fluid-container > .third {
     width: 100%;
     display: block; }
