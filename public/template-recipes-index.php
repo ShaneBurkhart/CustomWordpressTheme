@@ -89,6 +89,7 @@
                                 <option <?php if (!$product) echo "selected"; ?> disabled value="">
                                     Filter by Product
                                 </option>
+                                <option value="">All</option>
                                 <?php foreach ($productChoices as $key => $value) { ?>
                                     <option <?php if ($value == $productID) echo "selected"; ?> value="<?php echo $value; ?>">
                                         <?php echo $key; ?>
@@ -103,6 +104,7 @@
                                 <option <?php if (!$meat) echo "selected"; ?> disabled value="">
                                     Filter by Meat
                                 </option>
+                                <option value="">All</option>
                                 <?php var_dump($meatChoices); ?>
                                 <?php foreach ($meatChoices as $key => $value) { ?>
                                     <option <?php if ($value == $meat) echo "selected"; ?> value="<?php echo $value; ?>">
@@ -118,6 +120,7 @@
                                 <option <?php if (!$heat) echo "selected"; ?> disabled value="">
                                     Filter by Heat
                                 </option>
+                                <option value="">All</option>
                                 <?php foreach ($heatChoices as $key => $value) { ?>
                                     <option <?php if ($value == $heat) echo "selected"; ?> value="<?php echo $value; ?>">
                                         <?php echo $key; ?>
