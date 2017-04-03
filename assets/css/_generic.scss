@@ -1102,6 +1102,18 @@ ul#blog-share-links {
     display: none;
 }
 
+#wpsl-wrap {
+    #wpsl-search-wrap {
+        background-color: #f6f6f6;
+    }
+
+    #wpsl-result-list {
+        .wpsl-direction-wrap {
+            display: none !important;
+        }
+    }
+}
+
 @media only screen and (max-width : 750px) {
     #recipe-container {
         .full-container {
