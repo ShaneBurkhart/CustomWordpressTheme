@@ -5,6 +5,9 @@ $(document).ready(function () {
   var $desktopOverlay = $('#desktop-overlay');
   var $desktopOverlayImage = $('#desktop-overlay img');
   var $desktopOverlayExitButton  = $('#desktop-overlay #exit-button');
+  var $products = $('.products-previews-wrapper .product');
+  var productWidth = $($products[0]).css('width');
+  var productMaxWidth = $($products[0]).css('max-width');
 
   $categorySelect.change(function (e) {
     location.href = '/blog?category=' + $(e.currentTarget).val();
@@ -44,4 +47,17 @@ $(document).ready(function () {
     }).fail();
     // Load page and pull #posts-list
   });
+
+  function onResizeWindow(e) {
+    if ($(document).width() <= 750) {
+      $products.css('width', '100%');
+      $products.css('max-width', '100%');
+    } else {
+      $products.css('width', productWidth);
+      $products.css('max-width', productMaxWidth);
+    }
+  }
+
+  $(window).resize(onResizeWindow);
+  onResizeWindow();
 });
