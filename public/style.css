@@ -2551,11 +2551,10 @@ input[type=text], select, textarea {
     margin-bottom: 15px; }
 
 .promo {
-  width: 250px;
-  margin-top: 25px; }
+  width: 275px; }
   .promo img {
-    max-width: 100%;
-    max-height: 225px; }
+    width: 100%;
+    max-height: 300px; }
   .promo h3 {
     color: #ffffff;
     font-size: 36px;
