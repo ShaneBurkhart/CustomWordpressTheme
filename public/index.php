@@ -31,7 +31,7 @@
 
                 if ($categoryQuery) {
                     if ($categoryQuery == "articles") {
-                        $args['category__not_in'] = array(get_cat_ID('recipe'));
+                        $args['category__not_in'] = array(get_cat_ID('recipe'), get_cat_ID('infographics'));
                         $args['tax_query'] = array(
                             array(
                                 'taxonomy' => 'post_format',
@@ -51,7 +51,15 @@
                             )
                         );
                     } else if ($categoryQuery == "infographics") {
-                        $args['category_name'] = $categoryQuery;
+                        $args['category_name'] = 'infographics';
+                        $args['tax_query'] = array(
+                            array(
+                                'taxonomy' => 'post_format',
+                                'field' => 'slug',
+                                'terms' => array('post-format-video'),
+                                'operator' => 'NOT IN',
+                            )
+                        );
                     } else {
                         $args['category__not_in'] = array(get_cat_ID('recipe'));
                     }
