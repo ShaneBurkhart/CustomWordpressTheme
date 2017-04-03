@@ -32,6 +32,10 @@
             </div>
         </main>
 
+        <script>
+            $('#wpsl-search-input').attr('placeholder', "Enter zip code");
+        </script>
+
         <?php get_footer(); ?>
 
     </body>

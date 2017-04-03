@@ -1133,6 +1133,13 @@ ul#blog-share-links {
         }
 
         .wpsl-input {
+            width: 100% !important;
+            margin-bottom: 15px;
+
+            input {
+                width: 100% !important;
+            }
+
             &:before {
                 content: "Find Twist'd Q products near you.";
                 display: block;

@@ -3033,14 +3033,19 @@ ul#blog-share-links {
   #wpsl-wrap #wpsl-stores, #wpsl-wrap #wpsl-direction-details, #wpsl-wrap #wpsl-gmap {
     height: auto !important;
     padding: 0px 3%; }
-  #wpsl-wrap .wpsl-input:before {
-    content: "Find Twist'd Q products near you.";
-    display: block;
-    margin-bottom: 15px;
-    line-height: 1.8;
-    font-weight: bold; }
-  #wpsl-wrap .wpsl-input label {
-    display: none !important; }
+  #wpsl-wrap .wpsl-input {
+    width: 100% !important;
+    margin-bottom: 15px; }
+    #wpsl-wrap .wpsl-input input {
+      width: 100% !important; }
+    #wpsl-wrap .wpsl-input:before {
+      content: "Find Twist'd Q products near you.";
+      display: block;
+      margin-bottom: 15px;
+      line-height: 1.8;
+      font-weight: bold; }
+    #wpsl-wrap .wpsl-input label {
+      display: none !important; }
   #wpsl-wrap .wpsl-search-btn-wrap {
     width: 100%;
     display: block;
