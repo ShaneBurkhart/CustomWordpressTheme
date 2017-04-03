@@ -13,6 +13,12 @@
       crossorigin="anonymous"></script>
     <script src="/wp-content/themes/custom/assets/js/handlebars-v4.0.5.js"></script>
 
+    <meta name="og:url" content="<?php echo get_permalink(); ?>">
+    <meta name="og:title" content="<?php echo get_the_title(); ?>">
+    <meta name="og:description" content="<?php the_field('snippet'); ?>">
+    <meta name="og:image" content="<?php the_field('banner_image'); ?>">
+    <meta name="og:type" content="article">
+
     <title><?php echo get_the_title(); ?></title>
 
     <?php wp_head(); ?>
