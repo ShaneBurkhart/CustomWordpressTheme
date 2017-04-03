@@ -3835,8 +3835,8 @@ header {
   float: left;
   height: 60px;
   width: 150px;
-  margin-top: 20px;
-  margin-right: 20px;
+  margin-top: 16px;
+  margin-right: 24px;
   background-image: url(assets/images/logo-black.png);
   background-repeat: no-repeat;
   background-position: top left;
