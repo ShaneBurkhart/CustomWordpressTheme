@@ -89,11 +89,13 @@
                 <div class="section white micro">
                     <div class="container-fluid">
                         <div class="full text-center">
-                            <?php
-                                if (sizeof($all_pages) > $offset + 9) {
-                            ?>
-                                    <a class="button" href="/blog/page/<?php echo $page_num + 1; ?>">More Posts</a>
-                            <?php } ?>
+                            <span id="next-page-button">
+                                <?php
+                                    if (sizeof($all_pages) > $offset + 9) {
+                                ?>
+                                        <a class="button" href="/blog/page/<?php echo $page_num + 1; ?>">More Posts</a>
+                                <?php } ?>
+                            </span>
                         </div>
                     </div>
                 </div>
