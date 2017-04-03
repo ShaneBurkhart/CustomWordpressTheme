@@ -1111,6 +1111,19 @@ ul#blog-share-links {
         padding-bottom: 12px;
     }
 
+    #wpsl-search-input {
+        padding: 13px 24px;
+        border-radius: 0px;
+        background-color: #ffffff;
+        border: 1px solid rgb(166, 166, 166);
+        outline: none;
+
+        &.block {
+            display: block;
+            width: 100%;
+        }
+    }
+
     #wpsl-search-wrap {
         background-color: #f6f6f6;
     }

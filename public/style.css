@@ -3023,6 +3023,15 @@ ul#blog-share-links {
   #wpsl-wrap .wpsl-search {
     margin-bottom: 0px;
     padding-bottom: 12px; }
+  #wpsl-wrap #wpsl-search-input {
+    padding: 13px 24px;
+    border-radius: 0px;
+    background-color: #ffffff;
+    border: 1px solid #a6a6a6;
+    outline: none; }
+    #wpsl-wrap #wpsl-search-input.block {
+      display: block;
+      width: 100%; }
   #wpsl-wrap #wpsl-search-wrap {
     background-color: #f6f6f6; }
   #wpsl-wrap #wpsl-result-list .wpsl-direction-wrap {
