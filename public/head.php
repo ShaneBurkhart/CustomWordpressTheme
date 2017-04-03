@@ -6,7 +6,6 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
     <link href="/wp-content/themes/custom/style.css" rel="stylesheet">
 
-    <script src="https://maps.google.com/maps/api/js?key=AIzaSyC1dA9Qd5XDFwTeCsbWMySbOA0MMYaaUzc"></script>
     <script
       src="https://code.jquery.com/jquery-2.2.4.min.js"
       integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
