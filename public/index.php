@@ -30,7 +30,31 @@
                 );
 
                 if ($categoryQuery) {
-                    $args['category_name'] = $categoryQuery;
+                    if ($categoryQuery == "articles") {
+                        $args['category__not_in'] = array(get_cat_ID('recipe'));
+                        $args['tax_query'] = array(
+                            array(
+                                'taxonomy' => 'post_format',
+                                'field' => 'slug',
+                                'terms' => array('post-format-video'),
+                                'operator' => 'NOT IN',
+                            )
+                        );
+                    } else if ($categoryQuery == "videos") {
+                        $args['category__not_in'] = array(get_cat_ID('recipe'));
+                        $args['tax_query'] = array(
+                            array(
+                                'taxonomy' => 'post_format',
+                                'field' => 'slug',
+                                'terms' => array('post-format-video'),
+                                'operator' => 'IN',
+                            )
+                        );
+                    } else if ($categoryQuery == "infographics") {
+                        $args['category_name'] = $categoryQuery;
+                    } else {
+                        $args['category__not_in'] = array(get_cat_ID('recipe'));
+                    }
                 } else {
                     $args['category__not_in'] = array(get_cat_ID('recipe'));
                 }
@@ -49,13 +73,9 @@
                             <select id="category-select">
                                 <option disabled <?php if (!$categoryQuery) echo 'selected'; ?>>Filter by Category</option>
                                 <option value="">All Categories</option>
-                                <?php
-                                    foreach ($categories as $category) {
-                                ?>
-                                    <option <?php if ($category->name == $categoryQuery) echo 'selected'; ?> value="<?php echo $category->name; ?>">
-                                        <?php echo $category->name; ?>
-                                    </option>
-                                <?php } ?>
+                                <option <?php if ($categoryQuery == 'articles') echo 'selected'; ?> value="articles">Articles</option>
+                                <option <?php if ($categoryQuery == 'videos') echo 'selected'; ?> value="videos">Videos</option>
+                                <option <?php if ($categoryQuery == 'infographics') echo 'selected'; ?> value="infographics">Infographics</option>
                             </select>
                         </div>
                     </div>
