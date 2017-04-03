@@ -3080,9 +3080,9 @@ ul#blog-share-links {
     margin-top: 75px; }
     .jumbotron h1 {
       font-size: 48px; }
-  .product .promo-overlay .info {
+  .products-preview-wrapper .product .promo-overlay .info {
     padding-top: 60px; }
-    .product .promo-overlay .info p {
+    .products-preview-wrapper .product .promo-overlay .info p {
       font-size: 14px; } }
 
 @media only screen and (max-width: 750px) {
