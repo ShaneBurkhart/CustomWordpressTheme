@@ -528,6 +528,10 @@
 }
 
 @media only screen and (max-width : 750px) {
+    h1 {
+        font-size: 48px;
+    }
+
     .section.store-locator-header {
         height: auto;
 
@@ -660,9 +664,6 @@
                     width: 100%;
                     margin-top: 15px;
 
-                    h1 {
-                        font-size: 48px;
-                    }
                 }
             }
         }

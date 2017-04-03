@@ -2226,8 +2226,9 @@
   font-weight: bold;
   font-style: normal; }
 
-html {
-  height: 100%; }
+html#no-padding-page {
+  height: 100%;
+  margin-top: 0px !important; }
 
 body, html {
   color: #4f4f4f;
@@ -3028,6 +3029,8 @@ ul#blog-share-links {
     display: none !important; }
 
 @media only screen and (max-width: 750px) {
+  main {
+    padding-top: 55px; }
   #wpsl-wrap .wpsl-search {
     padding-top: 40px;
     padding-bottom: 40px; }
@@ -3509,6 +3512,8 @@ ul#blog-share-links {
       text-align: center; } }
 
 @media only screen and (max-width: 750px) {
+  h1 {
+    font-size: 48px; }
   .section.store-locator-header {
     height: auto; }
     .section.store-locator-header .full-container {
@@ -3586,9 +3591,7 @@ ul#blog-share-links {
     .section.parallax > .content .jumbotron {
       display: block;
       width: 100%;
-      margin-top: 15px; }
-      .section.parallax > .content .jumbotron h1 {
-        font-size: 48px; } }
+      margin-top: 15px; } }
 
 @media only screen and (max-width: 500px) {
   .section .micro-container, .section.product-section .micro-container {

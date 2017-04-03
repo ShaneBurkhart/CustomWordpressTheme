@@ -22,8 +22,9 @@
     font-style: normal;
 }
 
-html {
+html#no-padding-page {
     height: 100%;
+    margin-top: 0px !important;
 }
 
 body, html{
@@ -1122,6 +1123,10 @@ ul#blog-share-links {
 }
 
 @media only screen and (max-width : 750px) {
+    main {
+        padding-top: 55px;
+    }
+
     #wpsl-wrap {
         .wpsl-search {
             padding-top: 40px;

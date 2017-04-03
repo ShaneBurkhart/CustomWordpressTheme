@@ -3,7 +3,7 @@
     * Template Name: Store Locator Page
     */
 ?><!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html id="no-padding-page" <?php language_attributes(); ?>>
     <?php get_template_part('head'); ?>
 
     <body <?php body_class(); ?>>
