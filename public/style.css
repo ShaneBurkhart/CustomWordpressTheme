@@ -3780,7 +3780,8 @@ ul#blog-share-links {
     width: 100%;
     padding: 0; }
   .section.parallax > .content .promo {
-    padding-left: 50%; }
+    padding-left: 50%;
+    height: 300px; }
     .section.parallax > .content .promo img {
       position: absolute;
       left: -75px;
