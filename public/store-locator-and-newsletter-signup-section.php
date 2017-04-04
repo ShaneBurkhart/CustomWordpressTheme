@@ -2,7 +2,7 @@
     $page_template = basename(get_page_template());
     $guy_image = get_field('footer_guy');
     if ($page_template == 'template-product.php') {
-        $guy_image = get_field('footer_guy', wp_get_post_parent(get_the_ID()));
+        $guy_image = get_field('footer_guy', wp_get_post_parent_ID(get_the_ID()));
     }
 ?>
 <style>
