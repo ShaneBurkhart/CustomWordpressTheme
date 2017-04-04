@@ -1211,6 +1211,12 @@ ul#blog-share-links {
     display: none;
 }
 
+#search-form-404 {
+    input {
+        margin-bottom: 10px;
+    }
+}
+
 @media only screen and (max-width : 1000px) {
     .jumbotron {
         width: 550px;
