@@ -17,7 +17,7 @@
                         <h1><?php the_field('heading'); ?></h1>
                         <p><?php the_field('description'); ?></p>
                         <form id="find-store-by-zipcode" action="/store-locator" method="GET">
-                            <input name="loc" type="text" placeholder="Enter zip code" value="<?php echo $_GET['loc']; ?>">
+                            <input name="loc" type="text" placeholder="ZIP code" value="<?php echo $_GET['loc']; ?>">
                             <button></button>
                         </form>
                     </div>
