@@ -2372,6 +2372,9 @@ p {
     p.error i {
       margin-right: 15px; }
 
+a {
+  color: #87a9cb; }
+
 a, a:hover {
   text-decoration: none; }
 
