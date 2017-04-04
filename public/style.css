@@ -2617,7 +2617,9 @@ input[type=text], select, textarea {
   padding-bottom: 50px; }
 
 .thumbnail-page-preview > a {
-  display: block; }
+  display: block;
+  width: 100%;
+  height: auto; }
   .thumbnail-page-preview > a .image-wrapper {
     width: 100%;
     height: 175px;

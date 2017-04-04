@@ -573,6 +573,8 @@ input[type=text], select, textarea {
 .thumbnail-page-preview {
     & > a {
         display: block;
+        width: 100%;
+        height: auto;
 
         .image-wrapper {
             width: 100%;
