@@ -3088,7 +3088,13 @@ ul#blog-share-links {
   display: none; }
 
 #search-form-404 input {
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  font-size: 16px;
+  width: 400px; }
+
+#search-form-404 button {
+  display: block;
+  margin: 0px auto; }
 
 @media only screen and (max-width: 1000px) {
   .jumbotron {
@@ -3219,6 +3225,8 @@ ul#blog-share-links {
       margin: 0px auto; } }
 
 @media only screen and (max-width: 500px) {
+  #search-form-404 input {
+    width: 100%; }
   footer.section .fluid-container {
     text-align: center; }
     footer.section .fluid-container #site-logo {
