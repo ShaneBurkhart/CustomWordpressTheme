@@ -15,7 +15,7 @@
             <div class="section small white">
                 <div class="small-container">
                     <div class="full">
-                        <h1 class="text-center"><?php the_title(); ?></h1>
+                        <h1 class="text-center"><?php the_field('headline'); ?></h1>
                         <?php the_content(); ?>
                         <form id="search-form-404" class="text-center" action="/" method="GET">
                             <input name="s" type="text" placeholder="Search our site">
