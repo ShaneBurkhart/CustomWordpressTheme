@@ -3788,7 +3788,8 @@ ul#blog-share-links {
       bottom: 0px;
       height: auto;
       width: auto;
-      max-width: 70%; }
+      max-width: 70%;
+      max-height: 300px; }
     .section.parallax > .content .promo h3 {
       color: #ffffff;
       font-size: 28px;
