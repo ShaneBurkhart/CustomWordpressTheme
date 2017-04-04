@@ -419,6 +419,11 @@ input[type=text], select, textarea {
         padding: 10px 20px;
     }
 
+    &.medium {
+        font-size: 12px;
+        padding: 10px 20px;
+    }
+
     &.yellow {
         color: #4f4f4f;
         background-color: #fcbe11;
@@ -451,13 +456,26 @@ input[type=text], select, textarea {
         color: #000000;
         font-size: 20px;
         border: 1px solid #000000;
-        width: 50px;
-        height: 50px;
         padding: 0;
         margin: 0;
+        height: 50px;
+        width: 50px;
         line-height: 50px;
         border-radius: 50%;
         text-align: center;
+    }
+
+    &.pill-arrow {
+        color: #000000;
+        border: 1px solid #000000;
+        margin: 0;
+        border-radius: 18px;
+        text-align: center;
+
+        i {
+            font-size: 20px;
+            margin-left: 10px;
+        }
     }
 }
 

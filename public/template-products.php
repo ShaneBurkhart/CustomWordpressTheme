@@ -40,7 +40,7 @@
                             <div class="description left">
                                 <h3><?php echo $page->post_title; ?></h3>
                                 <p><?php the_field('products_page_description', $page->ID); ?></>
-                                <p><a href="<?php echo get_permalink($page->ID); ?>" class="button circle-arrow fa fa-arrow-right"></a></p>
+                                <p><a href="<?php echo get_permalink($page->ID); ?>" class="button medium pill-arrow">View <?php echo $page->post_title; ?> <i class="fa fa-arrow-right"></i></a></p>
                             </div>
                         <?php }?>
                         <div class="graphic">
@@ -52,7 +52,7 @@
                             <div class="description right">
                                 <h3><?php echo $page->post_title; ?></h3>
                                 <p><?php the_field('products_page_description', $page->ID); ?></>
-                                <p><a href="<?php echo get_permalink($page->ID); ?>" class="button circle-arrow fa fa-arrow-right"></a></p>
+                                <p><a href="<?php echo get_permalink($page->ID); ?>" class="button medium pill-arrow">View <?php echo $page->post_title; ?> <i class="fa fa-arrow-right"></i></a></p>
                             </div>
                         <?php }?>
                     </div>
