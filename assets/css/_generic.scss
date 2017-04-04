@@ -571,24 +571,18 @@ input[type=text], select, textarea {
 }
 
 .thumbnail-page-preview {
-    & > a {
+    .image-wrapper {
         display: block;
         width: 100%;
-        height: auto;
-
-        .image-wrapper {
-            width: 100%;
-            height: 175px;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center center;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-            margin-bottom: 35px;
-
-        }
+        height: 175px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        margin-bottom: 35px;
     }
 
     .mobile-button {

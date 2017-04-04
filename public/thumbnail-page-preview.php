@@ -9,9 +9,7 @@ if (in_category('recipe', $page)) {
 ?>
 
 <article class="thumbnail-page-preview <?php echo $thumbnail_class; ?>">
-    <a href="<?php echo get_permalink($page->ID); ?>">
-        <div class="image-wrapper <?php if ($no_overlay) echo "no-overlay"; ?>" style="background-image: url('<?php the_field('banner_image', $page->ID); ?>">
-        </div>
+    <a href="<?php echo get_permalink($page->ID); ?>" class="image-wrapper <?php if ($no_overlay) echo "no-overlay"; ?>" style="background-image: url('<?php the_field('banner_image', $page->ID); ?>">
     </a>
     <div class="description">
         <h3><?php echo $page->post_title ?></h3>
